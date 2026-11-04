@@ -106,8 +106,8 @@ header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-botto
 .arc{position:absolute;right:-8vw;top:14vh;width:min(46vw,620px);z-index:-1;opacity:.9;pointer-events:none}
 .coords{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:108px;font:400 .68rem var(--mono);letter-spacing:.2em;color:#c9ccd4;text-align:right;line-height:1.9}
 .mark{position:relative;display:flex;justify-content:center;padding:clamp(8px,3vw,40px) var(--gut,16px) clamp(8px,3vw,40px);background:var(--bg);overflow:hidden}
-.mark::before{content:"";position:absolute;left:50%;top:50%;width:min(760px,130vw);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(201,166,107,.13),transparent 70%);pointer-events:none}
-.mark img{position:relative;width:min(440px,84vw);height:auto;-webkit-mask-image:radial-gradient(closest-side,#000 60%,transparent 99%);mask-image:radial-gradient(closest-side,#000 60%,transparent 99%)}
+.mark::before{content:"";position:absolute;left:50%;top:50%;width:min(1100px,140vw);aspect-ratio:2/1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(201,166,107,.13),transparent 70%);pointer-events:none}
+.mark img{position:relative;width:min(980px,100%);height:auto;-webkit-mask-image:radial-gradient(closest-side,#000 62%,transparent 100%);mask-image:radial-gradient(closest-side,#000 62%,transparent 100%)}
 .draft{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:60;padding:7px 12px;background:rgba(7,9,14,.82);border:1px solid var(--gold);color:var(--gold2);font:500 .62rem var(--mono);letter-spacing:.16em;text-transform:uppercase;pointer-events:none;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .hero-in{padding-top:140px;padding-bottom:20px;width:100%}
 .hero .eyebrow,.coords{text-shadow:0 1px 14px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.7)}
@@ -338,7 +338,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <!-- MARCHIO -->
 <section class="mark" aria-label="Andrei Private Transfers">
-  <img class="rv" src="img/logo.webp" width="400" height="400" loading="lazy" alt="Andrei Private Transfers, logo">
+  <img class="rv" src="img/logo-xl.webp" width="1360" height="800" loading="lazy" alt="Andrei Private Transfers, logo">
 </section>
 
 <!-- SERVIZI -->
