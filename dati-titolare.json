@@ -1,0 +1,24 @@
+{
+  "_istruzioni": "Compila i campi, poi esegui: python applica_dati.py   (una sola volta, sulla versione con dati fittizi). Lascia vuoto \"rea\" se non esiste.",
+
+  "nome": "Mario Rossi",
+  "forma_it": "ditta individuale",
+  "forma_en": "sole proprietorship",
+  "indirizzo": "Via Esempio 1",
+  "cap": "00100",
+  "citta_it": "Roma (RM)",
+  "citta_en": "Rome (RM)",
+  "partita_iva": "12345678901",
+  "codice_fiscale": "",
+  "rea": "RM-1234567",
+  "autorizzazione_numero": "0000",
+  "autorizzazione_ente": "Roma Capitale",
+  "pec": "mario.rossi@pec.example.it",
+
+  "dominio": "https://demolandingpage.github.io/andrei-ncc-landing/",
+  "google_business_profile": "",
+  "google_maps": "",
+  "instagram": "",
+  "facebook": "",
+  "indicizzabile": true
+}

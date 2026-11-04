@@ -25,6 +25,13 @@ Anteprima locale: `python -m http.server` nella cartella, poi apri http://localh
 - **Recensioni:** nessuna recensione finta. Aggiungerne solo di reali.
 - **Foto:** `van1`–`van6` e `hero` sono quelle del progetto originale. Le foto del nuovo Vito 2026 blu non sono ancora incluse.
 
+## Quando arrivano i dati del titolare
+
+1. Raccogliere i dati con la lista in [CHECKLIST-DATI.md](CHECKLIST-DATI.md).
+2. Compilare `dati-titolare.json` (nome, indirizzo, P.IVA, REA, autorizzazione NCC, PEC, dominio, link Google Business Profile e social).
+3. Eseguire una sola volta `python applica_dati.py`: aggiorna footer, privacy, versione inglese, dati strutturati, canonical, Open Graph, `robots.txt` e `sitemap.xml`, poi controlla che non resti nessun dato fittizio. Con `"indicizzabile": false` mette il `noindex`.
+4. Controllare la pagina, pubblicare, registrare il sito su Search Console e inviare la sitemap.
+
 ## Da sostituire prima della pubblicazione definitiva
 
 - I dati del titolare sono **fittizi**: Mario Rossi, Via Esempio 1, 00100 Roma, P.IVA 12345678901, REA RM-1234567, autorizzazione NCC n. 0000, PEC mario.rossi@pec.example.it. Compaiono nel footer e nella sezione Privacy.
