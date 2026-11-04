@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>NCC Roma · Noleggio con conducente | Andrei Private Transfers</title>
+<meta name="description" content="NCC a Roma con autista privato: transfer Fiumicino e Ciampino, Civitavecchia, tour e servizio business. Mercedes V-Class fino a 7 passeggeri, prezzi fissi, H24. Prenota su WhatsApp.">
+<meta property="og:title" content="NCC Roma · Andrei Private Transfers">
+<meta property="og:description" content="Transfer privati a Roma con Mercedes V-Class. Prezzo fisso, accesso ZTL, disponibile H24.">
+<meta property="og:image" content="img/hero.webp">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="img/logo.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TaxiService","name":"Andrei Private Transfers – NCC Roma","description":"Noleggio con conducente a Roma: transfer aeroporti, hotel, business e tour.","telephone":"+393271996272","email":"andreiprivatetransfers@gmail.com","areaServed":["Roma","Lazio","Italia"],"openingHours":"Mo-Su 00:00-23:59","priceRange":"€€","address":{"@type":"PostalAddress","addressLocality":"Roma","addressCountry":"IT"}}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@font-face{font-family:"Jost";font-style:normal;font-weight:200 500;font-display:swap;src:url(fonts/jost.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400 600;font-display:swap;src:url(fonts/cormorant-italic.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/jetbrains-mono.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/inter-normal.woff2) format("woff2")}
+
+/* Layout: cinematic full-bleed hero, hairline-ruled sections on near-black, gold used only for rules, labels and the primary action */
+:root{
+  --bg:#07090e; --bg2:#0b0f17; --bg3:#121823;
+  --fg:#ece8df; --muted:#9aa1b0; --line:rgba(236,232,223,.12); --line2:rgba(236,232,223,.24);
+  --gold:#c9a66b; --gold2:#e0c28c; --wa:#14803f;
+  --display:"Jost","Helvetica Neue",Arial,sans-serif;
+  --italic:"Cormorant Garamond",Georgia,serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --sans:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--sans);color:var(--fg);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{padding:110px 0}
+.alt{background:var(--bg2);border-block:1px solid var(--line)}
+
+h1,h2,h3{font-family:var(--display);font-weight:300;text-transform:uppercase;line-height:1.04;letter-spacing:.01em;text-wrap:balance}
+h2{font-size:clamp(2rem,5.2vw,4.1rem);max-width:19ch}
+h3{font-weight:400;font-size:1.02rem;letter-spacing:.09em;line-height:1.3}
+em{font-family:var(--italic);font-style:italic;font-weight:500;text-transform:none;letter-spacing:0;font-size:1.08em;color:var(--gold2)}
+.eyebrow{display:flex;align-items:center;gap:14px;font:500 .72rem var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);flex:none}
+.lead{margin-top:22px;color:var(--muted);max-width:54ch}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:17px 30px;border:1px solid var(--gold);border-radius:2px;background:transparent;color:var(--gold);font:500 .76rem var(--mono);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-gold{background:var(--gold);color:#0a0a0a}
+.btn:hover{background:var(--gold2);border-color:var(--gold2);color:#0a0a0a}
+.btn-ghost{border-color:var(--line2);color:var(--fg)}
+.btn-ghost:hover{background:transparent;border-color:var(--gold);color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;z-index:100;background:#fff;color:#000;padding:12px 18px;font-weight:600}
+.skip:focus{left:0}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;height:76px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;font:300 1.05rem var(--display);letter-spacing:.34em;text-transform:uppercase}
+.brand img{width:36px;height:36px;border-radius:3px}
+.brand small{display:block;font:500 .6rem var(--mono);letter-spacing:.24em;color:var(--gold);margin-top:2px}
+.links{display:flex;gap:34px;margin-left:auto;margin-right:34px}
+.links a{font:500 .72rem var(--mono);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:#c9ccd4}
+.links a:hover{color:var(--gold)}
+.actions{display:flex;gap:12px;align-items:center}
+.actions .btn{padding:11px 20px;font-size:.7rem}
+.lang{background:none;border:1px solid var(--line2);color:var(--fg);border-radius:2px;padding:10px 13px;font:500 .7rem var(--mono);letter-spacing:.14em;cursor:pointer}
+.lang:hover{border-color:var(--gold);color:var(--gold)}
+.burger{display:none;width:42px;height:42px;border:1px solid var(--line2);border-radius:2px;background:none;place-content:center;gap:5px;cursor:pointer;padding:0}
+.burger span{display:block;width:18px;height:1px;background:var(--fg)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;padding:0;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2;animation:settle 2.6s cubic-bezier(.2,.7,.2,1) both}
+.hero-bg img{position:absolute;top:-12%;left:0;width:100%;height:112%;object-fit:cover;object-position:50% 74%;transform:translate3d(0,var(--py,0px),0)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,9,14,.7) 0%,rgba(7,9,14,.1) 30%,rgba(7,9,14,.55) 68%,var(--bg) 100%)}
+@keyframes settle{from{transform:scale(1.09)}to{transform:scale(1)}}
+.arc{position:absolute;right:-8vw;top:14vh;width:min(46vw,620px);z-index:-1;opacity:.9;pointer-events:none}
+.coords{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:108px;font:400 .68rem var(--mono);letter-spacing:.2em;color:#c9ccd4;text-align:right;line-height:1.9}
+.hero-in{padding-top:140px;padding-bottom:20px;width:100%}
+.hero .eyebrow,.coords{text-shadow:0 1px 14px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.7)}
+.hero .eyebrow{color:var(--gold2)}
+.hero h1{font-size:clamp(2.7rem,9.4vw,8rem);font-weight:200;line-height:.98;letter-spacing:.005em;margin-top:6px}
+.hero h1 em{font-weight:500;padding-right:.04em}
+.hero-row{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:end;margin-top:34px}
+.sub{font-size:1.08rem;color:#d7d4cc;max-width:46ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;padding-top:22px;border-top:1px solid var(--line2);padding-bottom:30px}
+.stats b{display:block;font:300 1.7rem var(--display);letter-spacing:.04em}
+.stats span{font:400 .66rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* services */
+.cols4{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:1px solid var(--line2)}
+.svc{padding:34px 28px 42px;border-left:1px solid var(--line);transition:background .25s}
+.svc:first-child{border-left:0;padding-left:0}
+.svc:hover{background:var(--bg2)}
+.svc:first-child:hover{background:linear-gradient(90deg,transparent,var(--bg2) 12%)}
+.svc svg{width:30px;height:30px;color:var(--gold);margin-bottom:26px;stroke-width:1.3}
+.svc h3{margin-bottom:12px}
+.svc p{font-size:.92rem;color:var(--muted)}
+
+/* prices */
+.prices{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;margin-top:56px}
+.price{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)}
+.price small{display:block;font:400 .66rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.price strong{display:block;font:400 1.12rem var(--display);letter-spacing:.04em;margin-top:5px}
+.eur{font:200 2.5rem var(--display);color:var(--gold2);text-align:right;line-height:1}
+.eur i{display:block;font:400 .58rem var(--mono);font-style:normal;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-top:8px}
+.notes{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px 36px;font:400 .76rem var(--mono);letter-spacing:.08em;color:#c9ccd4}
+.notes b{color:var(--gold2);font-weight:500}
+.long{margin-top:40px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;border:1px solid var(--line2);padding:30px 34px}
+.long>div{flex:1 1 340px;min-width:0}
+.long .eyebrow{margin-bottom:10px}
+.long p:last-child{color:#d7d4cc}
+
+/* fleet */
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:56px;padding-bottom:18px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.rail figure{flex:0 0 min(78vw,390px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;filter:saturate(.92)}
+.rail figcaption{margin-top:12px;font:400 .68rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.fleet-foot{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;margin-top:20px}
+.specs{display:flex;flex-wrap:wrap;gap:10px}
+.specs span{border:1px solid var(--line2);padding:9px 16px;font:400 .7rem var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.rail-ctl{display:flex;gap:10px}
+.rail-ctl button{width:48px;height:48px;border:1px solid var(--line2);background:none;color:var(--fg);font-size:1.1rem;cursor:pointer;border-radius:2px}
+.rail-ctl button:hover{border-color:var(--gold);color:var(--gold)}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 44px;margin-top:64px}
+.why>div{padding-top:26px;border-top:1px solid var(--line2);position:relative}
+.why>div::before{content:"";position:absolute;top:-1px;left:0;width:44px;height:1px;background:var(--gold)}
+.why h3{margin-bottom:10px}
+.why p{color:var(--muted);font-size:.93rem}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:center}
+.frame{position:relative;isolation:isolate;max-width:460px}
+.frame::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--gold);z-index:-1}
+.frame img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(.3) contrast(1.05)}
+.badge{position:absolute;left:0;bottom:0;background:var(--bg);padding:16px 22px 14px 0;font:400 .66rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.badge b{display:block;font:300 2rem var(--display);letter-spacing:.02em;color:var(--fg)}
+.about blockquote{font:italic 500 clamp(1.7rem,3.3vw,2.7rem)/1.18 var(--italic);margin:6px 0 28px;color:var(--fg)}
+.about p{color:var(--muted);max-width:52ch}
+.about .cta-row{justify-content:flex-start;margin-top:34px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px;border-top:1px solid var(--line2);counter-reset:s}
+.step{counter-increment:s;position:relative;padding:34px 36px 0 0}
+.step::before{content:"0" counter(s);display:block;font:500 .72rem var(--mono);letter-spacing:.2em;color:var(--gold);margin-bottom:16px}
+.step::after{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.step h3{margin-bottom:10px}
+.step p{color:var(--muted);font-size:.93rem;max-width:34ch}
+
+/* booking */
+.book{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+.contact-list{list-style:none;padding:0;margin-top:38px;display:flex;flex-direction:column;gap:16px}
+.contact-list a{text-decoration:none;display:flex;gap:14px;align-items:center;color:#d7d4cc}
+.contact-list a:hover{color:var(--gold)}
+.contact-list svg{width:20px;height:20px;color:var(--gold);flex:none}
+form{background:var(--bg2);border:1px solid var(--line2);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:26px 24px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+label{font:500 .66rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+input,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line2);border-radius:0;padding:11px 2px;color:var(--fg);font:inherit;font-size:1rem}
+input::placeholder,textarea::placeholder{color:#7d8596}
+input:focus,textarea:focus{outline:none;border-bottom-color:var(--gold)}
+input[type=date],input[type=time]{color-scheme:dark}
+textarea{resize:vertical}
+.chk{display:flex;gap:14px;align-items:flex-start;text-transform:none;letter-spacing:0;font:400 .86rem var(--sans);color:#c9ccd4;cursor:pointer}
+.chk input{width:20px;height:20px;padding:0;margin-top:2px;flex:none;accent-color:var(--gold)}
+.chk a{color:var(--gold)}
+form .btn{grid-column:1/-1}
+#wal{grid-column:1/-1;text-decoration:none}
+.fine{grid-column:1/-1;font:400 .68rem var(--mono);letter-spacing:.1em;color:var(--muted);text-align:center;text-transform:uppercase}
+
+/* faq */
+.faq{max-width:820px;margin-top:56px}
+details{border-bottom:1px solid var(--line);padding:24px 0}
+details:first-child{border-top:1px solid var(--line2)}
+summary{cursor:pointer;font:400 1.08rem var(--display);letter-spacing:.05em;text-transform:uppercase;list-style:none;display:flex;justify-content:space-between;gap:24px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font:300 1.6rem/1 var(--display);transition:transform .2s;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:14px;color:var(--muted);max-width:62ch}
+
+/* closing cta */
+.cta{position:relative;isolation:isolate;overflow:hidden;padding:150px 0;text-align:center}
+.cta-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%;z-index:-2}
+.cta::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--bg),rgba(7,9,14,.55) 30%,rgba(7,9,14,.62) 70%,var(--bg))}
+.cta h2{margin:0 auto 38px;max-width:16ch;font-size:clamp(2.2rem,6vw,5rem);font-weight:200}
+
+/* legal & footer */
+.legal{padding:84px 0;border-top:1px solid var(--line)}
+.legal h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 64px;margin-top:40px}
+.legal-grid>div{min-width:0}
+.legal h3{font-size:.86rem;margin-bottom:8px}
+.legal p{font-size:.88rem;color:var(--muted);max-width:64ch}
+.legal .upd{margin-top:34px;font:400 .68rem var(--mono);letter-spacing:.12em;text-transform:uppercase}
+footer{background:#05070b;border-top:1px solid var(--line);color:var(--muted);padding:56px 0 110px;font-size:.84rem;line-height:1.75}
+footer .wrap{display:flex;flex-wrap:wrap;gap:34px;justify-content:space-between}
+footer a{text-decoration:none}
+footer a:hover{color:var(--gold)}
+footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);letter-spacing:.3em;text-transform:uppercase;margin-bottom:6px}
+
+.float{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;color:#fff;box-shadow:0 14px 30px -8px rgba(0,0,0,.7)}
+.float svg{width:28px;height:28px}
+
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.hero-bg{animation:none}.hero-bg img{transform:none}.btn,.svc{transition:none}}
+
+@media (max-width:1020px){
+  .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;margin:0;background:rgba(7,9,14,.98);padding:6px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{padding:16px 0;border-bottom:1px solid var(--line);font-size:.8rem}
+  .burger{display:grid}
+  .actions{margin-left:auto}
+  .hero-row,.about,.book{grid-template-columns:1fr}
+  .cta-row{justify-content:flex-start}
+  .about{gap:56px}.book{gap:48px}
+  .cols4{grid-template-columns:1fr 1fr}
+  .svc:nth-child(3){border-left:0;padding-left:0}
+  .svc{border-top:1px solid var(--line)}.svc:nth-child(-n+2){border-top:0}
+  .why{grid-template-columns:1fr 1fr}
+  .legal-grid{grid-template-columns:1fr}
+  .arc{opacity:.5}
+}
+@media (max-width:700px){
+  section{padding:76px 0}
+  .prices,.why,.steps{grid-template-columns:1fr}
+  .steps{border-top:0;margin-top:48px}
+  .step{padding:28px 0 36px 28px;border-left:1px solid var(--line2)}
+  .step::after{top:0;left:-4px}
+  .cols4{grid-template-columns:1fr}
+  .svc,.svc:first-child,.svc:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--line)}
+  .svc:first-child{border-top:0}
+  .stats{grid-template-columns:1fr 1fr;gap:22px 16px}
+  form{grid-template-columns:1fr;padding:26px 22px}
+  .cta-row .btn{width:100%}
+  .actions .btn{display:none}
+  .brand small{display:none}
+  .coords{display:none}
+  .hero-in{padding-top:120px}
+  .frame::after{inset:14px -10px -14px 10px}
+  .cta{padding:110px 0}
+  .fleet-foot{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.27-1.38A9.9 9.9 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.4 1.34-1.94 1.4-.5.06-1.13.09-1.83-.12a16.6 16.6 0 0 1-1.65-.6c-2.9-1.25-4.8-4.17-4.94-4.37-.15-.2-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.57-.36.76-.36l.55.01c.18 0 .42-.07.65.5.25.58.84 2.02.91 2.17.07.15.12.32.02.5-.1.2-.15.32-.3.5-.15.17-.31.38-.45.51-.15.15-.3.3-.13.6.17.3.76 1.25 1.62 2.02 1.1.98 2.04 1.29 2.33 1.43.3.15.47.12.64-.07.18-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.34.07.13.07.72-.18 1.42Z"/></symbol>
+  <symbol id="i-ph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-ml" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 13.5 3 11l1-2 8 1 5-5a1.9 1.9 0 0 1 3 3l-5 5 1 8-2 1-2.5-7.5-3 3v3l-1.5 1-1-4-4-1 1-1.5h3Z"/></symbol>
+  <symbol id="i-bld" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16M14 10h5a1 1 0 0 1 1 1v10M2 21h20M8 8h2M8 12h2M8 16h2"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+</svg>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="img/logo.webp" alt=""><span>Andrei<small>NCC Roma</small></span></a>
+    <nav class="links" id="links" aria-label="Principale">
+      <a href="#servizi">Servizi</a>
+      <a href="#tariffe">Tariffe</a>
+      <a href="#flotta">Flotta</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="actions">
+      <button class="lang" id="lang" type="button" aria-label="Language">EN</button>
+      <a class="btn btn-gold" href="#prenota">Prenota</a>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="links"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img id="heroimg" src="img/hero.webp" width="1400" height="1750" alt="Mercedes V-Class nera davanti al Tempio di Adriano a Roma, di sera" fetchpriority="high"></div>
+  <svg class="arc" viewBox="0 0 400 400" aria-hidden="true"><circle cx="400" cy="200" r="198" fill="none" stroke="rgba(236,232,223,.28)" stroke-width="1"/><circle cx="400" cy="200" r="150" fill="none" stroke="rgba(201,166,107,.35)" stroke-width="1" stroke-dasharray="2 7"/></svg>
+  <p class="coords" aria-hidden="true">41.9028° N<br>12.4964° E</p>
+  <div class="wrap hero-in">
+    <p class="eyebrow">NCC · Noleggio con conducente · Roma</p>
+    <h1>Arriva a Roma<br><em>con</em> stile.</h1>
+    <div class="hero-row">
+      <p class="sub">Transfer privati con autista professionista a bordo di una Mercedes V-Class. Aeroporti, hotel, business e tour: puntuali, a prezzo fisso, a qualsiasi ora.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://wa.me/393271996272?text=Ciao%20Andrei%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Preventivo su WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+393271996272"><svg><use href="#i-ph"/></svg>+39 327 199 6272</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div><b>H24</b><span>365 giorni l'anno</span></div>
+      <div><b>7</b><span>passeggeri a bordo</span></div>
+      <div><b>FCO · CIA</b><span>voli monitorati</span></div>
+      <div><b>IT · EN · RO</b><span>lingue parlate</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section id="servizi">
+  <div class="wrap">
+    <p class="eyebrow rv">Servizi</p>
+    <h2 class="rv">Ogni spostamento, senza pensieri</h2>
+    <p class="lead rv">Dal primo messaggio all'ultima destinazione ti seguiamo noi: tu pensa solo a goderti il viaggio.</p>
+    <div class="cols4">
+      <article class="svc rv"><svg><use href="#i-plane"/></svg><h3>Transfer aeroporti</h3><p>Fiumicino e Ciampino. Monitoriamo il tuo volo: se tardi, ti aspettiamo, senza costi nascosti.</p></article>
+      <article class="svc rv"><svg><use href="#i-bld"/></svg><h3>Hotel e città</h3><p>Spostamenti rapidi tra hotel, ristoranti e monumenti, con permesso ZTL per arrivare davvero alla porta.</p></article>
+      <article class="svc rv"><svg><use href="#i-bag"/></svg><h3>Servizio business</h3><p>Meeting, eventi, ospiti VIP. Discrezione, riservatezza e puntualità assoluta.</p></article>
+      <article class="svc rv"><svg><use href="#i-pin"/></svg><h3>Tour su misura</h3><p>Roma, Civitavecchia, Tivoli, Castelli Romani: l'itinerario lo costruiamo insieme.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFFE -->
+<section id="tariffe" class="alt">
+  <div class="wrap">
+    <p class="eyebrow rv">Tariffe</p>
+    <h2 class="rv">Prezzi chiari, decisi prima di partire</h2>
+    <p class="lead rv">Tariffe indicative per veicolo, fino a 7 passeggeri. Per altre tratte il preventivo è gratuito.</p>
+    <div class="prices">
+      <div class="price rv"><div><small>Roma centro →</small><strong>Aeroporto Fiumicino (FCO)</strong></div><div class="eur">€60<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Roma centro →</small><strong>Aeroporto Ciampino (CIA)</strong></div><div class="eur">€50<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Roma →</small><strong>Porto di Civitavecchia</strong></div><div class="eur">€140<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Roma →</small><strong>Tour di 3 ore in città</strong></div><div class="eur">€150<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Roma →</small><strong>Castelli Romani / Tivoli</strong></div><div class="eur">€180<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Fiumicino →</small><strong>Ciampino</strong></div><div class="eur">€80<i>IVA incl.</i></div></div>
+    </div>
+    <div class="notes rv">
+      <span><b>−10%</b> se scegli di pagare in contanti.</span>
+      <span>Carta, bancomat e app al prezzo standard.</span>
+    </div>
+    <div class="long rv">
+      <div>
+        <p class="eyebrow">Tratte lunghe</p>
+        <p>Roma–Napoli, Roma–Firenze, Roma–Milano e altre città: tariffa fissa su preventivo, senza sorprese.</p>
+      </div>
+      <a class="btn btn-gold" href="#prenota">Richiedi disponibilità</a>
+    </div>
+  </div>
+</section>
+
+<!-- FLOTTA -->
+<section id="flotta">
+  <div class="wrap">
+    <p class="eyebrow rv">La flotta</p>
+    <h2 class="rv">Una Mercedes V-Class, per viaggiare comodi</h2>
+    <div class="rail rv" id="rail" tabindex="0" role="region" aria-label="Galleria">
+      <figure><img loading="lazy" src="img/van1.webp" alt="Mercedes V-Class con porta scorrevole aperta davanti a un hotel" width="900" height="1125"><figcaption>Ritiro in hotel</figcaption></figure>
+      <figure><img loading="lazy" src="img/van2.webp" alt="Interni in pelle con sedili spaziosi" width="900" height="1125"><figcaption>Interni in pelle</figcaption></figure>
+      <figure><img loading="lazy" src="img/van3.webp" alt="Mercedes V-Class di profilo" width="900" height="1125"><figcaption>Di profilo</figcaption></figure>
+      <figure><img loading="lazy" src="img/van4.webp" alt="Mercedes V-Class davanti a un hotel di lusso" width="900" height="1125"><figcaption>Hotel di lusso</figcaption></figure>
+      <figure><img loading="lazy" src="img/van5.webp" alt="Mercedes V-Class al ritiro clienti in hotel" width="900" height="1125"><figcaption>Ritiro clienti</figcaption></figure>
+      <figure><img loading="lazy" src="img/van6.webp" alt="Mercedes V-Class davanti al Pantheon" width="900" height="1125"><figcaption>Davanti al Pantheon</figcaption></figure>
+    </div>
+    <div class="fleet-foot rv">
+      <div class="specs"><span>Fino a 7 passeggeri</span><span>Ampio bagagliaio</span><span>Interni in pelle</span><span>Cambio automatico</span></div>
+      <div class="rail-ctl"><button type="button" id="rprev" aria-label="Foto precedente / Previous photo">←</button><button type="button" id="rnext" aria-label="Foto successiva / Next photo">→</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- PERCHE' -->
+<section id="perche" class="alt">
+  <div class="wrap">
+    <p class="eyebrow rv">Perché Andrei</p>
+    <h2 class="rv">Un servizio costruito sulla fiducia</h2>
+    <div class="why">
+      <div class="rv"><h3>Porta a porta</h3><p>Ti veniamo a prendere ovunque tu sia, hotel, casa o terminal.</p></div>
+      <div class="rv"><h3>Disponibile H24</h3><p>Anche di notte e nei festivi. Un volo all'alba non è un problema.</p></div>
+      <div class="rv"><h3>Veicolo premium</h3><p>Mercedes V-Class pulita, silenziosa e confortevole.</p></div>
+      <div class="rv"><h3>Autista professionista</h3><p>Oltre vent'anni di esperienza, parla italiano, inglese e rumeno.</p></div>
+      <div class="rv"><h3>Accesso ZTL Roma</h3><p>Permesso valido: ti portiamo il più vicino possibile alla destinazione.</p></div>
+      <div class="rv"><h3>Prezzo fisso</h3><p>Concordato in anticipo. Nessuna sorpresa a fine corsa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTISTA -->
+<section>
+  <div class="wrap about">
+    <div class="frame rv">
+      <img loading="lazy" src="img/andrei.webp" width="800" height="1000" alt="Andrei, autista NCC a Roma">
+      <div class="badge"><b>20+ anni</b>di esperienza</div>
+    </div>
+    <div class="rv">
+      <p class="eyebrow">L'autista</p>
+      <h2>Il volto dietro al servizio</h2>
+      <blockquote>“Il mio obiettivo è offrirti un servizio impeccabile, dal primo messaggio all'ultima destinazione.”</blockquote>
+      <p>Da oltre vent'anni accompagno turisti, professionisti e famiglie in tutta Roma e nel Lazio. Conosco la città a memoria e tratto ogni cliente come un ospite a casa mia.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://wa.me/393271996272?text=Ciao%20Andrei%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Scrivimi su WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COME FUNZIONA -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow rv">Come funziona</p>
+    <h2 class="rv">Prenotare richiede un minuto</h2>
+    <div class="steps">
+      <div class="step rv"><h3>Scrivi la tratta</h3><p>Compila il modulo o scrivici su WhatsApp con data, ora e destinazione.</p></div>
+      <div class="step rv"><h3>Ricevi conferma</h3><p>Ti confermiamo disponibilità e prezzo fisso, subito.</p></div>
+      <div class="step rv"><h3>Ti aspettiamo</h3><p>Andrei è puntuale all'arrivo, con il tuo nome o direttamente al terminal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRENOTA -->
+<section id="prenota">
+  <div class="wrap book">
+    <div class="rv">
+      <p class="eyebrow">Prenotazione</p>
+      <h2>Richiedi il tuo transfer</h2>
+      <p class="lead">Compila i dati e premi invia: ti prepariamo il messaggio WhatsApp già pronto. Nessun dato viene salvato sul sito.</p>
+      <ul class="contact-list">
+        <li><a href="tel:+393271996272"><svg><use href="#i-ph"/></svg>+39 327 199 6272</a></li>
+        <li><a href="mailto:andreiprivatetransfers@gmail.com"><svg><use href="#i-ml"/></svg>andreiprivatetransfers@gmail.com</a></li>
+        <li><a href="#prenota"><svg><use href="#i-pin"/></svg>Roma · H24 · 7 giorni su 7</a></li>
+      </ul>
+    </div>
+    <form id="bf" class="rv">
+      <div class="f full"><label for="n">Nome e cognome</label><input id="n" required maxlength="100" autocomplete="name" placeholder="Mario Rossi"></div>
+      <div class="f"><label for="d">Data</label><input id="d" type="date" required></div>
+      <div class="f"><label for="h">Ora</label><input id="h" type="time" required></div>
+      <div class="f"><label for="a">Partenza</label><input id="a" required maxlength="150" placeholder="Es. Aeroporto Fiumicino"></div>
+      <div class="f"><label for="b">Destinazione</label><input id="b" required maxlength="150" placeholder="Es. Hotel, Roma centro"></div>
+      <div class="f"><label for="p">Passeggeri</label><input id="p" type="number" min="1" max="7" value="1" required></div>
+      <div class="f"><label for="g">Valigie</label><input id="g" type="number" min="0" max="15" value="1" required></div>
+      <div class="f full"><label for="v">Codice volo / treno / nave (facoltativo)</label><input id="v" maxlength="40" placeholder="Es. AZ 610"></div>
+      <div class="f full"><label for="o">Note (facoltative)</label><textarea id="o" rows="3" maxlength="500" placeholder="Numero volo, seggiolino bambino, fermate intermedie…"></textarea></div>
+      <div class="f full"><label class="chk" for="pc"><input id="pc" type="checkbox" required><span>Acconsento al trattamento dei dati per rispondere alla mia richiesta. <a href="#privacy">Leggi l'informativa privacy</a></span></label></div>
+      <button class="btn btn-gold" type="submit"><svg><use href="#i-wa"/></svg>Invia richiesta su WhatsApp</button>
+      <a id="wal" class="btn btn-gold" target="_blank" rel="noopener" hidden>Apri WhatsApp</a>
+      <p class="fine">Risposta rapida · prezzo fisso confermato prima di partire</p>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="alt">
+  <div class="wrap">
+    <p class="eyebrow rv">Domande frequenti</p>
+    <h2 class="rv">Prima di prenotare</h2>
+    <div class="faq">
+      <details class="rv"><summary>Che differenza c'è tra NCC e taxi?</summary><p>L'NCC si prenota in anticipo: prezzo concordato prima, autista dedicato e veicolo premium. Niente tassametro, niente attese in coda al posteggio.</p></details>
+      <details class="rv"><summary>Cosa succede se il mio volo è in ritardo?</summary><p>Monitoriamo l'orario di arrivo reale: ci presentiamo quando atterri, senza costi extra per i ritardi.</p></details>
+      <details class="rv"><summary>Posso pagare con carta?</summary><p>Sì, carta, bancomat e app al prezzo standard. Pagando in contanti è previsto uno sconto del 10%.</p></details>
+      <details class="rv"><summary>Quante persone e valigie entrano?</summary><p>La Mercedes V-Class accoglie fino a 7 passeggeri con i rispettivi bagagli. Indicaci il numero esatto nella richiesta.</p></details>
+      <details class="rv"><summary>Fate tratte fuori Roma?</summary><p>Sì: Civitavecchia, Tivoli, Castelli Romani e altre destinazioni in tutta Italia. Chiedi un preventivo gratuito.</p></details>
+      <details class="rv"><summary>Posso prenotare un seggiolino per bambini?</summary><p>Certo, segnalalo nelle note della richiesta così lo prepariamo prima del ritiro.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINALE -->
+<section class="cta">
+  <img class="cta-bg" src="img/van6.webp" alt="" loading="lazy">
+  <div class="wrap">
+    <h2 class="rv">Il tuo prossimo viaggio <em>comincia</em> qui.</h2>
+    <a class="btn btn-gold rv" href="#prenota">Richiedi disponibilità</a>
+  </div>
+</section>
+
+<section id="privacy" class="legal">
+  <div class="wrap">
+    <p class="eyebrow">Informazioni legali</p>
+    <h2>Privacy e cookie</h2>
+    <div class="legal-grid">
+      <div><h3>Titolare del trattamento</h3><p>Mario Rossi, ditta individuale, Via Esempio 1, 00100 Roma (RM). P.IVA 12345678901. Email: andreiprivatetransfers@gmail.com · PEC: mario.rossi@pec.example.it.</p></div>
+      <div><h3>Quali dati raccogliamo</h3><p>Solo quelli che inserisci nel modulo di prenotazione: nome, data e ora, partenza, destinazione, numero di passeggeri e valigie e, se vuoi, codice del volo e note. Ti chiediamo di non inserire dati particolari, ad esempio sulla salute.</p></div>
+      <div><h3>Perché li usiamo</h3><p>Usiamo i dati solo per rispondere alla tua richiesta di preventivo o prenotazione e per eseguire il servizio. La base giuridica è l'esecuzione di misure precontrattuali e del contratto (art. 6.1.b GDPR).</p></div>
+      <div><h3>Come funziona il modulo</h3><p>Questo sito non salva i dati del modulo e non li invia a nessun server. Quando premi invio prepariamo un messaggio WhatsApp e sei tu a inviarlo. WhatsApp è un servizio di Meta e tratta i dati secondo la propria informativa. Noi riceviamo il messaggio e lo conserviamo per il tempo necessario a gestire la richiesta e gli obblighi fiscali e contabili.</p></div>
+      <div><h3>I tuoi diritti</h3><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione e opposizione (artt. 15-22 GDPR) scrivendo ai contatti qui sopra. Puoi anche presentare reclamo al Garante per la protezione dei dati personali (garanteprivacy.it).</p></div>
+      <div><h3>Dati di navigazione</h3><p>Il fornitore di hosting può registrare dati tecnici di accesso, come l'indirizzo IP, per la sicurezza e il funzionamento del servizio.</p></div>
+      <div id="cookie"><h3>Cookie</h3><p>Il sito non usa cookie di profilazione, statistici o di terze parti e non incorpora contenuti esterni. Salva nel browser solo la lingua scelta (IT o EN), un dato tecnico che non ti identifica. Per questo non mostriamo un banner cookie.</p><p>I font sono ospitati sul sito stesso, quindi il tuo indirizzo IP non viene inviato a servizi esterni.</p></div>
+    </div>
+    <p class="upd">Ultimo aggiornamento: 4 novembre 2026</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Andrei Private Transfers</strong>Mario Rossi · Via Esempio 1, 00100 Roma (RM)<br>P.IVA 12345678901 · REA RM-1234567<br>Autorizzazione NCC n. 0000 · Roma Capitale<br>PEC mario.rossi@pec.example.it</div>
+    <div><a href="tel:+393271996272">+39 327 199 6272</a> · <a href="mailto:andreiprivatetransfers@gmail.com">andreiprivatetransfers@gmail.com</a></div>
+    <div>© <span id="y"></span> Andrei NCC Roma · Tutti i diritti riservati<br><a href="#privacy">Privacy</a> · <a href="#cookie">Cookie</a></div>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/393271996272?text=Ciao%20Andrei%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  function s(){h.classList.toggle('solid',window.scrollY>40)}
+  s();addEventListener('scroll',s,{passive:true});
+  document.getElementById('y').textContent=new Date().getFullYear();
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }else els.forEach(function(e){e.classList.add('in')});
+
+  var d=document.getElementById('d');
+  d.min=new Date().toISOString().slice(0,10);
+
+  /* ---------- IT / EN ---------- */
+  var EN={
+    'Servizi':'Services','Tariffe':'Rates','Flotta':'Fleet','Prenota':'Book','NCC Roma':'Rome',
+    'NCC · Noleggio con conducente · Roma':'Chauffeur service · Private hire · Rome',
+    'Roma ti aspetta.':'Rome is waiting.','Noi ti ci portiamo':'We take you there','con stile.':'in style.',
+    'Transfer privati con autista professionista a bordo di una Mercedes V-Class. Aeroporti, hotel, business e tour: puntuali, a prezzo fisso, a qualsiasi ora.':'Private transfers with a professional driver in a Mercedes V-Class. Airports, hotels, business and tours: punctual, fixed price, at any hour.',
+    'Preventivo su WhatsApp':'Get a quote on WhatsApp',
+    'Prezzo fisso, IVA inclusa':'Fixed price, VAT included','Disponibile H24':'Available 24/7','Accesso ZTL':'ZTL access',
+    '20+ anni':'20+ years','di esperienza':'of experience','alla guida a Roma':'driving in Rome',
+    '365 giorni l\'anno':'365 days a year','passeggeri a bordo':'passenger seats','voli monitorati':'flights tracked','lingue parlate':'languages spoken',
+    'Ogni spostamento, senza pensieri':'Every ride, without the worry',
+    'Dal primo messaggio all\'ultima destinazione ti seguiamo noi: tu pensa solo a goderti il viaggio.':'From your first message to your last stop, we look after everything. You just enjoy the ride.',
+    'Transfer aeroporti':'Airport transfers','Fiumicino e Ciampino. Monitoriamo il tuo volo: se tardi, ti aspettiamo, senza costi nascosti.':'Fiumicino and Ciampino. We track your flight: if you are late, we wait, with no hidden costs.',
+    'Hotel e città':'Hotels and city','Spostamenti rapidi tra hotel, ristoranti e monumenti, con permesso ZTL per arrivare davvero alla porta.':'Quick rides between hotels, restaurants and landmarks, with a ZTL permit to drop you right at the door.',
+    'Servizio business':'Business service','Meeting, eventi, ospiti VIP. Discrezione, riservatezza e puntualità assoluta.':'Meetings, events, VIP guests. Discretion, privacy and absolute punctuality.',
+    'Tour su misura':'Tailor-made tours','Roma, Civitavecchia, Tivoli, Castelli Romani: l\'itinerario lo costruiamo insieme.':'Rome, Civitavecchia, Tivoli, Castelli Romani: we plan the itinerary together.',
+    'Prezzi chiari, decisi prima di partire':'Clear prices, agreed before you go',
+    'Tariffe indicative per veicolo, fino a 7 passeggeri. Per altre tratte il preventivo è gratuito.':'Indicative rates per vehicle, up to 7 passengers. For other routes the quote is free.',
+    'Roma centro →':'Rome centre →','Roma →':'Rome →','Fiumicino →':'Fiumicino →',
+    'Aeroporto Fiumicino (FCO)':'Fiumicino Airport (FCO)','Aeroporto Ciampino (CIA)':'Ciampino Airport (CIA)','Porto di Civitavecchia':'Civitavecchia Port','Tour di 3 ore in città':'3-hour city tour','IVA incl.':'VAT incl.',
+    'se scegli di pagare in contanti.':'if you pay in cash.','Carta, bancomat e app al prezzo standard.':'Card, debit and apps at the standard price.',
+    'La flotta':'The fleet','Una Mercedes V-Class, per viaggiare comodi':'A Mercedes V-Class, for a comfortable ride',
+    'Fino a 7 passeggeri':'Up to 7 passengers','Ampio bagagliaio':'Large luggage space','Interni in pelle':'Leather interior','Cambio automatico':'Automatic gearbox',
+    'Perché Andrei':'Why Andrei','Un servizio costruito sulla fiducia':'A service built on trust',
+    'Porta a porta':'Door to door','Ti veniamo a prendere ovunque tu sia, hotel, casa o terminal.':'We pick you up wherever you are: hotel, home or terminal.',
+    'Anche di notte e nei festivi. Un volo all\'alba non è un problema.':'Nights and holidays too. A flight at dawn is no problem.',
+    'Veicolo premium':'Premium vehicle','Mercedes V-Class pulita, silenziosa e confortevole.':'A clean, quiet and comfortable Mercedes V-Class.',
+    'Autista professionista':'Professional driver','Oltre vent\'anni di esperienza, parla italiano, inglese e rumeno.':'Over twenty years of experience. Speaks Italian, English and Romanian.',
+    'Accesso ZTL Roma':'Rome ZTL access','Permesso valido: ti portiamo il più vicino possibile alla destinazione.':'Valid permit: we take you as close to your destination as possible.',
+    'Prezzo fisso':'Fixed price','Concordato in anticipo. Nessuna sorpresa a fine corsa.':'Agreed in advance. No surprises at the end of the ride.',
+    'L\'autista':'The driver','Il volto dietro al servizio':'The face behind the service',
+    '“Il mio obiettivo è offrirti un servizio impeccabile, dal primo messaggio all\'ultima destinazione.”':'“My goal is to give you a flawless service, from the first message to the last destination.”',
+    'Da oltre vent\'anni accompagno turisti, professionisti e famiglie in tutta Roma e nel Lazio. Conosco la città a memoria e tratto ogni cliente come un ospite a casa mia.':'For over twenty years I have driven tourists, professionals and families across Rome and Lazio. I know the city by heart and treat every client like a guest in my home.',
+    'Scrivimi su WhatsApp':'Message me on WhatsApp',
+    'Come funziona':'How it works','Prenotare richiede un minuto':'Booking takes a minute',
+    'Scrivi la tratta':'Send your route','Compila il modulo o scrivici su WhatsApp con data, ora e destinazione.':'Fill in the form or message us on WhatsApp with date, time and destination.',
+    'Ricevi conferma':'Get confirmation','Ti confermiamo disponibilità e prezzo fisso, subito.':'We confirm availability and the fixed price right away.',
+    'Ti aspettiamo':'We meet you','Andrei è puntuale all\'arrivo, con il tuo nome o direttamente al terminal.':'Andrei is there on time, with your name sign or right at the terminal.',
+    'Prenotazione':'Booking','Richiedi il tuo transfer':'Request your transfer',
+    'Compila i dati e premi invia: ti prepariamo il messaggio WhatsApp già pronto. Nessun dato viene salvato sul sito.':'Fill in the details and press send: we prepare the WhatsApp message for you. No data is stored on this site.',
+    'Roma · H24 · 7 giorni su 7':'Rome · 24/7 · every day',
+    'Nome e cognome':'Full name','Data':'Date','Ora':'Time','Partenza':'Pickup','Destinazione':'Drop-off','Passeggeri':'Passengers','Valigie':'Bags','Note (facoltative)':'Notes (optional)',
+    'Invia richiesta su WhatsApp':'Send request on WhatsApp','Apri WhatsApp':'Open WhatsApp',
+    'Risposta rapida · prezzo fisso confermato prima di partire':'Quick reply · fixed price confirmed before you travel',
+    'Tratte lunghe':'Long-distance routes','Roma–Napoli, Roma–Firenze, Roma–Milano e altre città: tariffa fissa su preventivo, senza sorprese.':'Rome–Naples, Rome–Florence, Rome–Milan and other cities: fixed rate on quote, no surprises.',
+    'Richiedi disponibilità':'Check availability','Codice volo / treno / nave (facoltativo)':'Flight / train / ship number (optional)',
+    "Informazioni legali":"Legal information",
+    "Privacy e cookie":"Privacy and cookies",
+    "Salta al contenuto":"Skip to content",
+    "Acconsento al trattamento dei dati per rispondere alla mia richiesta.":"I consent to my data being processed to answer my request.",
+    "Leggi l'informativa privacy":"Read the privacy notice",
+    "Mario Rossi · Via Esempio 1, 00100 Roma (RM)":"Mario Rossi · Via Esempio 1, 00100 Rome (RM)",
+    "P.IVA 12345678901 · REA RM-1234567":"VAT no. 12345678901 · REA RM-1234567",
+    "Autorizzazione NCC n. 0000 · Roma Capitale":"NCC licence no. 0000 · Roma Capitale",
+    "Ultimo aggiornamento: 4 novembre 2026":"Last updated: 4 November 2026",
+    "Titolare del trattamento":"Data controller",
+    "Mario Rossi, ditta individuale, Via Esempio 1, 00100 Roma (RM). P.IVA 12345678901. Email: andreiprivatetransfers@gmail.com · PEC: mario.rossi@pec.example.it.":"Mario Rossi, sole proprietorship, Via Esempio 1, 00100 Rome (RM). VAT no. 12345678901. Email: andreiprivatetransfers@gmail.com · PEC: mario.rossi@pec.example.it.",
+    "Quali dati raccogliamo":"What data we collect",
+    "Solo quelli che inserisci nel modulo di prenotazione: nome, data e ora, partenza, destinazione, numero di passeggeri e valigie e, se vuoi, codice del volo e note. Ti chiediamo di non inserire dati particolari, ad esempio sulla salute.":"Only what you enter in the booking form: name, date and time, pickup, drop-off, number of passengers and bags and, if you wish, flight number and notes. Please do not enter special-category data, such as health information.",
+    "Perché li usiamo":"Why we use it",
+    "Usiamo i dati solo per rispondere alla tua richiesta di preventivo o prenotazione e per eseguire il servizio. La base giuridica è l'esecuzione di misure precontrattuali e del contratto (art. 6.1.b GDPR).":"We use the data only to answer your quote or booking request and to provide the service. The legal basis is the performance of pre-contractual measures and of the contract (art. 6.1.b GDPR).",
+    "Come funziona il modulo":"How the form works",
+    "Questo sito non salva i dati del modulo e non li invia a nessun server. Quando premi invio prepariamo un messaggio WhatsApp e sei tu a inviarlo. WhatsApp è un servizio di Meta e tratta i dati secondo la propria informativa. Noi riceviamo il messaggio e lo conserviamo per il tempo necessario a gestire la richiesta e gli obblighi fiscali e contabili.":"This site does not store the form data and does not send it to any server. When you press send we prepare a WhatsApp message and you are the one who sends it. WhatsApp is a Meta service and processes data under its own privacy notice. We receive the message and keep it for as long as needed to handle the request and meet tax and accounting obligations.",
+    "I tuoi diritti":"Your rights",
+    "Puoi chiedere accesso, rettifica, cancellazione, limitazione e opposizione (artt. 15-22 GDPR) scrivendo ai contatti qui sopra. Puoi anche presentare reclamo al Garante per la protezione dei dati personali (garanteprivacy.it).":"You can ask for access, rectification, erasure, restriction and objection (arts. 15-22 GDPR) by writing to the contacts above. You can also lodge a complaint with the Italian Data Protection Authority (garanteprivacy.it).",
+    "Dati di navigazione":"Browsing data",
+    "Il fornitore di hosting può registrare dati tecnici di accesso, come l'indirizzo IP, per la sicurezza e il funzionamento del servizio.":"The hosting provider may log technical access data, such as the IP address, for security and to run the service.",
+    "Il sito non usa cookie di profilazione, statistici o di terze parti e non incorpora contenuti esterni. Salva nel browser solo la lingua scelta (IT o EN), un dato tecnico che non ti identifica. Per questo non mostriamo un banner cookie.":"This site uses no profiling, analytics or third-party cookies and embeds no external content. It stores only your chosen language (IT or EN) in the browser, a technical item that does not identify you. For this reason we do not show a cookie banner.",
+    "I font sono ospitati sul sito stesso, quindi il tuo indirizzo IP non viene inviato a servizi esterni.":"Fonts are hosted on the site itself, so your IP address is not sent to external services.",
+    "Arriva a Roma":"Arrive in Rome",
+    "con":"in",
+    "stile.":"style.",
+    "Ritiro in hotel":"Hotel pickup",
+    "Di profilo":"Side view",
+    "Hotel di lusso":"Luxury hotels",
+    "Ritiro clienti":"Client pickup",
+    "Davanti al Pantheon":"At the Pantheon",
+    "Il tuo prossimo viaggio":"Your next journey",
+    "comincia":"starts",
+    "qui.":"here.",
+    'Domande frequenti':'FAQ','Prima di prenotare':'Before you book',
+    'Che differenza c\'è tra NCC e taxi?':'What is the difference between NCC and a taxi?',
+    'L\'NCC si prenota in anticipo: prezzo concordato prima, autista dedicato e veicolo premium. Niente tassametro, niente attese in coda al posteggio.':'An NCC is booked in advance: price agreed beforehand, a dedicated driver and a premium vehicle. No meter, no queuing at a taxi rank.',
+    'Cosa succede se il mio volo è in ritardo?':'What if my flight is late?',
+    'Monitoriamo l\'orario di arrivo reale: ci presentiamo quando atterri, senza costi extra per i ritardi.':'We track your real arrival time and meet you when you land, with no extra charge for delays.',
+    'Posso pagare con carta?':'Can I pay by card?',
+    'Sì, carta, bancomat e app al prezzo standard. Pagando in contanti è previsto uno sconto del 10%.':'Yes: card, debit and apps at the standard price. Paying in cash gets a 10% discount.',
+    'Quante persone e valigie entrano?':'How many people and bags fit?',
+    'La Mercedes V-Class accoglie fino a 7 passeggeri con i rispettivi bagagli. Indicaci il numero esatto nella richiesta.':'The Mercedes V-Class seats up to 7 passengers with their luggage. Tell us the exact numbers in your request.',
+    'Fate tratte fuori Roma?':'Do you drive outside Rome?',
+    'Sì: Civitavecchia, Tivoli, Castelli Romani e altre destinazioni in tutta Italia. Chiedi un preventivo gratuito.':'Yes: Civitavecchia, Tivoli, Castelli Romani and other destinations across Italy. Ask for a free quote.',
+    'Posso prenotare un seggiolino per bambini?':'Can I book a child seat?',
+    'Certo, segnalalo nelle note della richiesta così lo prepariamo prima del ritiro.':'Of course. Mention it in the notes of your request and we will have it ready at pickup.',
+    'NCC Roma · P.IVA 18170441002':'Rome chauffeur service · VAT no. 18170441002',
+    'Andrei NCC Roma · Tutti i diritti riservati':'Andrei NCC Rome · All rights reserved'
+  };
+  var PH_EN={n:'John Smith',a:'e.g. Fiumicino Airport',b:'e.g. Hotel, central Rome',o:'Flight number, child seat, stops on the way…',v:'e.g. AZ 610'};
+  var MSG={
+    it:{q:'Ciao Andrei, vorrei un preventivo transfer',b:'Ciao Andrei, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Valigie',o:'Note',v:'Volo/treno/nave'},
+    en:{q:'Hi Andrei, I would like a transfer quote',b:'Hi Andrei, I would like to book a transfer:',n:'Name',d:'Date',f:'From',t:'To',p:'Passengers',g:'Bags',o:'Notes',v:'Flight/train/ship'}
+  };
+  var TITLE={it:document.title,en:'Rome Chauffeur Service (NCC) | Andrei Private Transfers'};
+  var lang='it',nodes=[],phs=[];
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+    return (!n.nodeValue.trim()||n.parentNode.closest('script,style'))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}});
+  while(w.nextNode())nodes.push([w.currentNode,w.currentNode.nodeValue]);
+  Object.keys(PH_EN).forEach(function(id){var e=document.getElementById(id);phs.push([e,e.getAttribute('placeholder'),PH_EN[id]])});
+
+  function setLang(l){
+    lang=l;
+    nodes.forEach(function(p){
+      var k=p[1].trim();
+      p[0].nodeValue=(l==='en'&&EN[k]!==undefined)?p[1].replace(k,function(){return EN[k]}):p[1];
+    });
+    phs.forEach(function(p){p[0].setAttribute('placeholder',l==='en'?p[2]:p[1])});
+    document.documentElement.lang=l;
+    document.title=TITLE[l];
+    document.getElementById('lang').textContent=l==='en'?'IT':'EN';
+    document.querySelectorAll('a[href^="https://wa.me/393271996272?text=Ciao"],a[data-q]').forEach(function(a){
+      a.dataset.q='1';a.href='https://wa.me/393271996272?text='+encodeURIComponent(MSG[l].q);
+    });
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  document.getElementById('lang').addEventListener('click',function(){setLang(lang==='it'?'en':'it')});
+  var start='it';
+  try{var sv=localStorage.getItem('lang');if(sv==='it'||sv==='en')start=sv;else if((navigator.language||'').toLowerCase().indexOf('en')===0)start='en'}catch(e){}
+  if(start==='en')setLang('en');
+
+  var bg=document.getElementById('burger'),lk=document.getElementById('links');
+  bg.addEventListener('click',function(){var o=lk.classList.toggle('open');bg.setAttribute('aria-expanded',String(o))});
+  lk.addEventListener('click',function(e){if(e.target.tagName==='A'){lk.classList.remove('open');bg.setAttribute('aria-expanded','false')}});
+
+  var rail=document.getElementById('rail');
+  function rs(dir){rail.scrollBy({left:dir*Math.min(rail.clientWidth*.8,420),behavior:'smooth'})}
+  document.getElementById('rprev').addEventListener('click',function(){rs(-1)});
+  document.getElementById('rnext').addEventListener('click',function(){rs(1)});
+  var hi=document.getElementById('heroimg'),mm=window.matchMedia('(prefers-reduced-motion: reduce)'),tick=false;
+  function par(){tick=false;if(mm.matches)return;var y=Math.min(window.scrollY,innerHeight);hi.style.setProperty('--py',(y*.12)+'px')}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(par)}},{passive:true});
+
+  /* ---------- form -> WhatsApp ---------- */
+  document.getElementById('bf').addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=MSG[lang];
+    var v=function(i){return document.getElementById(i).value.trim()};
+    var L=[m.b,
+      '👤 '+m.n+': '+v('n'),
+      '📅 '+m.d+': '+v('d')+' '+v('h'),
+      '📍 '+m.f+': '+v('a'),
+      '🏁 '+m.t+': '+v('b'),
+      '👥 '+m.p+': '+v('p'),
+      '🧳 '+m.g+': '+v('g')];
+    if(v('o'))L.push('📝 '+m.o+': '+v('o'));
+    if(v('v'))L.push('✈️ '+m.v+': '+v('v'));
+    var a=document.getElementById('wal');
+    a.href='https://wa.me/393271996272?text='+encodeURIComponent(L.join('\n'));
+    a.hidden=false;
+    a.click();
+  });
+})();
+</script>
+</body>
+</html>
