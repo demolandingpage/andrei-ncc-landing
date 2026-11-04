@@ -53,7 +53,7 @@
   --sans:"Inter",system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 body{font-family:var(--sans);color:var(--fg);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
@@ -83,10 +83,10 @@ em{font-family:var(--italic);font-style:italic;font-weight:500;text-transform:no
 /* header */
 header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
 header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
-.nav{display:flex;align-items:center;height:76px}
-.brand{display:flex;align-items:center;gap:14px;text-decoration:none;font:300 1.05rem var(--display);letter-spacing:.34em;text-transform:uppercase}
-.brand img{width:36px;height:36px;border-radius:3px}
-.brand small{display:block;font:500 .6rem var(--mono);letter-spacing:.24em;color:var(--gold);margin-top:2px}
+.nav{display:flex;align-items:center;height:92px}
+.brand{display:flex;align-items:center;gap:18px;text-decoration:none;font:300 1.5rem var(--display);letter-spacing:.3em;text-transform:uppercase}
+.brand img{width:60px;height:60px;border-radius:4px}
+.brand small{display:block;font:500 .75rem var(--mono);letter-spacing:.24em;color:var(--gold);margin-top:4px}
 .links{display:flex;gap:34px;margin-left:auto;margin-right:34px}
 .links a{font:500 .72rem var(--mono);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:#c9ccd4}
 .links a:hover{color:var(--gold)}
@@ -109,7 +109,7 @@ header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-botto
 .mark::before{content:"";position:absolute;left:50%;top:50%;width:min(1100px,140vw);aspect-ratio:2/1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(201,166,107,.13),transparent 70%);pointer-events:none}
 .mark img{position:relative;width:min(980px,100%);height:auto;-webkit-mask-image:radial-gradient(closest-side,#000 62%,transparent 100%);mask-image:radial-gradient(closest-side,#000 62%,transparent 100%)}
 .draft{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:60;padding:7px 12px;background:rgba(7,9,14,.82);border:1px solid var(--gold);color:var(--gold2);font:500 .62rem var(--mono);letter-spacing:.16em;text-transform:uppercase;pointer-events:none;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-.hero-in{padding-top:140px;padding-bottom:20px;width:100%}
+.hero-in{padding-top:150px;padding-bottom:20px;width:100%}
 .hero .eyebrow,.coords{text-shadow:0 1px 14px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.7)}
 .hero .eyebrow{color:var(--gold2)}
 .hero h1{font-size:clamp(2.7rem,9.4vw,8rem);font-weight:200;line-height:.98;letter-spacing:.005em;margin-top:6px}
@@ -271,7 +271,10 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   form{grid-template-columns:1fr;padding:26px 22px}
   .cta-row .btn{width:100%}
   .actions .btn{display:none}
-  .brand small{display:none}
+  .nav{height:80px}
+  .brand{gap:12px;font-size:1.2rem;letter-spacing:.24em}
+  .brand img{width:48px;height:48px}
+  .brand small{font-size:.62rem;letter-spacing:.2em}
   .coords{display:none}
   .hero-in{padding-top:120px}
   .frame::after{inset:14px -10px -14px 10px}
@@ -296,7 +299,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <header id="top">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Andrei NCC Roma, torna in alto"><img src="img/logo.webp" alt="" width="40" height="40"><span>Andrei<small>NCC Roma</small></span></a>
+    <a class="brand" href="#top" aria-label="Andrei NCC Roma, torna in alto"><img src="img/logo.webp" alt="" width="60" height="60"><span>Andrei<small>NCC Roma</small></span></a>
     <nav class="links" id="links" aria-label="Principale">
       <a href="#servizi">Servizi</a>
       <a href="#tariffe">Tariffe</a>
