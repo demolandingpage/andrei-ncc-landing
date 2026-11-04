@@ -53,7 +53,7 @@
   --sans:"Inter",system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 body{font-family:var(--sans);color:var(--fg);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
@@ -83,10 +83,10 @@ em{font-family:var(--italic);font-style:italic;font-weight:500;text-transform:no
 /* header */
 header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
 header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
-.nav{display:flex;align-items:center;height:92px}
-.brand{display:flex;align-items:center;gap:18px;text-decoration:none;font:300 1.5rem var(--display);letter-spacing:.3em;text-transform:uppercase}
-.brand img{width:60px;height:60px;border-radius:4px}
-.brand small{display:block;font:500 .75rem var(--mono);letter-spacing:.24em;color:var(--gold);margin-top:4px}
+.nav{display:flex;align-items:center;height:96px}
+.brand{display:flex;align-items:center;gap:20px;text-decoration:none}
+.brand img{height:68px;width:auto;display:block}
+.brand small{padding-left:20px;border-left:1px solid var(--line);font:500 .78rem var(--mono);letter-spacing:.26em;text-transform:uppercase;color:var(--gold2);white-space:nowrap}
 .links{display:flex;gap:34px;margin-left:auto;margin-right:34px}
 .links a{font:500 .72rem var(--mono);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:#c9ccd4}
 .links a:hover{color:var(--gold)}
@@ -221,6 +221,18 @@ details p{margin-top:14px;color:var(--muted);max-width:62ch}
 .cta::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--bg),rgba(7,9,14,.55) 30%,rgba(7,9,14,.62) 70%,var(--bg))}
 .cta h2{margin:0 auto 38px;max-width:16ch;font-size:clamp(2.2rem,6vw,5rem);font-weight:200}
 
+/* informative in finestra */
+.ldlg{width:min(940px,calc(100vw - 32px));max-height:88vh;padding:0;border:1px solid rgba(201,166,107,.5);background:var(--bg2);color:var(--fg);overflow:auto;overscroll-behavior:contain}
+.ldlg::backdrop{background:rgba(3,5,9,.82);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.ldlg-in{position:relative;padding:clamp(26px,4vw,52px)}
+.ldlg h2{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:0}
+.ldlg h3{font-size:.86rem;margin-bottom:8px}
+.ldlg p{font-size:.88rem;color:var(--muted);max-width:64ch}
+.ldlg .eyebrow{margin-bottom:14px}
+.ldlg .legal-grid.one{grid-template-columns:1fr}
+.ldlg .upd{margin-top:34px;font:400 .68rem var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.ldlg-x{position:absolute;top:12px;right:14px;width:44px;height:44px;display:grid;place-items:center;background:none;border:1px solid var(--line);color:var(--fg);font:300 1.6rem/1 var(--display);cursor:pointer}
+.ldlg-x:hover{border-color:var(--gold);color:var(--gold)}
 /* legal & footer */
 .legal{padding:84px 0;border-top:1px solid var(--line)}
 .legal h2{font-size:clamp(1.6rem,3vw,2.2rem)}
@@ -271,10 +283,10 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   form{grid-template-columns:1fr;padding:26px 22px}
   .cta-row .btn{width:100%}
   .actions .btn{display:none}
-  .nav{height:80px}
-  .brand{gap:12px;font-size:1.2rem;letter-spacing:.24em}
-  .brand img{width:48px;height:48px}
-  .brand small{font-size:.62rem;letter-spacing:.2em}
+  .nav{height:84px}
+  .brand{gap:12px}
+  .brand img{height:54px}
+  .brand small{display:none}
   .coords{display:none}
   .hero-in{padding-top:120px}
   .frame::after{inset:14px -10px -14px 10px}
@@ -299,7 +311,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <header id="top">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Andrei NCC Roma, torna in alto"><img src="img/logo.webp" alt="" width="60" height="60"><span>Andrei<small>NCC Roma</small></span></a>
+    <a class="brand" href="#top" aria-label="Andrei Private Transfers, NCC Roma: torna in alto"><img src="img/logo-head.webp" alt="Andrei Private Transfers" width="996" height="408"><small>NCC Roma</small></a>
     <nav class="links" id="links" aria-label="Principale">
       <a href="#servizi">Servizi</a>
       <a href="#tariffe">Tariffe</a>
@@ -511,10 +523,12 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   </div>
 </section>
 
-<section id="privacy" class="legal">
-  <div class="wrap">
+<!-- INFORMATIVE (si aprono dai link nel footer) -->
+<dialog id="privacy" class="ldlg" aria-labelledby="privacy-t">
+  <div class="ldlg-in">
+    <button class="ldlg-x" type="button" data-close aria-label="Chiudi">×</button>
     <p class="eyebrow">Informazioni legali</p>
-    <h2>Privacy e cookie</h2>
+    <h2 id="privacy-t">Informativa privacy</h2>
     <div class="legal-grid">
       <div><h3>Titolare del trattamento</h3><p>Mario Rossi, ditta individuale, Via Esempio 1, 00100 Roma (RM). P.IVA 12345678901. Email: andreiprivatetransfers@gmail.com · PEC: mario.rossi@pec.example.it.</p></div>
       <div><h3>Quali dati raccogliamo</h3><p>Solo quelli che inserisci nel modulo di prenotazione: nome, data e ora, partenza, destinazione, numero di passeggeri e valigie e, se vuoi, codice del volo e note. Ti chiediamo di non inserire dati particolari, ad esempio sulla salute.</p></div>
@@ -522,18 +536,28 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
       <div><h3>Come funziona il modulo</h3><p>Questo sito non salva i dati del modulo e non li invia a nessun server. Quando premi invio prepariamo un messaggio WhatsApp e sei tu a inviarlo. WhatsApp è un servizio di Meta e tratta i dati secondo la propria informativa. Noi riceviamo il messaggio e lo conserviamo per il tempo necessario a gestire la richiesta e gli obblighi fiscali e contabili.</p></div>
       <div><h3>I tuoi diritti</h3><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione e opposizione (artt. 15-22 GDPR) scrivendo ai contatti qui sopra. Puoi anche presentare reclamo al Garante per la protezione dei dati personali (garanteprivacy.it).</p></div>
       <div><h3>Dati di navigazione</h3><p>Il fornitore di hosting può registrare dati tecnici di accesso, come l'indirizzo IP, per la sicurezza e il funzionamento del servizio.</p></div>
-      <div id="cookie"><h3>Cookie</h3><p>Il sito non usa cookie di profilazione, statistici o di terze parti e non incorpora contenuti esterni. Salva nel browser solo la lingua scelta (IT o EN), un dato tecnico che non ti identifica. Per questo non mostriamo un banner cookie.</p><p>I font sono ospitati sul sito stesso, quindi il tuo indirizzo IP non viene inviato a servizi esterni.</p></div>
     </div>
     <p class="upd">Ultimo aggiornamento: 4 novembre 2026</p>
   </div>
-</section>
+</dialog>
+<dialog id="cookie" class="ldlg" aria-labelledby="cookie-t">
+  <div class="ldlg-in">
+    <button class="ldlg-x" type="button" data-close aria-label="Chiudi">×</button>
+    <p class="eyebrow">Informazioni legali</p>
+    <h2 id="cookie-t">Cookie policy</h2>
+    <div class="legal-grid one">
+      <div><p>Il sito non usa cookie di profilazione, statistici o di terze parti e non incorpora contenuti esterni. Salva nel browser solo la lingua scelta (IT o EN), un dato tecnico che non ti identifica. Per questo non mostriamo un banner cookie.</p><p>I font sono ospitati sul sito stesso, quindi il tuo indirizzo IP non viene inviato a servizi esterni.</p></div>
+    </div>
+    <p class="upd">Ultimo aggiornamento: 4 novembre 2026</p>
+  </div>
+</dialog>
 </main>
 
 <footer>
   <div class="wrap">
     <div><strong>Andrei Private Transfers</strong>Mario Rossi · Via Esempio 1, 00100 Roma (RM)<br>P.IVA 12345678901 · REA RM-1234567<br>Autorizzazione NCC n. 0000 · Roma Capitale<br>PEC mario.rossi@pec.example.it</div>
     <div><a href="tel:+393271996272">+39 327 199 6272</a> · <a href="mailto:andreiprivatetransfers@gmail.com">andreiprivatetransfers@gmail.com</a></div>
-    <div>© <span id="y"></span> Andrei NCC Roma · Tutti i diritti riservati<br><a href="#privacy">Privacy</a> · <a href="#cookie">Cookie</a></div>
+    <div>© <span id="y"></span> Andrei NCC Roma · Tutti i diritti riservati<br><a href="#privacy">Privacy Policy</a> · <a href="#cookie">Cookie Policy</a></div>
   </div>
 </footer>
 
@@ -638,6 +662,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "qui.":"here.",
     'NCC Roma, noleggio con conducente:':'Rome chauffeur service, private hire:',
     'Bozza 1 · dati fittizi':'Draft 1 · sample data',
+    'Informativa privacy':'Privacy policy','Cookie policy':'Cookie policy',
     'Domande frequenti':'FAQ','Prima di prenotare':'Before you book',
     'Che differenza c\'è tra NCC e taxi?':'What is the difference between NCC and a taxi?',
     'L\'NCC si prenota in anticipo: prezzo concordato prima, autista dedicato e veicolo premium. Niente tassametro, niente attese in coda al posteggio.':'An NCC is booked in advance: price agreed beforehand, a dedicated driver and a premium vehicle. No meter, no queuing at a taxi rank.',
@@ -697,6 +722,18 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   var hi=document.getElementById('heroimg'),mm=window.matchMedia('(prefers-reduced-motion: reduce)'),tick=false;
   function par(){tick=false;if(mm.matches)return;var y=Math.min(window.scrollY,innerHeight);hi.style.setProperty('--py',(y*.12)+'px')}
   addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(par)}},{passive:true});
+
+  /* ---------- informative (privacy / cookie) ---------- */
+  var LG=['privacy','cookie'];
+  function openL(id){var d=document.getElementById(id);if(d&&!d.open)d.showModal()}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href="#privacy"],a[href="#cookie"]');
+    if(a){e.preventDefault();openL(a.getAttribute('href').slice(1));return}
+    if(e.target.closest&&e.target.closest('[data-close]')){var d=e.target.closest('dialog');if(d)d.close();return}
+    if(e.target.tagName==='DIALOG')e.target.close();
+  });
+  LG.forEach(function(id){document.getElementById(id).addEventListener('close',function(){if(LG.indexOf(location.hash.slice(1))>-1)history.replaceState(null,'',location.pathname+location.search)})});
+  if(LG.indexOf(location.hash.slice(1))>-1)openL(location.hash.slice(1));
 
   /* ---------- form -> WhatsApp ---------- */
   document.getElementById('bf').addEventListener('submit',function(e){
