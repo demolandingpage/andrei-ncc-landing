@@ -30,4 +30,14 @@ Anteprima locale: `python -m http.server` nella cartella, poi apri http://localh
 - I dati del titolare sono **fittizi**: Mario Rossi, Via Esempio 1, 00100 Roma, P.IVA 12345678901, REA RM-1234567, autorizzazione NCC n. 0000, PEC mario.rossi@pec.example.it. Compaiono nel footer e nella sezione Privacy.
 - Telefono ed email sono quelli reali di Andrei.
 - La privacy policy è una bozza generica: da far verificare.
-- Il sito non è ancora escluso dai motori di ricerca: finché i dati sono fittizi conviene aggiungere `<meta name="robots" content="noindex, nofollow">` in `index.html`, e toglierlo alla messa online definitiva.
+- **SEO:** la pagina è indicizzabile (nessun `noindex`). I dati fittizi non devono restare online sotto un indirizzo indicizzato: sostituirli prima di chiedere l'indicizzazione.
+
+## SEO
+
+Già presenti: title e description con parole chiave, H1/H2/H3 strutturati, canonical, Open Graph e Twitter Card, dati strutturati JSON-LD (TaxiService/LocalBusiness con tariffe, orari, zona servita, FAQPage), `robots.txt`, `sitemap.xml`, alt su tutte le immagini, font e immagini ottimizzati.
+
+Da fare alla messa online sul dominio definitivo:
+1. Sostituire l'URL `https://demolandingpage.github.io/andrei-ncc-landing/` con il dominio reale in `index.html` (canonical, og:url, og:image, JSON-LD), `robots.txt` e `sitemap.xml`.
+2. Registrare il sito su Google Search Console e inviare la sitemap.
+3. Creare e verificare la scheda Google Business Profile (indirizzo reale, orari, foto, recensioni vere): è il fattore principale per le ricerche "NCC Roma".
+4. Inserire indirizzo, P.IVA e telefono reali (devono coincidere con la scheda Google).

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://demolandingpage.github.io/andrei-ncc-landing/sitemap.xml
