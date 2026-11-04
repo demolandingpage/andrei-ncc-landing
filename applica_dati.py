@@ -80,7 +80,8 @@ sub("n. " + FAKE["aut"], "n. " + aut)
 sub("no. " + FAKE["aut"], "no. " + aut)
 sub(FAKE["ente"], ente)
 
-# 3) dominio, indicizzazione
+# 3) dominio, indicizzazione, rimozione etichetta "Bozza"
+s = re.sub(r"<!--DRAFT-->.*?<!--/DRAFT-->\s*", "", s, flags=re.S)
 sub(FAKE["dominio"], dominio)
 if not cfg.get("indicizzabile", True):
     s = s.replace('<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">',

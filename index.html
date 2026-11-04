@@ -108,6 +108,7 @@ header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-botto
 .mark{position:relative;display:flex;justify-content:center;padding:clamp(8px,3vw,40px) var(--gut,16px) clamp(8px,3vw,40px);background:var(--bg);overflow:hidden}
 .mark::before{content:"";position:absolute;left:50%;top:50%;width:min(760px,130vw);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(201,166,107,.13),transparent 70%);pointer-events:none}
 .mark img{position:relative;width:min(440px,84vw);height:auto;-webkit-mask-image:radial-gradient(closest-side,#000 60%,transparent 99%);mask-image:radial-gradient(closest-side,#000 60%,transparent 99%)}
+.draft{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:60;padding:7px 12px;background:rgba(7,9,14,.82);border:1px solid var(--gold);color:var(--gold2);font:500 .62rem var(--mono);letter-spacing:.16em;text-transform:uppercase;pointer-events:none;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .hero-in{padding-top:140px;padding-bottom:20px;width:100%}
 .hero .eyebrow,.coords{text-shadow:0 1px 14px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.7)}
 .hero .eyebrow{color:var(--gold2)}
@@ -535,6 +536,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <a class="float" href="https://wa.me/393271996272?text=Ciao%20Andrei%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
+<!--DRAFT--><div class="draft" role="note">Bozza 1 · dati fittizi</div><!--/DRAFT-->
 <script>
 (function(){
   var h=document.querySelector('header');
@@ -632,6 +634,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "comincia":"starts",
     "qui.":"here.",
     'NCC Roma, noleggio con conducente:':'Rome chauffeur service, private hire:',
+    'Bozza 1 · dati fittizi':'Draft 1 · sample data',
     'Domande frequenti':'FAQ','Prima di prenotare':'Before you book',
     'Che differenza c\'è tra NCC e taxi?':'What is the difference between NCC and a taxi?',
     'L\'NCC si prenota in anticipo: prezzo concordato prima, autista dedicato e veicolo premium. Niente tassametro, niente attese in coda al posteggio.':'An NCC is booked in advance: price agreed beforehand, a dedicated driver and a premium vehicle. No meter, no queuing at a taxi rank.',
