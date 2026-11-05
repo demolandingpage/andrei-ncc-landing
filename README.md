@@ -6,7 +6,7 @@ Landing page statica (HTML/CSS/JS, nessuna build) per BlackVans Transfer, NCC a 
 
 **https://demolandingpage.github.io/andrei-ncc-landing/**
 
-> **Bozza 1** – anteprima da sottoporre al cliente: i dati del titolare sono fittizi (vedi sotto).
+> **Bozza 2** – anteprima da sottoporre al cliente: i dati del titolare sono fittizi (vedi sotto).
 > Se il link non risponde: Settings → Pages → Source "Deploy from a branch", branch `main`, cartella `/ (root)`. Dopo il salvataggio servono 1–2 minuti.
 
 ## Contenuto
@@ -29,7 +29,7 @@ Anteprima locale: `python -m http.server` nella cartella, poi apri http://localh
 
 1. Raccogliere i dati con la lista in [CHECKLIST-DATI.md](CHECKLIST-DATI.md).
 2. Compilare `dati-titolare.json` (nome, indirizzo, P.IVA, REA, autorizzazione NCC, PEC, dominio, link Google Business Profile e social).
-3. Eseguire una sola volta `python applica_dati.py`: aggiorna footer, privacy, versione inglese, dati strutturati, canonical, Open Graph, `robots.txt` e `sitemap.xml`, toglie l'etichetta «Bozza 1» e controlla che non resti nessun dato fittizio. Con `"indicizzabile": false` mette il `noindex`.
+3. Eseguire una sola volta `python applica_dati.py`: aggiorna footer, privacy, versione inglese, dati strutturati, canonical, Open Graph, `robots.txt` e `sitemap.xml`, toglie l'etichetta «Bozza» e controlla che non resti nessun dato fittizio. Con `"indicizzabile": false` mette il `noindex`.
 4. Controllare la pagina, pubblicare, registrare il sito su Search Console e inviare la sitemap.
 
 ## Da sostituire prima della pubblicazione definitiva
