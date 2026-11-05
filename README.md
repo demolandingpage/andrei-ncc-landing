@@ -1,6 +1,6 @@
-# Andrei NCC Roma – landing page
+# BlackVans Transfer – landing page
 
-Landing page statica (HTML/CSS/JS, nessuna build) per Andrei Private Transfers, NCC a Roma. Italiano e inglese.
+Landing page statica (HTML/CSS/JS, nessuna build) per BlackVans Transfer, NCC a Roma. Italiano e inglese.
 
 ## Link per accedere
 
@@ -35,7 +35,7 @@ Anteprima locale: `python -m http.server` nella cartella, poi apri http://localh
 ## Da sostituire prima della pubblicazione definitiva
 
 - I dati del titolare sono **fittizi**: Mario Rossi, Via Esempio 1, 00100 Roma, P.IVA 12345678901, REA RM-1234567, autorizzazione NCC n. 0000, PEC mario.rossi@pec.example.it. Compaiono nel footer e nella sezione Privacy.
-- Telefono ed email sono quelli reali di Andrei.
+- Telefono ed email sono quelli reali del cliente.
 - La privacy policy è una bozza generica: da far verificare.
 - **SEO:** la pagina è indicizzabile (nessun `noindex`). I dati fittizi non devono restare online sotto un indirizzo indicizzato: sostituirli prima di chiedere l'indicizzazione.
 
