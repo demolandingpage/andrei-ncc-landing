@@ -149,6 +149,8 @@ header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-botto
 .rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:56px;padding-bottom:18px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
 .rail figure{flex:0 0 min(78vw,390px);scroll-snap-align:start}
 .rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;filter:saturate(.92)}
+.rail figure.wide{flex-basis:min(88vw,730px)}
+.rail figure.wide img{aspect-ratio:3/2}
 .rail figcaption{margin-top:12px;font:400 .68rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .fleet-foot{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;margin-top:20px}
 .specs{display:flex;flex-wrap:wrap;gap:10px}
@@ -409,6 +411,12 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     <p class="eyebrow rv">La flotta</p>
     <h2 class="rv">Mercedes Premium Van, per viaggiare comodi</h2>
     <div class="rail rv" id="rail" tabindex="0" role="region" aria-label="Galleria">
+      <figure><img loading="lazy" src="img/van7.webp" alt="Mercedes Premium Van nero in una via del centro storico di Roma" width="900" height="1125"><figcaption>Nel centro storico</figcaption></figure>
+      <figure><img loading="lazy" src="img/van8.webp" alt="Mercedes Premium Van nero in banchina davanti a una nave da crociera" width="900" height="1125"><figcaption>Al porto</figcaption></figure>
+      <figure class="wide"><img loading="lazy" src="img/van9.webp" alt="Mercedes Premium Van nero di profilo al porto crociere" width="1200" height="800"><figcaption>Transfer porto crociere</figcaption></figure>
+      <figure><img loading="lazy" src="img/van10.webp" alt="Interni del Mercedes Premium Van con sedili in pelle regolabili" width="900" height="1125"><figcaption>Sedili in pelle</figcaption></figure>
+      <figure><img loading="lazy" src="img/van11.webp" alt="Il Colosseo all'alba riflesso nello specchietto del van" width="900" height="1125"><figcaption>Alba verso il Colosseo</figcaption></figure>
+      <figure><img loading="lazy" src="img/van12.webp" alt="Il Colosseo all'alba lungo una strada deserta di Roma" width="900" height="1125"><figcaption>Roma all'alba</figcaption></figure>
       <figure><img loading="lazy" src="img/van1.webp" alt="Mercedes Premium Van con porta scorrevole aperta davanti a un hotel" width="900" height="1125"><figcaption>Ritiro in hotel</figcaption></figure>
       <figure><img loading="lazy" src="img/van2.webp" alt="Interni in pelle con sedili spaziosi" width="900" height="1125"><figcaption>Interni in pelle</figcaption></figure>
       <figure><img loading="lazy" src="img/van3.webp" alt="Mercedes Premium Van di profilo" width="900" height="1125"><figcaption>Di profilo</figcaption></figure>
@@ -661,6 +669,12 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "Roma–Siena":"Rome–Siena",
     "e altre destinazioni":"and other destinations",
     "Richiedi preventivo":"Request a quote",
+    "Nel centro storico":"In the historic centre",
+    "Al porto":"At the port",
+    "Transfer porto crociere":"Cruise port transfer",
+    "Sedili in pelle":"Leather seats",
+    "Alba verso il Colosseo":"Dawn towards the Colosseum",
+    "Roma all'alba":"Rome at dawn",
     'Domande frequenti':'FAQ','Prima di prenotare':'Before you book',
     'Che differenza c\'è tra NCC e taxi?':'What is the difference between NCC and a taxi?',
     'L\'NCC si prenota in anticipo: prezzo concordato prima, autista dedicato e veicolo premium. Niente tassametro, niente attese in coda al posteggio.':'An NCC is booked in advance: price agreed beforehand, a dedicated driver and a premium vehicle. No meter, no queuing at a taxi rank.',
