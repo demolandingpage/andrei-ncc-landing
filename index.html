@@ -107,10 +107,16 @@ header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-botto
 .arc{position:absolute;right:-8vw;top:14vh;width:min(46vw,620px);z-index:-1;opacity:.9;pointer-events:none}
 .coords{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:108px;font:400 .68rem var(--mono);letter-spacing:.2em;color:#c9ccd4;text-align:right;line-height:1.9}
 .draft{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:60;padding:7px 12px;background:rgba(7,9,14,.82);border:1px solid var(--gold);color:var(--gold2);font:500 .62rem var(--mono);letter-spacing:.16em;text-transform:uppercase;pointer-events:none;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-.hero-in{padding-top:150px;padding-bottom:20px;width:100%}
+.hero-in{padding-top:275px;padding-bottom:20px;width:100%}
 .hero .eyebrow,.coords{text-shadow:0 1px 14px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.7)}
 .hero .eyebrow{color:var(--gold2)}
-.hlogo{display:block;width:min(300px,62vw);height:auto;margin:0 0 22px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(180deg,transparent,#000 7%,#000 93%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(180deg,transparent,#000 7%,#000 93%,transparent);mask-composite:intersect}
+.hl-wrap{position:absolute;left:0;right:0;top:74px;z-index:1;pointer-events:none}
+.hl{width:237px}
+.hl img{display:block;width:100%;height:auto;margin-top:-4px}
+.hl p{margin:-6px 0 0;text-align:center;font:500 .46rem var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#ece8df;white-space:nowrap;text-shadow:0 0 6px #000,0 1px 12px #000,0 0 3px #000}
+.hl p i{font-style:normal;color:var(--gold2);margin:0 .25em}
+.hl p::after{content:"";display:block;height:3px;margin:8px 6% 0;background:linear-gradient(90deg,transparent,#1f9d55 18%,#1f9d55 33%,#ece8df 36%,#ece8df 64%,#d63a3a 67%,#d63a3a 82%,transparent);border-radius:2px}
+@media(min-width:701px){.hl-wrap{top:92px}.hl{width:356px}.hl p{font-size:.6rem;letter-spacing:.2em}}
 .hero h1{font-size:clamp(2.7rem,9.4vw,8rem);font-weight:200;line-height:.98;letter-spacing:.005em;margin-top:6px}
 .hero h1 em{font-weight:500;padding-right:.04em}
 .hero-row{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:end;margin-top:34px}
@@ -293,7 +299,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   .brand img{height:40px}
   .brand small{display:none}
   .coords{display:none}
-  .hero-in{padding-top:120px}
+  .hero-in{padding-top:225px}
   .frame::after{inset:14px -10px -14px 10px}
   .cta{padding:110px 0}
   .fleet-foot{flex-direction:column;align-items:flex-start}
@@ -337,8 +343,8 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   <div class="hero-bg"><img id="heroimg" src="img/hero.webp" width="1400" height="1750" alt="Mercedes Premium Van nero davanti al Tempio di Adriano a Roma, di sera" fetchpriority="high"></div>
   <svg class="arc" viewBox="0 0 400 400" aria-hidden="true"><circle cx="400" cy="200" r="198" fill="none" stroke="rgba(236,232,223,.28)" stroke-width="1"/><circle cx="400" cy="200" r="150" fill="none" stroke="rgba(201,166,107,.35)" stroke-width="1" stroke-dasharray="2 7"/></svg>
   <p class="coords" aria-hidden="true">41.9028° N<br>12.4964° E</p>
+  <div class="wrap hl-wrap" aria-hidden="true"><div class="hl"><img src="img/logo-art.webp" alt="" width="760" height="298"><p>Rome <i>•</i> Airports <i>•</i> Ports <i>•</i> Private transfers</p></div></div>
   <div class="wrap hero-in">
-    <img class="hlogo" src="img/logo-full-sm.webp" srcset="img/logo-full-sm.webp 760w, img/logo-full.webp 1522w" sizes="(max-width:700px) 62vw, 300px" alt="" width="760" height="491" aria-hidden="true">
     <p class="eyebrow">NCC · Noleggio con conducente · Roma</p>
     <h1><span class="sr">NCC Roma, noleggio con conducente: </span>Arriva a Roma<br><em>con</em> stile.</h1>
     <div class="hero-row">
