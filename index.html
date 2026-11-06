@@ -110,6 +110,7 @@ header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-botto
 .hero-in{padding-top:150px;padding-bottom:20px;width:100%}
 .hero .eyebrow,.coords{text-shadow:0 1px 14px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.7)}
 .hero .eyebrow{color:var(--gold2)}
+.hlogo{display:block;width:min(300px,62vw);height:auto;margin:0 0 22px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(180deg,transparent,#000 7%,#000 93%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(180deg,transparent,#000 7%,#000 93%,transparent);mask-composite:intersect}
 .hero h1{font-size:clamp(2.7rem,9.4vw,8rem);font-weight:200;line-height:.98;letter-spacing:.005em;margin-top:6px}
 .hero h1 em{font-weight:500;padding-right:.04em}
 .hero-row{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:end;margin-top:34px}
@@ -337,6 +338,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   <svg class="arc" viewBox="0 0 400 400" aria-hidden="true"><circle cx="400" cy="200" r="198" fill="none" stroke="rgba(236,232,223,.28)" stroke-width="1"/><circle cx="400" cy="200" r="150" fill="none" stroke="rgba(201,166,107,.35)" stroke-width="1" stroke-dasharray="2 7"/></svg>
   <p class="coords" aria-hidden="true">41.9028° N<br>12.4964° E</p>
   <div class="wrap hero-in">
+    <img class="hlogo" src="img/logo-full-sm.webp" srcset="img/logo-full-sm.webp 760w, img/logo-full.webp 1522w" sizes="(max-width:700px) 62vw, 300px" alt="" width="760" height="491" aria-hidden="true">
     <p class="eyebrow">NCC · Noleggio con conducente · Roma</p>
     <h1><span class="sr">NCC Roma, noleggio con conducente: </span>Arriva a Roma<br><em>con</em> stile.</h1>
     <div class="hero-row">
