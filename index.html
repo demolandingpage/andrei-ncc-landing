@@ -153,18 +153,25 @@ header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-botto
 .long p:last-child{color:#d7d4cc}
 
 /* fleet */
-.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:56px;padding-bottom:18px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
-.rail figure{flex:0 0 min(78vw,390px);scroll-snap-align:start}
-.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;filter:saturate(.92)}
-.rail figure.wide{flex-basis:min(88vw,730px)}
-.rail figure.wide img{aspect-ratio:3/2}
-.rail figcaption{margin-top:12px;font:400 .68rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.gal{display:grid;gap:18px;margin-top:56px}
+.grow{display:flex;gap:18px}
+.gal figure{flex:var(--r) 1 0;min-width:0;position:relative;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s,z-index 0s .5s}
+.gb{display:block;width:100%;padding:0;border:0;background:var(--bg2);cursor:zoom-in;overflow:hidden;border-radius:2px;line-height:0}
+.gal img{display:block;width:100%;height:auto;filter:saturate(.92);transition:filter .5s}
+.gal figcaption{margin-top:12px;font:400 .68rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);transition:color .4s}
+@media(hover:hover){.gal figure:hover{transform:scale(1.14);z-index:6;transition-delay:0s;box-shadow:0 28px 70px rgba(0,0,0,.75)}.gal figure:hover img{filter:none}.gal figure:hover figcaption{color:var(--gold2)}}
+.gb:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(max-width:900px){.gal{grid-template-columns:1fr 1fr;gap:14px}.grow{display:contents}.gal figure:nth-child(n){flex:none}.gal .grow:first-child figure:first-child{grid-column:1/-1}.gal .grow:last-child figure:last-child{grid-column:1/-1;justify-self:center;width:calc(50% - 7px)}}
+.lb{width:min(1100px,96vw);max-height:94vh;padding:0;border:0;background:rgba(5,7,11,.96);color:var(--fg);overflow:hidden}
+.lb::backdrop{background:rgba(2,3,6,.86);backdrop-filter:blur(6px)}
+.lb img{display:block;max-width:100%;max-height:82vh;margin:0 auto;width:auto;height:auto}
+.lb p{text-align:center;margin:0;padding:14px 16px 18px;font:400 .72rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold2)}
+.lb button{position:absolute;top:50%;width:48px;height:48px;margin-top:-24px;border:1px solid var(--line2);background:rgba(7,9,14,.7);color:var(--fg);font-size:1.2rem;cursor:pointer}
+.lb button:hover{border-color:var(--gold);color:var(--gold)}
+.lb .lp{left:10px}.lb .ln{right:10px}.lb .lx{top:22px;right:10px;margin:0}
 .fleet-foot{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;margin-top:20px}
 .specs{display:flex;flex-wrap:wrap;gap:10px}
 .specs span{border:1px solid var(--line2);padding:9px 16px;font:400 .7rem var(--mono);letter-spacing:.14em;text-transform:uppercase}
-.rail-ctl{display:flex;gap:10px}
-.rail-ctl button{width:48px;height:48px;border:1px solid var(--line2);background:none;color:var(--fg);font-size:1.1rem;cursor:pointer;border-radius:2px}
-.rail-ctl button:hover{border-color:var(--gold);color:var(--gold)}
 
 /* why */
 .why{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 44px;margin-top:64px}
@@ -420,26 +427,33 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   <div class="wrap">
     <p class="eyebrow rv">La flotta</p>
     <h2 class="rv">Mercedes Premium Van, per viaggiare comodi</h2>
-    <div class="rail rv" id="rail" tabindex="0" role="region" aria-label="Galleria">
-      <figure><img loading="lazy" src="img/van7.webp" alt="Mercedes Premium Van nero in una via del centro storico di Roma" width="900" height="1125"><figcaption>Nel centro storico</figcaption></figure>
-      <figure><img loading="lazy" src="img/van8.webp" alt="Mercedes Premium Van nero in banchina davanti a una nave da crociera" width="900" height="1125"><figcaption>Al porto</figcaption></figure>
-      <figure class="wide"><img loading="lazy" src="img/van9.webp" alt="Mercedes Premium Van nero di profilo al porto crociere" width="1200" height="800"><figcaption>Transfer porto crociere</figcaption></figure>
-      <figure><img loading="lazy" src="img/van10.webp" alt="Interni del Mercedes Premium Van con sedili in pelle regolabili" width="900" height="1125"><figcaption>Sedili in pelle</figcaption></figure>
-      <figure><img loading="lazy" src="img/van11.webp" alt="Il Colosseo all'alba riflesso nello specchietto del van" width="900" height="1125"><figcaption>Alba verso il Colosseo</figcaption></figure>
-      <figure><img loading="lazy" src="img/van12.webp" alt="Il Colosseo all'alba lungo una strada deserta di Roma" width="900" height="1125"><figcaption>Roma all'alba</figcaption></figure>
-      <figure><img loading="lazy" src="img/van1.webp" alt="Mercedes Premium Van con porta scorrevole aperta davanti a un hotel" width="900" height="1125"><figcaption>Ritiro in hotel</figcaption></figure>
-      <figure><img loading="lazy" src="img/van2.webp" alt="Interni in pelle con sedili spaziosi" width="900" height="1125"><figcaption>Interni in pelle</figcaption></figure>
-      <figure><img loading="lazy" src="img/van3.webp" alt="Mercedes Premium Van di profilo" width="900" height="1125"><figcaption>Di profilo</figcaption></figure>
-      <figure><img loading="lazy" src="img/van4.webp" alt="Mercedes Premium Van davanti a un hotel di lusso" width="900" height="1125"><figcaption>Hotel di lusso</figcaption></figure>
-      <figure><img loading="lazy" src="img/van5.webp" alt="Mercedes Premium Van al ritiro clienti in hotel" width="900" height="1125"><figcaption>Ritiro clienti</figcaption></figure>
-      <figure><img loading="lazy" src="img/van6.webp" alt="Mercedes Premium Van davanti al Pantheon" width="900" height="1125"><figcaption>Davanti al Pantheon</figcaption></figure>
+    <div class="gal" id="gal">
+      <div class="grow rv">
+        <figure style="--r:1.5"><button type="button" class="gb" data-src="img/van9.webp" aria-label="Mercedes Premium Van nero di profilo al porto crociere"><img loading="lazy" src="img/van9.webp" alt="Mercedes Premium Van nero di profilo al porto crociere" width="1200" height="800"></button><figcaption>Transfer porto crociere</figcaption></figure>
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van7.webp" aria-label="Mercedes Premium Van nero in una via del centro storico di Roma"><img loading="lazy" src="img/van7.webp" alt="Mercedes Premium Van nero in una via del centro storico di Roma" width="900" height="1125"></button><figcaption>Nel centro storico</figcaption></figure>
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van8.webp" aria-label="Mercedes Premium Van nero in banchina davanti a una nave da crociera"><img loading="lazy" src="img/van8.webp" alt="Mercedes Premium Van nero in banchina davanti a una nave da crociera" width="900" height="1125"></button><figcaption>Al porto</figcaption></figure>
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van10.webp" aria-label="Interni del Mercedes Premium Van con sedili in pelle regolabili"><img loading="lazy" src="img/van10.webp" alt="Interni del Mercedes Premium Van con sedili in pelle regolabili" width="900" height="1125"></button><figcaption>Sedili in pelle</figcaption></figure>
+      </div>
+      <div class="grow rv">
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van11.webp" aria-label="Il Colosseo all'alba riflesso nello specchietto del van"><img loading="lazy" src="img/van11.webp" alt="Il Colosseo all'alba riflesso nello specchietto del van" width="900" height="1125"></button><figcaption>Alba verso il Colosseo</figcaption></figure>
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van12.webp" aria-label="Il Colosseo all'alba lungo una strada deserta di Roma"><img loading="lazy" src="img/van12.webp" alt="Il Colosseo all'alba lungo una strada deserta di Roma" width="900" height="1125"></button><figcaption>Roma all'alba</figcaption></figure>
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van1.webp" aria-label="Mercedes Premium Van con porta scorrevole aperta davanti a un hotel"><img loading="lazy" src="img/van1.webp" alt="Mercedes Premium Van con porta scorrevole aperta davanti a un hotel" width="900" height="1125"></button><figcaption>Ritiro in hotel</figcaption></figure>
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van2.webp" aria-label="Interni in pelle con sedili spaziosi"><img loading="lazy" src="img/van2.webp" alt="Interni in pelle con sedili spaziosi" width="900" height="1125"></button><figcaption>Interni in pelle</figcaption></figure>
+      </div>
+      <div class="grow rv">
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van3.webp" aria-label="Mercedes Premium Van di profilo"><img loading="lazy" src="img/van3.webp" alt="Mercedes Premium Van di profilo" width="900" height="1125"></button><figcaption>Di profilo</figcaption></figure>
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van4.webp" aria-label="Mercedes Premium Van davanti a un hotel di lusso"><img loading="lazy" src="img/van4.webp" alt="Mercedes Premium Van davanti a un hotel di lusso" width="900" height="1125"></button><figcaption>Hotel di lusso</figcaption></figure>
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van5.webp" aria-label="Mercedes Premium Van al ritiro clienti in hotel"><img loading="lazy" src="img/van5.webp" alt="Mercedes Premium Van al ritiro clienti in hotel" width="900" height="1125"></button><figcaption>Ritiro clienti</figcaption></figure>
+        <figure style="--r:.8"><button type="button" class="gb" data-src="img/van6.webp" aria-label="Mercedes Premium Van davanti al Pantheon"><img loading="lazy" src="img/van6.webp" alt="Mercedes Premium Van davanti al Pantheon" width="900" height="1125"></button><figcaption>Davanti al Pantheon</figcaption></figure>
+      </div>
     </div>
     <div class="fleet-foot rv">
       <div class="specs"><span>Fino a 7 passeggeri</span><span>Ampio bagagliaio</span><span>Interni in pelle</span><span>Cambio automatico</span></div>
-      <div class="rail-ctl"><button type="button" id="rprev" aria-label="Foto precedente / Previous photo">←</button><button type="button" id="rnext" aria-label="Foto successiva / Next photo">→</button></div>
     </div>
   </div>
 </section>
+
+<dialog id="lb" class="lb" aria-label="Galleria"><button type="button" class="lx" aria-label="Chiudi">×</button><button type="button" class="lp" aria-label="Foto precedente">←</button><img alt=""><button type="button" class="ln" aria-label="Foto successiva">→</button><p></p></dialog>
 
 <!-- PERCHE' -->
 <section id="perche" class="alt">
@@ -738,10 +752,14 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   bg.addEventListener('click',function(){var o=lk.classList.toggle('open');bg.setAttribute('aria-expanded',String(o))});
   lk.addEventListener('click',function(e){if(e.target.tagName==='A'){lk.classList.remove('open');bg.setAttribute('aria-expanded','false')}});
 
-  var rail=document.getElementById('rail');
-  function rs(dir){rail.scrollBy({left:dir*Math.min(rail.clientWidth*.8,420),behavior:'smooth'})}
-  document.getElementById('rprev').addEventListener('click',function(){rs(-1)});
-  document.getElementById('rnext').addEventListener('click',function(){rs(1)});
+  var gb=[].slice.call(document.querySelectorAll('.gb')),lb=document.getElementById('lb'),li=lb.querySelector('img'),lc=lb.querySelector('p'),ci=0;
+  function show(i){ci=(i+gb.length)%gb.length;var b=gb[ci],c=b.parentNode.querySelector('figcaption');li.src=b.getAttribute('data-src');li.alt=b.getAttribute('aria-label')||'';lc.textContent=c?c.textContent:''}
+  gb.forEach(function(b,i){b.addEventListener('click',function(){show(i);if(!lb.open)lb.showModal()})});
+  lb.querySelector('.lp').addEventListener('click',function(){show(ci-1)});
+  lb.querySelector('.ln').addEventListener('click',function(){show(ci+1)});
+  lb.querySelector('.lx').addEventListener('click',function(){lb.close()});
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+  lb.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(ci-1);if(e.key==='ArrowRight')show(ci+1)});
   var hi=document.getElementById('heroimg'),mm=window.matchMedia('(prefers-reduced-motion: reduce)'),tick=false;
   function par(){tick=false;if(mm.matches)return;var y=Math.min(window.scrollY,innerHeight);hi.style.setProperty('--py',(y*.12)+'px')}
   addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(par)}},{passive:true});
