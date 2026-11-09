@@ -136,6 +136,10 @@ header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-botto
 .svc:first-child{border-left:0;padding-left:0}
 .svc:hover{background:var(--bg2)}
 .svc:first-child:hover{background:linear-gradient(90deg,transparent,var(--bg2) 12%)}
+.svc,.price,.lt li{position:relative}
+.go{color:inherit;text-decoration:none}
+.go::after{content:"";position:absolute;inset:0}
+.svc .pay{margin-top:14px;font:400 .72rem var(--mono);letter-spacing:.08em;color:#c9ccd4}
 .svc svg{width:30px;height:30px;color:var(--gold);margin-bottom:26px;stroke-width:1.3}
 .svc h3{margin-bottom:12px}
 .svc p{font-size:.92rem;color:var(--muted)}
@@ -386,10 +390,10 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     <h2 class="rv">Ogni spostamento, senza pensieri</h2>
     <p class="lead rv">Dal primo messaggio all'ultima destinazione ti seguiamo noi: tu pensa solo a goderti il viaggio.</p>
     <div class="cols4">
-      <article class="svc rv"><svg><use href="#i-plane"/></svg><h3>Transfer aeroporti di Roma</h3><p>Fiumicino e Ciampino. Monitoriamo il tuo volo: se tardi, ti aspettiamo, senza costi nascosti.</p></article>
-      <article class="svc rv"><svg><use href="#i-ship"/></svg><h3>Porto di Civitavecchia · Crociere</h3><p>Transfer da e per il porto di Civitavecchia, verso Roma e dintorni, a prezzo fisso.</p></article>
-      <article class="svc rv"><svg><use href="#i-road"/></svg><h3>Long Transfer</h3><p>Roma–Napoli, Firenze, Assisi, Cortona, Montepulciano e oltre: lunghe tratte comode, a prezzo concordato.</p></article>
-      <article class="svc rv"><svg><use href="#i-pin"/></svg><h3>Tour su misura e gite giornaliere</h3><p>Roma, Civitavecchia, Tivoli, Castelli Romani: l'itinerario lo costruiamo insieme.</p></article>
+      <article class="svc rv"><svg><use href="#i-plane"/></svg><h3><a class="go" href="#prenota" data-a="" data-b="">Transfer aeroporti di Roma</a></h3><p>Fiumicino e Ciampino. Monitoriamo il tuo volo: se tardi, ti aspettiamo, senza costi nascosti.</p><p class="pay">Sconto del 10% per i pagamenti in contanti.</p></article>
+      <article class="svc rv"><svg><use href="#i-ship"/></svg><h3><a class="go" href="#prenota" data-a="" data-b="">Porto di Civitavecchia · Crociere</a></h3><p>Transfer da e per il porto di Civitavecchia, verso Roma e dintorni, a prezzo fisso.</p></article>
+      <article class="svc rv"><svg><use href="#i-road"/></svg><h3><a class="go" href="#prenota" data-a="" data-b="">Long Transfer</a></h3><p>Roma–Napoli, Firenze, Assisi, Cortona, Montepulciano e oltre: lunghe tratte comode, a prezzo concordato.</p></article>
+      <article class="svc rv"><svg><use href="#i-pin"/></svg><h3><a class="go" href="#prenota" data-a="" data-b="">Tour su misura e gite giornaliere</a></h3><p>Roma, Civitavecchia, Tivoli, Castelli Romani: l'itinerario lo costruiamo insieme.</p></article>
     </div>
   </div>
 </section>
@@ -401,12 +405,12 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     <h2 class="rv">Prezzi chiari, decisi prima di partire</h2>
     <p class="lead rv">Tariffe indicative per veicolo, fino a 7 passeggeri. Per altre tratte il preventivo è gratuito.</p>
     <div class="prices">
-      <div class="price rv"><div><small>Roma centro →</small><strong>Aeroporto Fiumicino (FCO)</strong></div><div class="eur">€60<i>IVA incl.</i></div></div>
-      <div class="price rv"><div><small>Roma centro →</small><strong>Aeroporto Ciampino (CIA)</strong></div><div class="eur">€50<i>IVA incl.</i></div></div>
-      <div class="price rv"><div><small>Roma centro →</small><strong>Porto di Civitavecchia</strong></div><div class="eur">€140<i>IVA incl.</i></div></div>
-      <div class="price rv"><div><small>Tour →</small><strong>Tour di 3 ore in città</strong></div><div class="eur">€150<i>IVA incl.</i></div></div>
-      <div class="price rv"><div><small>Transfer Roma →</small><strong>Castelli Romani / Tivoli</strong></div><div class="eur">€180<i>IVA incl.</i></div></div>
-      <div class="price rv"><div><small>Transfer Fiumicino →</small><strong>Ciampino</strong></div><div class="eur">€80<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Roma centro →</small><strong><a class="go" href="#prenota" data-a="Roma centro" data-b="Aeroporto Fiumicino (FCO)" data-t="€60 (IVA incl.)">Aeroporto Fiumicino (FCO)</a></strong></div><div class="eur">€60<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Roma centro →</small><strong><a class="go" href="#prenota" data-a="Roma centro" data-b="Aeroporto Ciampino (CIA)" data-t="€50 (IVA incl.)">Aeroporto Ciampino (CIA)</a></strong></div><div class="eur">€50<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Roma centro →</small><strong><a class="go" href="#prenota" data-a="Roma centro" data-b="Porto di Civitavecchia" data-t="€140 (IVA incl.)">Porto di Civitavecchia</a></strong></div><div class="eur">€140<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Tour →</small><strong><a class="go" href="#prenota" data-a="Roma" data-b="Tour di 3 ore in città" data-t="€150 (IVA incl.)">Tour di 3 ore in città</a></strong></div><div class="eur">€150<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Transfer Roma →</small><strong><a class="go" href="#prenota" data-a="Roma" data-b="Castelli Romani / Tivoli" data-t="€180 (IVA incl.)">Castelli Romani / Tivoli</a></strong></div><div class="eur">€180<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Transfer Fiumicino →</small><strong><a class="go" href="#prenota" data-a="Aeroporto Fiumicino (FCO)" data-b="Aeroporto Ciampino (CIA)" data-t="€80 (IVA incl.)">Ciampino</a></strong></div><div class="eur">€80<i>IVA incl.</i></div></div>
     </div>
     <div class="notes rv">
       <span><b>−10%</b> se scegli di pagare in contanti.</span>
@@ -421,20 +425,20 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
         <a class="btn btn-gold" href="#prenota">Richiedi preventivo</a>
       </div>
       <ul class="lt">
-          <li><span>Roma × Assisi</span><b>€ 580</b></li>
-          <li><span>Roma × Cortona</span><b>€ 600</b></li>
-          <li><span>Roma × Montepulciano</span><b>€ 520</b></li>
-          <li><span>Roma × Montalcino</span><b>€ 550</b></li>
-          <li><span>Roma × Napoli</span><b>€ 660</b></li>
-          <li><span>Roma × Perugia</span><b>€ 530</b></li>
-          <li><span>Roma × Sorrento</span><b>€ 680</b></li>
-          <li><span>Roma × Positano</span><b>€ 750</b></li>
-          <li><span>Roma × Siena</span><b>€ 600</b></li>
-          <li><span>Roma × Porto Santo Stefano</span><b>€ 400</b></li>
-          <li><span>Roma × Porto Ercole</span><b>€ 400</b></li>
-          <li><span>Roma × Orvieto</span><b>€ 360</b></li>
-          <li><span>Roma × Lucca</span><b>€ 770</b></li>
-          <li><span>Roma × Firenze</span><b>€ 700</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Assisi" data-t="€580">Roma × Assisi</a></span><b>€ 580</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Cortona" data-t="€600">Roma × Cortona</a></span><b>€ 600</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Montepulciano" data-t="€520">Roma × Montepulciano</a></span><b>€ 520</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Montalcino" data-t="€550">Roma × Montalcino</a></span><b>€ 550</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Napoli" data-t="€660">Roma × Napoli</a></span><b>€ 660</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Perugia" data-t="€530">Roma × Perugia</a></span><b>€ 530</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Sorrento" data-t="€680">Roma × Sorrento</a></span><b>€ 680</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Positano" data-t="€750">Roma × Positano</a></span><b>€ 750</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Siena" data-t="€600">Roma × Siena</a></span><b>€ 600</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Porto Santo Stefano" data-t="€400">Roma × Porto Santo Stefano</a></span><b>€ 400</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Porto Ercole" data-t="€400">Roma × Porto Ercole</a></span><b>€ 400</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Orvieto" data-t="€360">Roma × Orvieto</a></span><b>€ 360</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Lucca" data-t="€770">Roma × Lucca</a></span><b>€ 770</b></li>
+          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Firenze" data-t="€700">Roma × Firenze</a></span><b>€ 700</b></li>
       </ul>
       <p class="lt-note">La tua destinazione non è in elenco? Dicci dove vuoi andare e ce ne occupiamo noi.</p>
     </div>
@@ -524,6 +528,9 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
       <div class="f"><label for="b">Destinazione</label><input id="b" required maxlength="150" placeholder="Es. Hotel, Roma centro"></div>
       <div class="f"><label for="p">Passeggeri</label><input id="p" type="number" min="1" max="7" value="1" required></div>
       <div class="f"><label for="g">Valigie</label><input id="g" type="number" min="0" max="15" value="1" required></div>
+      <div class="f full"><label class="chk" for="rt"><input id="rt" type="checkbox"><span>Aggiungi il ritorno (andata e ritorno)</span></label></div>
+      <div class="f" id="rdw" hidden><label for="rd">Data ritorno</label><input id="rd" type="date"></div>
+      <div class="f" id="rhw" hidden><label for="rh">Ora ritorno</label><input id="rh" type="time"></div>
       <div class="f full"><label for="v">Codice volo / treno / nave (facoltativo)</label><input id="v" maxlength="40" placeholder="Es. AZ 610"></div>
       <div class="f full"><label for="o">Note (facoltative)</label><textarea id="o" rows="3" maxlength="500" placeholder="Numero volo, seggiolino bambino, fermate intermedie…"></textarea></div>
       <div class="f full"><label class="chk" for="pc"><input id="pc" type="checkbox" required><span>Acconsento al trattamento dei dati per rispondere alla mia richiesta. <a href="#privacy">Leggi l'informativa privacy</a></span></label></div>
@@ -705,7 +712,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "Long Transfer":"Long Transfer",
     "Transfer privati con autista professionista che parla inglese, a bordo di un Mercedes Premium Van: aeroporti, porti, hotel, business, tour e gite giornaliere. Puntuali, a prezzo fisso, a qualsiasi ora.":"Private transfer with a professional english speaking driver in a Mercedes premium van: Airports, ports, hotels, business, tours and daytrips, punctual, fixed prices at any hour.",
     "La tua destinazione non è in elenco? Dicci dove vuoi andare e ce ne occupiamo noi.":"Your destination is not listed? Tell us where you want to go and we will organize it for you.",
-    "Transfer aeroporti di Roma":"Rome Airport Transfer","Porto di Civitavecchia · Crociere":"Civitavecchia Port Cruise","Tour su misura e gite giornaliere":"Tailor Made Tours and Daytrips","Roma":"Rome","Aeroporti":"Airports","Porti":"Ports","Transfer privati":"Private transfers",
+    "Transfer aeroporti di Roma":"Rome Airport Transfer","Porto di Civitavecchia · Crociere":"Civitavecchia Port Cruise","Tour su misura e gite giornaliere":"Tailor Made Tours and Daytrips","Roma":"Rome","Aggiungi il ritorno (andata e ritorno)":"Add a return trip (round trip)","Data ritorno":"Return date","Ora ritorno":"Return time","Sconto del 10% per i pagamenti in contanti.":"10% discount for cash payments.","Aeroporti":"Airports","Porti":"Ports","Transfer privati":"Private transfers",
     "Viaggi di lungo percorso in tutta Italia: tariffa fissa, senza sorprese.":"Long-distance trips across Italy: fixed rate, no surprises.",
     "Roma × Assisi":"Rome × Assisi","Roma × Cortona":"Rome × Cortona","Roma × Montepulciano":"Rome × Montepulciano","Roma × Montalcino":"Rome × Montalcino","Roma × Napoli":"Rome × Naples","Roma × Perugia":"Rome × Perugia","Roma × Sorrento":"Rome × Sorrento","Roma × Positano":"Rome × Positano","Roma × Siena":"Rome × Siena","Roma × Porto Santo Stefano":"Rome × Porto Santo Stefano","Roma × Porto Ercole":"Rome × Porto Ercole","Roma × Orvieto":"Rome × Orvieto","Roma × Lucca":"Rome × Lucca","Roma × Firenze":"Rome × Florence",
     "Roma–Napoli":"Rome–Naples",
@@ -740,8 +747,8 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   };
   var PH_EN={n:'John Smith',a:'e.g. Fiumicino Airport',b:'e.g. Hotel, central Rome',o:'Flight number, child seat, stops on the way…',v:'e.g. AZ 610'};
   var MSG={
-    it:{q:'Ciao, vorrei un preventivo transfer',b:'Ciao, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Valigie',o:'Note',v:'Volo/treno/nave'},
-    en:{q:'Hi, I would like a transfer quote',b:'Hi, I would like to book a transfer:',n:'Name',d:'Date',f:'From',t:'To',p:'Passengers',g:'Bags',o:'Notes',v:'Flight/train/ship'}
+    it:{q:'Ciao, vorrei un preventivo transfer',b:'Ciao, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Valigie',o:'Note',v:'Volo/treno/nave',r:'Ritorno',tf:'Tariffa indicata'},
+    en:{q:'Hi, I would like a transfer quote',b:'Hi, I would like to book a transfer:',n:'Name',d:'Date',f:'From',t:'To',p:'Passengers',g:'Bags',o:'Notes',v:'Flight/train/ship',r:'Return',tf:'Quoted rate'}
   };
   var TITLE={it:document.title,en:'Rome Chauffeur Service (NCC) | BlackVans Transfer'};
   var lang='it',nodes=[],phs=[];
@@ -799,6 +806,16 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   if(LG.indexOf(location.hash.slice(1))>-1)openL(location.hash.slice(1));
 
   /* ---------- form -> WhatsApp ---------- */
+  var tar='';
+  [].forEach.call(document.querySelectorAll('a.go'),function(k){k.addEventListener('click',function(){
+    tar=k.getAttribute('data-t')||'';
+    var A=k.getAttribute('data-a'),B=k.getAttribute('data-b');
+    if(A||B){document.getElementById('a').value=A;document.getElementById('b').value=B}
+  })});
+  ['a','b'].forEach(function(i){document.getElementById(i).addEventListener('input',function(){tar=''})});
+  var rt=document.getElementById('rt');
+  rt.addEventListener('change',function(){['rdw','rhw'].forEach(function(i){document.getElementById(i).hidden=!rt.checked});
+    document.getElementById('rd').required=document.getElementById('rh').required=rt.checked});
   document.getElementById('bf').addEventListener('submit',function(e){
     e.preventDefault();
     var m=MSG[lang];
@@ -812,6 +829,8 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
       '🧳 '+m.g+': '+v('g')];
     if(v('o'))L.push('📝 '+m.o+': '+v('o'));
     if(v('v'))L.push('✈️ '+m.v+': '+v('v'));
+    if(document.getElementById('rt').checked)L.push('🔁 '+m.r+': '+v('rd')+' '+v('rh')+' ('+v('b')+' → '+v('a')+')');
+    if(tar)L.push('💶 '+m.tf+': '+tar);
     var a=document.getElementById('wal');
     a.href='https://wa.me/393271996272?text='+encodeURIComponent(L.join('\n'));
     a.hidden=false;
