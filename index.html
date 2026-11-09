@@ -226,6 +226,12 @@ input,textarea{width:100%;background:transparent;border:0;border-bottom:1px soli
 input::placeholder,textarea::placeholder{color:#7d8596}
 input:focus,textarea:focus{outline:none;border-bottom-color:var(--gold)}
 input[type=date],input[type=time]{color-scheme:dark}
+select{width:100%;background:var(--bg2);border:0;border-bottom:1px solid var(--line2);border-radius:0;padding:11px 2px;color:var(--fg);font:inherit;font-size:1rem;color-scheme:dark}
+select:focus{outline:none;border-bottom-color:var(--gold)}
+.ph{display:grid;grid-template-columns:128px 1fr;gap:14px}
+.tm{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{margin:2px 0 0;font:400 .8rem var(--sans);color:var(--muted);line-height:1.5}
+.pbox{border:1px solid var(--line2);padding:12px 14px;font:600 1rem var(--sans);color:var(--gold2)}
 textarea{resize:vertical}
 .chk{display:flex;gap:14px;align-items:flex-start;text-transform:none;letter-spacing:0;font:400 .86rem var(--sans);color:#c9ccd4;cursor:pointer}
 .chk input{width:20px;height:20px;padding:0;margin-top:2px;flex:none;accent-color:var(--gold)}
@@ -521,19 +527,25 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
       </ul>
     </div>
     <form id="bf" class="rv">
+      <div class="f full"><label for="v">Numero volo / nave (facoltativo)</label><input id="v" maxlength="40" placeholder="Es. AZ 610"></div>
+      <div class="f full"><label for="bu">Ti serve più tempo per la dogana?</label><select id="bu"><option value="">Seleziona</option><option>Nessun margine extra</option><option>+30 minuti</option><option>+60 minuti</option><option>+90 minuti</option></select><p class="hint">Seleziona il margine dopo l'atterraggio.</p></div>
+      <div class="f full"><label for="ct">Tipo di veicolo</label><select id="ct"><option>Mercedes Premium Van – fino a 7 passeggeri</option></select><p class="hint">Massimo: 7 passeggeri, 7 bagagli in stiva e 7 bagagli a mano.</p></div>
       <div class="f full"><label for="n">Nome e cognome</label><input id="n" required maxlength="100" autocomplete="name" placeholder="Mario Rossi"></div>
-      <div class="f"><label for="d">Data</label><input id="d" type="date" required></div>
-      <div class="f"><label for="h">Ora</label><input id="h" type="time" required></div>
+      <div class="f full"><label for="em">Email</label><input id="em" type="email" required maxlength="120" autocomplete="email" placeholder="nome@esempio.it"></div>
+      <div class="f full"><label for="tel">Cellulare</label><div class="ph"><select id="pf" aria-label="Prefisso"><option value="+39" selected>IT +39</option><option value="+44">UK +44</option><option value="+1">US/CA +1</option><option value="+33">FR +33</option><option value="+34">ES +34</option><option value="+49">DE +49</option><option value="+41">CH +41</option><option value="+43">AT +43</option><option value="+31">NL +31</option><option value="+32">BE +32</option><option value="+351">PT +351</option><option value="+353">IE +353</option><option value="+30">GR +30</option><option value="+48">PL +48</option><option value="+46">SE +46</option><option value="+47">NO +47</option><option value="+45">DK +45</option><option value="+61">AU +61</option><option value="+55">BR +55</option><option value="+971">AE +971</option></select><input id="tel" type="tel" required maxlength="20" autocomplete="tel-national" placeholder="Numero di telefono"></div></div>
+      <div class="f full"><label for="d">Data del transfer</label><input id="d" type="date" required></div>
+      <div class="f full"><label for="hh">Orario di arrivo del volo / ritiro (24 ore)</label><div class="tm"><select id="hh" required aria-label="Ora"><option value="">Ora</option><option>00</option><option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option></select><select id="hm" required aria-label="Minuti"><option value="">Min</option><option>00</option><option>05</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option><option>45</option><option>50</option><option>55</option></select></div><p class="hint">Seleziona l'orario di atterraggio del volo o di ritiro.</p></div>
+      <div class="f full"><label>Prezzo</label><div class="pbox"><span id="prd">Preventivo su richiesta</span><span id="prv" hidden></span></div></div>
       <div class="f"><label for="a">Partenza</label><input id="a" required maxlength="150" placeholder="Es. Aeroporto Fiumicino"></div>
-      <div class="f"><label for="b">Destinazione</label><input id="b" required maxlength="150" placeholder="Es. Hotel, Roma centro"></div>
-      <div class="f"><label for="p">Passeggeri</label><input id="p" type="number" min="1" max="7" value="1" required></div>
-      <div class="f"><label for="g">Valigie</label><input id="g" type="number" min="0" max="15" value="1" required></div>
+      <div class="f"><label for="b">Indirizzo / hotel di destinazione</label><input id="b" required maxlength="150" placeholder="Es. Hotel, Roma centro"></div>
       <div class="f full"><label class="chk" for="rt"><input id="rt" type="checkbox"><span>Aggiungi il ritorno (andata e ritorno)</span></label></div>
       <div class="f" id="rdw" hidden><label for="rd">Data ritorno</label><input id="rd" type="date"></div>
       <div class="f" id="rhw" hidden><label for="rh">Ora ritorno</label><input id="rh" type="time"></div>
-      <div class="f full"><label for="v">Codice volo / treno / nave (facoltativo)</label><input id="v" maxlength="40" placeholder="Es. AZ 610"></div>
-      <div class="f full"><label for="o">Note (facoltative)</label><textarea id="o" rows="3" maxlength="500" placeholder="Numero volo, seggiolino bambino, fermate intermedie…"></textarea></div>
-      <div class="f full"><label class="chk" for="pc"><input id="pc" type="checkbox" required><span>Acconsento al trattamento dei dati per rispondere alla mia richiesta. <a href="#privacy">Leggi l'informativa privacy</a></span></label></div>
+      <div class="f full"><label for="p">Passeggeri</label><select id="p" required><option value="">Seleziona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
+      <div class="f full"><label for="cb">Bagagli a mano</label><select id="cb" required><option value="">Seleziona</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
+      <div class="f full"><label for="kb">Bagagli in stiva</label><select id="kb" required><option value="">Seleziona</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
+      <div class="f full"><label for="o">Messaggio (facoltativo)</label><p class="hint">Se viaggi con bagagli ingombranti o oggetti speciali, come una sedia a rotelle, strumenti musicali o attrezzatura sportiva, indicalo in anticipo con le dimensioni approssimative, così possiamo confermare che il veicolo abbia spazio sufficiente.</p><textarea id="o" rows="4" maxlength="500" placeholder="Seggiolino bambino, fermate intermedie, bagagli ingombranti…"></textarea></div>
+      <div class="f full"><label class="chk" for="pc"><input id="pc" type="checkbox" required><span>Ho letto e accetto l'<a href="#privacy">Informativa Privacy</a> e la <a href="#cookie">Cookie Policy</a>.</span></label></div>
       <button class="btn btn-gold" type="submit"><svg><use href="#i-wa"/></svg>Invia richiesta su WhatsApp</button>
       <a id="wal" class="btn btn-gold" target="_blank" rel="noopener" hidden>Apri WhatsApp</a>
       <p class="fine">Risposta rapida · prezzo fisso confermato prima di partire</p>
@@ -712,7 +724,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "Long Transfer":"Long Transfer",
     "Transfer privati con autista professionista che parla inglese, a bordo di un Mercedes Premium Van: aeroporti, porti, hotel, business, tour e gite giornaliere. Puntuali, a prezzo fisso, a qualsiasi ora.":"Private transfer with a professional english speaking driver in a Mercedes premium van: Airports, ports, hotels, business, tours and daytrips, punctual, fixed prices at any hour.",
     "La tua destinazione non è in elenco? Dicci dove vuoi andare e ce ne occupiamo noi.":"Your destination is not listed? Tell us where you want to go and we will organize it for you.",
-    "Transfer aeroporti di Roma":"Rome Airport Transfer","Porto di Civitavecchia · Crociere":"Civitavecchia Port Cruise","Tour su misura e gite giornaliere":"Tailor Made Tours and Daytrips","Roma":"Rome","Aggiungi il ritorno (andata e ritorno)":"Add a return trip (round trip)","Data ritorno":"Return date","Ora ritorno":"Return time","Sconto del 10% per i pagamenti in contanti.":"10% discount for cash payments.","Aeroporti":"Airports","Porti":"Ports","Transfer privati":"Private transfers",
+    "Transfer aeroporti di Roma":"Rome Airport Transfer","Porto di Civitavecchia · Crociere":"Civitavecchia Port Cruise","Tour su misura e gite giornaliere":"Tailor Made Tours and Daytrips","Roma":"Rome","Numero volo / nave (facoltativo)":"Flight / ship number (optional)","Ti serve più tempo per la dogana?":"Need more time for customs?","Seleziona":"Select","Nessun margine extra":"No extra buffer","+30 minuti":"+30 minutes","+60 minuti":"+60 minutes","+90 minuti":"+90 minutes","Seleziona il margine dopo l'atterraggio.":"Select your buffer after landing.","Tipo di veicolo":"Vehicle type","Mercedes Premium Van – fino a 7 passeggeri":"Mercedes Premium Van – up to 7 passengers","Massimo: 7 passeggeri, 7 bagagli in stiva e 7 bagagli a mano.":"Maximum: 7 passengers, 7 checked bags and 7 cabin bags.","Email":"Email","Cellulare":"Mobile number","Data del transfer":"Transfer date","Orario di arrivo del volo / ritiro (24 ore)":"Flight arrival / pickup time (24h)","Seleziona l'orario di atterraggio del volo o di ritiro.":"Select your flight landing or pickup time.","Prezzo":"Price","Preventivo su richiesta":"Quote on request","Indirizzo / hotel di destinazione":"Drop-off address / hotel","Bagagli a mano":"Cabin bags","Bagagli in stiva":"Checked luggage","Messaggio (facoltativo)":"Message (optional)","Se viaggi con bagagli ingombranti o oggetti speciali, come una sedia a rotelle, strumenti musicali o attrezzatura sportiva, indicalo in anticipo con le dimensioni approssimative, così possiamo confermare che il veicolo abbia spazio sufficiente.":"If you are travelling with oversized luggage or special items, such as a wheelchair, musical instruments or sports equipment, please tell us in advance with approximate dimensions so we can confirm the vehicle has enough space.","Ho letto e accetto l'":"I have read and agree to the ","Informativa Privacy":"Privacy Policy","Cookie Policy":"Cookie Policy","e la":"and the","Aggiungi il ritorno (andata e ritorno)":"Add a return trip (round trip)","Data ritorno":"Return date","Ora ritorno":"Return time","Sconto del 10% per i pagamenti in contanti.":"10% discount for cash payments.","Aeroporti":"Airports","Porti":"Ports","Transfer privati":"Private transfers",
     "Viaggi di lungo percorso in tutta Italia: tariffa fissa, senza sorprese.":"Long-distance trips across Italy: fixed rate, no surprises.",
     "Roma × Assisi":"Rome × Assisi","Roma × Cortona":"Rome × Cortona","Roma × Montepulciano":"Rome × Montepulciano","Roma × Montalcino":"Rome × Montalcino","Roma × Napoli":"Rome × Naples","Roma × Perugia":"Rome × Perugia","Roma × Sorrento":"Rome × Sorrento","Roma × Positano":"Rome × Positano","Roma × Siena":"Rome × Siena","Roma × Porto Santo Stefano":"Rome × Porto Santo Stefano","Roma × Porto Ercole":"Rome × Porto Ercole","Roma × Orvieto":"Rome × Orvieto","Roma × Lucca":"Rome × Lucca","Roma × Firenze":"Rome × Florence",
     "Roma–Napoli":"Rome–Naples",
@@ -745,10 +757,10 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     'NCC Roma · P.IVA 18170441002':'Rome chauffeur service · VAT no. 18170441002',
     'BlackVans Transfer · Tutti i diritti riservati':'BlackVans Transfer · All rights reserved'
   };
-  var PH_EN={n:'John Smith',a:'e.g. Fiumicino Airport',b:'e.g. Hotel, central Rome',o:'Flight number, child seat, stops on the way…',v:'e.g. AZ 610'};
+  var PH_EN={n:'John Smith',a:'e.g. Fiumicino Airport',b:'e.g. Hotel, central Rome',o:'Child seat, stops on the way, oversized luggage…',v:'e.g. AZ 610',em:'name@example.com',tel:'Phone number'};
   var MSG={
-    it:{q:'Ciao, vorrei un preventivo transfer',b:'Ciao, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Valigie',o:'Note',v:'Volo/treno/nave',r:'Ritorno',tf:'Tariffa indicata'},
-    en:{q:'Hi, I would like a transfer quote',b:'Hi, I would like to book a transfer:',n:'Name',d:'Date',f:'From',t:'To',p:'Passengers',g:'Bags',o:'Notes',v:'Flight/train/ship',r:'Return',tf:'Quoted rate'}
+    it:{q:'Ciao, vorrei un preventivo transfer',b:'Ciao, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Valigie',o:'Note',v:'Volo/treno/nave',r:'Ritorno',tf:'Tariffa indicata',em:'Email',tel:'Cellulare',bu:'Margine dogana',ct:'Veicolo',cb:'Bagagli a mano',kb:'Bagagli in stiva'},
+    en:{q:'Hi, I would like a transfer quote',b:'Hi, I would like to book a transfer:',n:'Name',d:'Date',f:'From',t:'To',p:'Passengers',g:'Bags',o:'Notes',v:'Flight/train/ship',r:'Return',tf:'Quoted rate',em:'Email',tel:'Mobile',bu:'Customs buffer',ct:'Vehicle',cb:'Cabin bags',kb:'Checked bags'}
   };
   var TITLE={it:document.title,en:'Rome Chauffeur Service (NCC) | BlackVans Transfer'};
   var lang='it',nodes=[],phs=[];
@@ -807,12 +819,13 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
   /* ---------- form -> WhatsApp ---------- */
   var tar='';
+  function showTar(){document.getElementById('prd').hidden=!!tar;var e=document.getElementById('prv');e.hidden=!tar;e.textContent=tar}
   [].forEach.call(document.querySelectorAll('a.go'),function(k){k.addEventListener('click',function(){
-    tar=k.getAttribute('data-t')||'';
+    tar=k.getAttribute('data-t')||'';showTar();
     var A=k.getAttribute('data-a'),B=k.getAttribute('data-b');
     if(A||B){document.getElementById('a').value=A;document.getElementById('b').value=B}
   })});
-  ['a','b'].forEach(function(i){document.getElementById(i).addEventListener('input',function(){tar=''})});
+  ['a','b'].forEach(function(i){document.getElementById(i).addEventListener('input',function(){tar='';showTar()})});
   var rt=document.getElementById('rt');
   rt.addEventListener('change',function(){['rdw','rhw'].forEach(function(i){document.getElementById(i).hidden=!rt.checked});
     document.getElementById('rd').required=document.getElementById('rh').required=rt.checked});
@@ -822,13 +835,18 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     var v=function(i){return document.getElementById(i).value.trim()};
     var L=[m.b,
       '👤 '+m.n+': '+v('n'),
-      '📅 '+m.d+': '+v('d')+' '+v('h'),
+      '✉️ '+m.em+': '+v('em'),
+      '📞 '+m.tel+': '+v('pf')+' '+v('tel'),
+      '📅 '+m.d+': '+v('d')+' '+v('hh')+':'+v('hm'),
       '📍 '+m.f+': '+v('a'),
       '🏁 '+m.t+': '+v('b'),
+      '🚐 '+m.ct+': '+v('ct'),
       '👥 '+m.p+': '+v('p'),
-      '🧳 '+m.g+': '+v('g')];
-    if(v('o'))L.push('📝 '+m.o+': '+v('o'));
+      '🎒 '+m.cb+': '+v('cb'),
+      '🧳 '+m.kb+': '+v('kb')];
     if(v('v'))L.push('✈️ '+m.v+': '+v('v'));
+    if(v('bu'))L.push('🕒 '+m.bu+': '+v('bu'));
+    if(v('o'))L.push('📝 '+m.o+': '+v('o'));
     if(document.getElementById('rt').checked)L.push('🔁 '+m.r+': '+v('rd')+' '+v('rh')+' ('+v('b')+' → '+v('a')+')');
     if(tar)L.push('💶 '+m.tf+': '+tar);
     var a=document.getElementById('wal');
