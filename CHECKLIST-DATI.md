@@ -27,3 +27,15 @@ Servono per rendere la pagina operativa e a norma. Con questi dati: compila `dat
 - [ ] Privacy policy controllata da un consulente
 - [ ] Sitemap inviata in Google Search Console
 - [ ] Verifica con il Test dei risultati multimediali di Google (dati strutturati)
+
+## Condizioni di servizio da confermare con il titolare
+
+Le informazioni della sezione «Informazioni utili», delle FAQ e del modulo sono una bozza ispirata a un sito concorrente di riferimento (romelimotransfer.com). Vanno confermate o cambiate:
+
+- Prenotare almeno 24 ore prima; conferma di disponibilità entro 8 ore dalla richiesta.
+- Attesa gratuita: 60 minuti in aeroporto, 15 minuti negli altri punti di ritiro.
+- Supplemento notturno: 20 € a veicolo dalle 19:00 alle 06:00.
+- Tariffe per veicolo, con una destinazione nel centro di Roma; ritiri o soste aggiuntivi con supplemento.
+- Pagamento: carta, bancomat e app al prezzo standard; sconto 10% in contanti. Il sito di riferimento chiede anche un acconto con link di pagamento: qui non previsto.
+- **Mancante:** politica di cancellazione e rimborsi (non pubblicata sul sito di riferimento).
+- Come arrivano le richieste: oggi solo su WhatsApp. Da decidere se aggiungere l'invio per email (serve un indirizzo e un servizio di invio).
