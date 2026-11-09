@@ -521,7 +521,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     <div class="rv">
       <p class="eyebrow">Prenotazione</p>
       <h2>Richiedi il tuo transfer</h2>
-      <p class="lead">Compila i dati e premi invia: ti prepariamo il messaggio WhatsApp già pronto. Nessun dato viene salvato sul sito.</p>
+      <p class="lead">Compila i dati e premi invia: riceviamo la richiesta per email e ti rispondiamo il prima possibile. Puoi anche continuare su WhatsApp.</p>
       <ul class="contact-list">
         <li><a href="tel:+393271996272"><svg><use href="#i-ph"/></svg>+39 327 199 6272</a></li>
         <li><a href="mailto:andreiprivatetransfers@gmail.com"><svg><use href="#i-ml"/></svg>andreiprivatetransfers@gmail.com</a></li>
@@ -548,8 +548,9 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
       <div class="f full"><label for="kb">Bagagli in stiva</label><select id="kb" required><option value="">Seleziona</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
       <div class="f full"><label for="o">Messaggio (facoltativo)</label><p class="hint">Se viaggi con bagagli ingombranti o oggetti speciali, come una sedia a rotelle, strumenti musicali o attrezzatura sportiva, indicalo in anticipo con le dimensioni approssimative, così possiamo confermare che il veicolo abbia spazio sufficiente.</p><textarea id="o" rows="4" maxlength="500" placeholder="Seggiolino bambino, fermate intermedie, bagagli ingombranti…"></textarea></div>
       <div class="f full"><label class="chk" for="pc"><input id="pc" type="checkbox" required><span>Ho letto e accetto l'<a href="#privacy">Informativa Privacy</a> e la <a href="#cookie">Cookie Policy</a>.</span></label></div>
-      <button class="btn btn-gold" type="submit"><svg><use href="#i-wa"/></svg>Invia richiesta su WhatsApp</button>
+      <button class="btn btn-gold" type="submit"><svg><use href="#i-ml"/></svg>Invia richiesta</button>
       <a id="wal" class="btn btn-gold" target="_blank" rel="noopener" hidden>Apri WhatsApp</a>
+      <p class="fine" id="bst" role="status" aria-live="polite" hidden></p>
       <p class="fine">Risposta rapida · prezzo fisso confermato prima di partire</p>
     </form>
   </div>
@@ -611,7 +612,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
       <div><h3>Titolare del trattamento</h3><p>Mario Rossi, ditta individuale, Via Esempio 1, 00100 Roma (RM). P.IVA 12345678901. Email: andreiprivatetransfers@gmail.com · PEC: mario.rossi@pec.example.it.</p></div>
       <div><h3>Quali dati raccogliamo</h3><p>Solo quelli che inserisci nel modulo di prenotazione: nome, data e ora, partenza, destinazione, numero di passeggeri e valigie e, se vuoi, codice del volo e note. Ti chiediamo di non inserire dati particolari, ad esempio sulla salute.</p></div>
       <div><h3>Perché li usiamo</h3><p>Usiamo i dati solo per rispondere alla tua richiesta di preventivo o prenotazione e per eseguire il servizio. La base giuridica è l'esecuzione di misure precontrattuali e del contratto (art. 6.1.b GDPR).</p></div>
-      <div><h3>Come funziona il modulo</h3><p>Questo sito non salva i dati del modulo e non li invia a nessun server. Quando premi invio prepariamo un messaggio WhatsApp e sei tu a inviarlo. WhatsApp è un servizio di Meta e tratta i dati secondo la propria informativa. Noi riceviamo il messaggio e lo conserviamo per il tempo necessario a gestire la richiesta e gli obblighi fiscali e contabili.</p></div>
+      <div><h3>Come funziona il modulo</h3><p>Questo sito non salva i dati del modulo. Quando premi invio, i dati inseriti vengono trasmessi per email al nostro indirizzo tramite il servizio FormSubmit (formsubmit.co), che agisce come fornitore tecnico dell'invio, e ti arriva un messaggio di conferma. Puoi poi continuare la conversazione su WhatsApp, un servizio di Meta che tratta i dati secondo la propria informativa. Conserviamo la richiesta per il tempo necessario a gestirla e per gli obblighi fiscali e contabili.</p></div>
       <div><h3>I tuoi diritti</h3><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione e opposizione (artt. 15-22 GDPR) scrivendo ai contatti qui sopra. Puoi anche presentare reclamo al Garante per la protezione dei dati personali (garanteprivacy.it).</p></div>
       <div><h3>Dati di navigazione</h3><p>Il fornitore di hosting può registrare dati tecnici di accesso, come l'indirizzo IP, per la sicurezza e il funzionamento del servizio.</p></div>
     </div>
@@ -642,7 +643,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <a class="float" href="https://wa.me/393271996272?text=Ciao%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-<!--DRAFT--><div class="draft" role="note">Bozza 5 · dati fittizi</div><!--/DRAFT-->
+<!--DRAFT--><div class="draft" role="note">Bozza 6 · dati fittizi</div><!--/DRAFT-->
 <script>
 (function(){
   var h=document.querySelector('header');
@@ -697,10 +698,10 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     'Ricevi conferma':'Get confirmation','Ti confermiamo disponibilità e prezzo fisso, subito.':'We confirm availability and the fixed price right away.',
     'Ti aspettiamo':'We meet you','L\'autista è puntuale all\'arrivo, con il tuo nome o direttamente al terminal.':'Your driver is there on time, with your name sign or right at the terminal.',
     'Prenotazione':'Booking','Richiedi il tuo transfer':'Request your transfer',
-    'Compila i dati e premi invia: ti prepariamo il messaggio WhatsApp già pronto. Nessun dato viene salvato sul sito.':'Fill in the details and press send: we prepare the WhatsApp message for you. No data is stored on this site.',
+    'Compila i dati e premi invia: riceviamo la richiesta per email e ti rispondiamo il prima possibile. Puoi anche continuare su WhatsApp.':'Fill in the details and press send: we receive your request by email and reply as soon as possible. You can also continue on WhatsApp.',
     'Roma · H24 · 7 giorni su 7':'Rome · 24/7 · every day',
     'Nome e cognome':'Full name','Data':'Date','Ora':'Time','Partenza':'Pickup','Destinazione':'Drop-off','Passeggeri':'Passengers','Valigie':'Bags','Note (facoltative)':'Notes (optional)',
-    'Invia richiesta su WhatsApp':'Send request on WhatsApp','Apri WhatsApp':'Open WhatsApp',
+    'Invia richiesta':'Send request','Apri WhatsApp':'Open WhatsApp',
     'Risposta rapida · prezzo fisso confermato prima di partire':'Quick reply · fixed price confirmed before you travel',
     'Tratte lunghe':'Long-distance routes','Roma–Napoli, Roma–Firenze, Roma–Milano e altre città: tariffa fissa su preventivo, senza sorprese.':'Rome–Naples, Rome–Florence, Rome–Milan and other cities: fixed rate on quote, no surprises.',
     'Richiedi disponibilità':'Check availability','Codice volo / treno / nave (facoltativo)':'Flight / train / ship number (optional)',
@@ -720,7 +721,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "Perché li usiamo":"Why we use it",
     "Usiamo i dati solo per rispondere alla tua richiesta di preventivo o prenotazione e per eseguire il servizio. La base giuridica è l'esecuzione di misure precontrattuali e del contratto (art. 6.1.b GDPR).":"We use the data only to answer your quote or booking request and to provide the service. The legal basis is the performance of pre-contractual measures and of the contract (art. 6.1.b GDPR).",
     "Come funziona il modulo":"How the form works",
-    "Questo sito non salva i dati del modulo e non li invia a nessun server. Quando premi invio prepariamo un messaggio WhatsApp e sei tu a inviarlo. WhatsApp è un servizio di Meta e tratta i dati secondo la propria informativa. Noi riceviamo il messaggio e lo conserviamo per il tempo necessario a gestire la richiesta e gli obblighi fiscali e contabili.":"This site does not store the form data and does not send it to any server. When you press send we prepare a WhatsApp message and you are the one who sends it. WhatsApp is a Meta service and processes data under its own privacy notice. We receive the message and keep it for as long as needed to handle the request and meet tax and accounting obligations.",
+    "Questo sito non salva i dati del modulo. Quando premi invio, i dati inseriti vengono trasmessi per email al nostro indirizzo tramite il servizio FormSubmit (formsubmit.co), che agisce come fornitore tecnico dell'invio, e ti arriva un messaggio di conferma. Puoi poi continuare la conversazione su WhatsApp, un servizio di Meta che tratta i dati secondo la propria informativa. Conserviamo la richiesta per il tempo necessario a gestirla e per gli obblighi fiscali e contabili.":"This site does not store the form data. When you press send, the details you enter are sent by email to our address through the FormSubmit service (formsubmit.co), which acts as a technical provider for the delivery, and you receive a confirmation message. You can then continue the conversation on WhatsApp, a Meta service that processes data under its own privacy notice. We keep the request for as long as needed to handle it and to meet tax and accounting obligations.",
     "I tuoi diritti":"Your rights",
     "Puoi chiedere accesso, rettifica, cancellazione, limitazione e opposizione (artt. 15-22 GDPR) scrivendo ai contatti qui sopra. Puoi anche presentare reclamo al Garante per la protezione dei dati personali (garanteprivacy.it).":"You can ask for access, rectification, erasure, restriction and objection (arts. 15-22 GDPR) by writing to the contacts above. You can also lodge a complaint with the Italian Data Protection Authority (garanteprivacy.it).",
     "Dati di navigazione":"Browsing data",
@@ -739,7 +740,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "comincia":"starts",
     "qui.":"here.",
     'NCC Roma, noleggio con conducente:':'Rome chauffeur service, private hire:',
-    'Bozza 5 · dati fittizi':'Draft 5 · sample data',
+    'Bozza 6 · dati fittizi':'Draft 6 · sample data',
     'Informativa privacy':'Privacy policy','Cookie policy':'Cookie policy',
     "Transfer Roma →":"Transfer Rome →",
     "Transfer Fiumicino →":"Transfer Fiumicino →",
@@ -782,8 +783,8 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   };
   var PH_EN={n:'John Smith',a:'e.g. Fiumicino Airport',b:'e.g. Hotel, central Rome',o:'Child seat, stops on the way, oversized luggage…',v:'e.g. AZ 610',em:'name@example.com',tel:'Phone number'};
   var MSG={
-    it:{q:'Ciao, vorrei un preventivo transfer',b:'Ciao, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Valigie',o:'Note',v:'Volo/treno/nave',r:'Ritorno',tf:'Tariffa indicata',em:'Email',tel:'Cellulare',bu:'Margine dogana',ct:'Veicolo',cb:'Bagagli a mano',kb:'Bagagli in stiva'},
-    en:{q:'Hi, I would like a transfer quote',b:'Hi, I would like to book a transfer:',n:'Name',d:'Date',f:'From',t:'To',p:'Passengers',g:'Bags',o:'Notes',v:'Flight/train/ship',r:'Return',tf:'Quoted rate',em:'Email',tel:'Mobile',bu:'Customs buffer',ct:'Vehicle',cb:'Cabin bags',kb:'Checked bags'}
+    it:{q:'Ciao, vorrei un preventivo transfer',b:'Ciao, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Valigie',o:'Note',v:'Volo/treno/nave',r:'Ritorno',tf:'Tariffa indicata',em:'Email',tel:'Cellulare',bu:'Margine dogana',ct:'Veicolo',cb:'Bagagli a mano',kb:'Bagagli in stiva',ok:'Richiesta inviata. Ti risponderemo il prima possibile; riceverai anche una email di conferma. Se vuoi, puoi continuare su WhatsApp.',ko:'Non siamo riusciti a inviare la richiesta per email: ti apriamo WhatsApp con il messaggio già pronto.',ar:'Grazie per la tua richiesta a BlackVans Transfer. L\'abbiamo ricevuta e ti confermeremo la disponibilità il prima possibile. Se hai urgenza puoi scriverci su WhatsApp al +39 327 199 6272.',sj:'Nuova richiesta di prenotazione – BlackVans Transfer'},
+    en:{q:'Hi, I would like a transfer quote',b:'Hi, I would like to book a transfer:',n:'Name',d:'Date',f:'From',t:'To',p:'Passengers',g:'Bags',o:'Notes',v:'Flight/train/ship',r:'Return',tf:'Quoted rate',em:'Email',tel:'Mobile',bu:'Customs buffer',ct:'Vehicle',cb:'Cabin bags',kb:'Checked bags',ok:'Request sent. We will reply as soon as possible; you will also receive a confirmation email. If you like, you can continue on WhatsApp.',ko:'We could not send the request by email: we are opening WhatsApp with your message ready.',ar:'Thank you for your request to BlackVans Transfer. We have received it and will confirm availability as soon as possible. If it is urgent, message us on WhatsApp at +39 327 199 6272.',sj:'New booking request – BlackVans Transfer'}
   };
   var TITLE={it:document.title,en:'Rome Chauffeur Service (NCC) | BlackVans Transfer'};
   var lang='it',nodes=[],phs=[];
@@ -878,8 +879,17 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     if(tar)L.push('💶 '+m.tf+': '+tarTxt());
     var a=document.getElementById('wal');
     a.href='https://wa.me/393271996272?text='+encodeURIComponent(L.join('\n'));
-    a.hidden=false;
-    a.click();
+    var btn=e.target.querySelector('button[type=submit]'),st=document.getElementById('bst');
+    btn.disabled=true;
+    var data={_subject:m.sj,_template:'table',_captcha:'false',_autoresponse:m.ar,
+      name:v('n'),email:v('em'),phone:v('pf')+' '+v('tel'),date:v('d')+' '+v('hh')+':'+v('hm'),from:v('a'),to:v('b'),
+      vehicle:v('ct'),passengers:v('p'),cabin_bags:v('cb'),checked_bags:v('kb'),flight:v('v'),customs_buffer:v('bu'),
+      return_trip:document.getElementById('rt').checked?(v('rd')+' '+v('rh')):'no',quoted_rate:tar?tarTxt():'',message:v('o')};
+    function fail(){btn.disabled=false;st.textContent=m.ko;st.hidden=false;a.hidden=false;a.click()}
+    fetch('https://formsubmit.co/ajax/andreiprivatetransfers@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json()})
+      .then(function(j){if(j&&(j.success===true||j.success==='true')){btn.disabled=false;st.textContent=m.ok;st.hidden=false;a.hidden=false}else fail()})
+      .catch(fail);
   });
 })();
 </script>

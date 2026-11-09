@@ -6,7 +6,7 @@ Landing page statica (HTML/CSS/JS, nessuna build) per BlackVans Transfer, NCC a 
 
 **https://demolandingpage.github.io/andrei-ncc-landing/**
 
-> **Bozza 5** – anteprima da sottoporre al cliente: i dati del titolare sono fittizi (vedi sotto).
+> **Bozza 6** – anteprima da sottoporre al cliente: i dati del titolare sono fittizi (vedi sotto).
 > Se il link non risponde: Settings → Pages → Source "Deploy from a branch", branch `main`, cartella `/ (root)`. Dopo il salvataggio servono 1–2 minuti.
 
 ## Contenuto
@@ -20,7 +20,7 @@ Anteprima locale: `python -m http.server` nella cartella, poi apri http://localh
 ## Note
 
 - **Lingue:** italiano/inglese con selettore in alto; la scelta viene ricordata nel browser e, alla prima visita, segue la lingua del browser.
-- **Form di prenotazione:** non salva nulla; compone un messaggio e apre WhatsApp. Nessun dato passa da server.
+- **Form di prenotazione:** invia la richiesta per email tramite FormSubmit (formsubmit.co) a andreiprivatetransfers@gmail.com e manda una conferma automatica al cliente; poi si può continuare su WhatsApp. Se l'invio fallisce si apre WhatsApp con il messaggio pronto. **Alla prima richiesta reale FormSubmit manda un'email di attivazione a quell'indirizzo: va cliccato il link.** Il sito non salva i dati.
 - **Cookie/analytics:** nessuno. Nessun embed o script di terze parti, per questo non serve il banner cookie. Se in futuro si aggiungono Google Analytics, Maps o simili, va aggiunto un banner di consenso e aggiornata la privacy policy.
 - **Recensioni:** nessuna recensione finta. Aggiungerne solo di reali.
 - **Foto:** `van1`–`van6` e `hero` sono quelle del progetto originale. Le foto del nuovo Vito 2026 blu non sono ancora incluse.
