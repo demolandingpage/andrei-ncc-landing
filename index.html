@@ -231,6 +231,10 @@ select{width:100%;background:var(--bg2);border:0;border-bottom:1px solid var(--l
 select:focus{outline:none;border-bottom-color:var(--gold)}
 .ph{display:grid;grid-template-columns:128px 1fr;gap:14px}
 .tm{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint.full{grid-column:1/-1;margin-top:-10px}
+.lk{background:none;border:0;padding:0;color:var(--gold);font:500 .74rem var(--mono);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;text-align:left}
+.lk:hover{color:var(--gold2)}
+#nw{margin-top:12px}
 .hint{margin:2px 0 0;font:400 .8rem var(--sans);color:var(--muted);line-height:1.5}
 .pnote{margin:6px 0 0;font:400 .8rem var(--sans);color:var(--muted);line-height:1.5}
 .pbox{border:1px solid var(--line2);padding:12px 14px;font:600 1rem var(--sans);color:var(--gold2)}
@@ -413,12 +417,12 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     <h2 class="rv">Prezzi chiari, decisi prima di partire</h2>
     <p class="lead rv">Tariffe indicative per veicolo, fino a 7 passeggeri. Per altre tratte il preventivo è gratuito.</p>
     <div class="prices">
-      <div class="price rv"><div><small>Roma centro →</small><strong><a class="go" href="#prenota" data-a="Roma centro" data-b="Aeroporto Fiumicino (FCO)" data-t="€60 (IVA incl.)">Aeroporto Fiumicino (FCO)</a></strong></div><div class="eur">€60<i>IVA incl.</i></div></div>
-      <div class="price rv"><div><small>Roma centro →</small><strong><a class="go" href="#prenota" data-a="Roma centro" data-b="Aeroporto Ciampino (CIA)" data-t="€50 (IVA incl.)">Aeroporto Ciampino (CIA)</a></strong></div><div class="eur">€50<i>IVA incl.</i></div></div>
-      <div class="price rv"><div><small>Roma centro →</small><strong><a class="go" href="#prenota" data-a="Roma centro" data-b="Porto di Civitavecchia" data-t="€140 (IVA incl.)">Porto di Civitavecchia</a></strong></div><div class="eur">€140<i>IVA incl.</i></div></div>
-      <div class="price rv"><div><small>Tour →</small><strong><a class="go" href="#prenota" data-a="Roma" data-b="Tour di 3 ore in città" data-t="€150 (IVA incl.)">Tour di 3 ore in città</a></strong></div><div class="eur">€150<i>IVA incl.</i></div></div>
-      <div class="price rv"><div><small>Transfer Roma →</small><strong><a class="go" href="#prenota" data-a="Roma" data-b="Castelli Romani / Tivoli" data-t="€180 (IVA incl.)">Castelli Romani / Tivoli</a></strong></div><div class="eur">€180<i>IVA incl.</i></div></div>
-      <div class="price rv"><div><small>Transfer Fiumicino →</small><strong><a class="go" href="#prenota" data-a="Aeroporto Fiumicino (FCO)" data-b="Aeroporto Ciampino (CIA)" data-t="€80 (IVA incl.)">Ciampino</a></strong></div><div class="eur">€80<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Roma centro →</small><strong><a class="go" href="#prenota" data-a="ROMA" data-b="FCO" data-t="€60 (IVA incl.)">Aeroporto Fiumicino (FCO)</a></strong></div><div class="eur">€60<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Roma centro →</small><strong><a class="go" href="#prenota" data-a="ROMA" data-b="CIA" data-t="€50 (IVA incl.)">Aeroporto Ciampino (CIA)</a></strong></div><div class="eur">€50<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Roma centro →</small><strong><a class="go" href="#prenota" data-a="ROMA" data-b="CVT" data-t="€140 (IVA incl.)">Porto di Civitavecchia</a></strong></div><div class="eur">€140<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Tour →</small><strong><a class="go" href="#prenota" data-a="ROMA" data-b="TOUR" data-t="€150 (IVA incl.)">Tour di 3 ore in città</a></strong></div><div class="eur">€150<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Transfer Roma →</small><strong><a class="go" href="#prenota" data-a="ROMA" data-b="CAS" data-t="€180 (IVA incl.)">Castelli Romani / Tivoli</a></strong></div><div class="eur">€180<i>IVA incl.</i></div></div>
+      <div class="price rv"><div><small>Transfer Fiumicino →</small><strong><a class="go" href="#prenota" data-a="FCO" data-b="CIA" data-t="€80 (IVA incl.)">Ciampino</a></strong></div><div class="eur">€80<i>IVA incl.</i></div></div>
     </div>
     <div class="notes rv">
       <span><b>−10%</b> se scegli di pagare in contanti.</span>
@@ -433,20 +437,20 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
         <a class="btn btn-gold" href="#prenota">Richiedi preventivo</a>
       </div>
       <ul class="lt">
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Assisi" data-t="€580">Roma × Assisi</a></span><b>€ 580</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Cortona" data-t="€600">Roma × Cortona</a></span><b>€ 600</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Montepulciano" data-t="€520">Roma × Montepulciano</a></span><b>€ 520</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Montalcino" data-t="€550">Roma × Montalcino</a></span><b>€ 550</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Napoli" data-t="€660">Roma × Napoli</a></span><b>€ 660</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Perugia" data-t="€530">Roma × Perugia</a></span><b>€ 530</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Sorrento" data-t="€680">Roma × Sorrento</a></span><b>€ 680</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Positano" data-t="€750">Roma × Positano</a></span><b>€ 750</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Siena" data-t="€600">Roma × Siena</a></span><b>€ 600</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Porto Santo Stefano" data-t="€400">Roma × Porto Santo Stefano</a></span><b>€ 400</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Porto Ercole" data-t="€400">Roma × Porto Ercole</a></span><b>€ 400</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Orvieto" data-t="€360">Roma × Orvieto</a></span><b>€ 360</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Lucca" data-t="€770">Roma × Lucca</a></span><b>€ 770</b></li>
-          <li><span><a class="go" href="#prenota" data-a="Roma" data-b="Firenze" data-t="€700">Roma × Firenze</a></span><b>€ 700</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Assisi" data-t="€580">Roma × Assisi</a></span><b>€ 580</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Cortona" data-t="€600">Roma × Cortona</a></span><b>€ 600</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Montepulciano" data-t="€520">Roma × Montepulciano</a></span><b>€ 520</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Montalcino" data-t="€550">Roma × Montalcino</a></span><b>€ 550</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Napoli" data-t="€660">Roma × Napoli</a></span><b>€ 660</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Perugia" data-t="€530">Roma × Perugia</a></span><b>€ 530</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Sorrento" data-t="€680">Roma × Sorrento</a></span><b>€ 680</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Positano" data-t="€750">Roma × Positano</a></span><b>€ 750</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Siena" data-t="€600">Roma × Siena</a></span><b>€ 600</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Porto Santo Stefano" data-t="€400">Roma × Porto Santo Stefano</a></span><b>€ 400</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Porto Ercole" data-t="€400">Roma × Porto Ercole</a></span><b>€ 400</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Orvieto" data-t="€360">Roma × Orvieto</a></span><b>€ 360</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Lucca" data-t="€770">Roma × Lucca</a></span><b>€ 770</b></li>
+          <li><span><a class="go" href="#prenota" data-a="ROMA" data-b="Firenze" data-t="€700">Roma × Firenze</a></span><b>€ 700</b></li>
       </ul>
       <p class="lt-note">La tua destinazione non è in elenco? Dicci dove vuoi andare e ce ne occupiamo noi.</p>
     </div>
@@ -529,24 +533,24 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
       </ul>
     </div>
     <form id="bf" class="rv">
+      <div class="f"><label for="a">Partenza</label><select id="a" required><option value="">Seleziona</option><optgroup label="Aeroporti e porto"><option value="FCO">Aeroporto di Fiumicino (FCO)</option><option value="CIA">Aeroporto di Ciampino (CIA)</option><option value="CVT">Porto di Civitavecchia</option></optgroup><optgroup label="Roma"><option value="ROMA">Roma (hotel o indirizzo)</option><option value="CAS">Castelli Romani / Tivoli</option><option value="TOUR">Tour di 3 ore a Roma</option></optgroup><optgroup label="Long Transfer"><option value="Assisi">Assisi</option><option value="Cortona">Cortona</option><option value="Montepulciano">Montepulciano</option><option value="Montalcino">Montalcino</option><option value="Napoli">Napoli</option><option value="Perugia">Perugia</option><option value="Sorrento">Sorrento</option><option value="Positano">Positano</option><option value="Siena">Siena</option><option value="Porto Santo Stefano">Porto Santo Stefano</option><option value="Porto Ercole">Porto Ercole</option><option value="Orvieto">Orvieto</option><option value="Lucca">Lucca</option><option value="Firenze">Firenze</option></optgroup><option value="OTH">Altro (scrivo l'indirizzo)</option></select></div>
+      <div class="f"><label for="b">Arrivo</label><select id="b" required><option value="">Seleziona</option><optgroup label="Aeroporti e porto"><option value="FCO">Aeroporto di Fiumicino (FCO)</option><option value="CIA">Aeroporto di Ciampino (CIA)</option><option value="CVT">Porto di Civitavecchia</option></optgroup><optgroup label="Roma"><option value="ROMA">Roma (hotel o indirizzo)</option><option value="CAS">Castelli Romani / Tivoli</option><option value="TOUR">Tour di 3 ore a Roma</option></optgroup><optgroup label="Long Transfer"><option value="Assisi">Assisi</option><option value="Cortona">Cortona</option><option value="Montepulciano">Montepulciano</option><option value="Montalcino">Montalcino</option><option value="Napoli">Napoli</option><option value="Perugia">Perugia</option><option value="Sorrento">Sorrento</option><option value="Positano">Positano</option><option value="Siena">Siena</option><option value="Porto Santo Stefano">Porto Santo Stefano</option><option value="Porto Ercole">Porto Ercole</option><option value="Orvieto">Orvieto</option><option value="Lucca">Lucca</option><option value="Firenze">Firenze</option></optgroup><option value="OTH">Altro (scrivo l'indirizzo)</option></select></div>
+      <div class="f full"><label>Prezzo</label><div class="pbox"><span id="prd">Scegli partenza e arrivo per vedere il prezzo</span><span id="prv" hidden></span></div><p class="pnote">Prezzo per veicolo, con una destinazione inclusa. Supplemento notturno di 20 € dalle 19:00 alle 06:00. Pagando in contanti: sconto del 10%.</p></div>
+      <div class="f full" id="aw" hidden><label for="aa"><span class="la1">Indirizzo / hotel a Roma</span><span class="la2" hidden>Indirizzo di partenza</span><span class="la3" hidden>Indirizzo / hotel di partenza (facoltativo)</span></label><input id="aa" maxlength="150" placeholder="Es. Hotel, via e numero civico"></div>
+      <div class="f full" id="bw" hidden><label for="ba"><span class="la1">Indirizzo / hotel a Roma</span><span class="la2" hidden>Indirizzo di arrivo</span><span class="la3" hidden>Indirizzo / hotel di arrivo (facoltativo)</span></label><input id="ba" maxlength="150" placeholder="Es. Hotel, via e numero civico"></div>
+      <div class="f"><label for="d">Data</label><input id="d" type="date" required></div>
+      <div class="f"><label for="h">Orario di arrivo del volo / ritiro</label><input id="h" type="time" required></div>
       <div class="f full" id="fw" hidden><label for="v">Numero volo / nave (facoltativo)</label><input id="v" maxlength="40" placeholder="Es. AZ 610"></div>
-      <div class="f full" id="bw" hidden><label for="bu">Ti serve più tempo per la dogana?</label><select id="bu"><option value="">Seleziona</option><option>Nessun margine extra</option><option>+30 minuti</option><option>+60 minuti</option><option>+90 minuti</option></select><p class="hint">Seleziona il margine dopo l'atterraggio.</p></div>
-      <div class="f full"><label for="ct">Tipo di veicolo</label><select id="ct"><option>Mercedes Premium Van – fino a 7 passeggeri</option></select><p class="hint">Massimo: 7 passeggeri, 7 bagagli in stiva e 7 bagagli a mano.</p></div>
-      <div class="f full"><label for="n">Nome e cognome</label><input id="n" required maxlength="100" autocomplete="name" placeholder="Mario Rossi"></div>
-      <div class="f full"><label for="em">Email</label><input id="em" type="email" required maxlength="120" autocomplete="email" placeholder="nome@esempio.it"></div>
-      <div class="f full"><label for="tel">Cellulare</label><div class="ph"><select id="pf" aria-label="Prefisso"><option value="+39" selected>IT +39</option><option value="+44">UK +44</option><option value="+1">US/CA +1</option><option value="+33">FR +33</option><option value="+34">ES +34</option><option value="+49">DE +49</option><option value="+41">CH +41</option><option value="+43">AT +43</option><option value="+31">NL +31</option><option value="+32">BE +32</option><option value="+351">PT +351</option><option value="+353">IE +353</option><option value="+30">GR +30</option><option value="+48">PL +48</option><option value="+46">SE +46</option><option value="+47">NO +47</option><option value="+45">DK +45</option><option value="+61">AU +61</option><option value="+55">BR +55</option><option value="+971">AE +971</option></select><input id="tel" type="tel" required maxlength="20" autocomplete="tel-national" placeholder="Numero di telefono"></div></div>
-      <div class="f full"><label for="d">Data del transfer</label><input id="d" type="date" required></div>
-      <div class="f full"><label for="hh">Orario di arrivo del volo / ritiro (24 ore)</label><div class="tm"><select id="hh" required aria-label="Ora"><option value="">Ora</option><option>00</option><option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option></select><select id="hm" required aria-label="Minuti"><option value="">Min</option><option>00</option><option>05</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option><option>45</option><option>50</option><option>55</option></select></div><p class="hint">Seleziona l'orario di atterraggio del volo o di ritiro.</p></div>
-      <div class="f full"><label>Prezzo</label><div class="pbox"><span id="prd">Preventivo su richiesta</span><span id="prv" hidden></span></div><p class="pnote">Prezzo per veicolo, con una destinazione inclusa. Supplemento notturno di 20 € dalle 19:00 alle 06:00. Pagando in contanti: sconto del 10%.</p></div>
-      <div class="f"><label for="a">Partenza</label><input id="a" required maxlength="150" placeholder="Es. Aeroporto Fiumicino"></div>
-      <div class="f"><label for="b">Indirizzo / hotel di destinazione</label><input id="b" required maxlength="150" placeholder="Es. Hotel, Roma centro"></div>
+      <div class="f"><label for="p">Passeggeri</label><select id="p" required><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
+      <div class="f"><label for="g">Bagagli</label><select id="g" required><option>0</option><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
+      <p class="hint full">Veicolo: Mercedes Premium Van, fino a 7 passeggeri e 7 bagagli.</p>
       <div class="f full"><label class="chk" for="rt"><input id="rt" type="checkbox"><span>Aggiungi il ritorno (andata e ritorno)</span></label></div>
       <div class="f" id="rdw" hidden><label for="rd">Data ritorno</label><input id="rd" type="date"></div>
       <div class="f" id="rhw" hidden><label for="rh">Ora ritorno</label><input id="rh" type="time"></div>
-      <div class="f full"><label for="p">Passeggeri</label><select id="p" required><option value="">Seleziona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
-      <div class="f full"><label for="cb">Bagagli a mano</label><select id="cb" required><option value="">Seleziona</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
-      <div class="f full"><label for="kb">Bagagli in stiva</label><select id="kb" required><option value="">Seleziona</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
-      <div class="f full"><label for="o">Messaggio (facoltativo)</label><p class="hint">Se viaggi con bagagli ingombranti o oggetti speciali, come una sedia a rotelle, strumenti musicali o attrezzatura sportiva, indicalo in anticipo con le dimensioni approssimative, così possiamo confermare che il veicolo abbia spazio sufficiente.</p><textarea id="o" rows="4" maxlength="500" placeholder="Seggiolino bambino, fermate intermedie, bagagli ingombranti…"></textarea></div>
+      <div class="f full"><label for="n">Nome e cognome</label><input id="n" required maxlength="100" autocomplete="name" placeholder="Mario Rossi"></div>
+      <div class="f"><label for="em">Email</label><input id="em" type="email" required maxlength="120" autocomplete="email" placeholder="nome@esempio.it"></div>
+      <div class="f"><label for="tel">Cellulare</label><div class="ph"><select id="pf" aria-label="Prefisso"><option value="+39" selected>IT +39</option><option value="+44">UK +44</option><option value="+1">US/CA +1</option><option value="+33">FR +33</option><option value="+34">ES +34</option><option value="+49">DE +49</option><option value="+41">CH +41</option><option value="+43">AT +43</option><option value="+31">NL +31</option><option value="+32">BE +32</option><option value="+351">PT +351</option><option value="+353">IE +353</option><option value="+30">GR +30</option><option value="+48">PL +48</option><option value="+46">SE +46</option><option value="+47">NO +47</option><option value="+45">DK +45</option><option value="+61">AU +61</option><option value="+55">BR +55</option><option value="+971">AE +971</option></select><input id="tel" type="tel" required maxlength="20" autocomplete="tel-national" placeholder="Numero di telefono"></div></div>
+      <div class="f full"><button type="button" class="lk" id="nt" aria-expanded="false">+ Aggiungi note o richieste speciali</button><div id="nw" hidden><p class="hint">Bagagli ingombranti, sedia a rotelle, strumenti musicali, attrezzatura sportiva (con dimensioni approssimative), seggiolino bambino, soste intermedie.</p><textarea id="o" rows="3" maxlength="500" placeholder="Scrivi qui le tue richieste"></textarea></div></div>
       <div class="f full"><label class="chk" for="pc"><input id="pc" type="checkbox" required><span>Ho letto e accetto l'<a href="#privacy">Informativa Privacy</a> e la <a href="#cookie">Cookie Policy</a>.</span></label></div>
       <button class="btn btn-gold" type="submit"><svg><use href="#i-ml"/></svg>Invia richiesta</button>
       <a id="wal" class="btn btn-gold" target="_blank" rel="noopener" hidden>Apri WhatsApp</a>
@@ -643,7 +647,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <a class="float" href="https://wa.me/393271996272?text=Ciao%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-<!--DRAFT--><div class="draft" role="note">Bozza 6 · dati fittizi</div><!--/DRAFT-->
+<!--DRAFT--><div class="draft" role="note">Bozza 7 · dati fittizi</div><!--/DRAFT-->
 <script>
 (function(){
   var h=document.querySelector('header');
@@ -740,7 +744,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "comincia":"starts",
     "qui.":"here.",
     'NCC Roma, noleggio con conducente:':'Rome chauffeur service, private hire:',
-    'Bozza 6 · dati fittizi':'Draft 6 · sample data',
+    'Bozza 7 · dati fittizi':'Draft 7 · sample data',
     'Informativa privacy':'Privacy policy','Cookie policy':'Cookie policy',
     "Transfer Roma →":"Transfer Rome →",
     "Transfer Fiumicino →":"Transfer Fiumicino →",
@@ -748,7 +752,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "Long Transfer":"Long Transfer",
     "Transfer privati con autista professionista che parla inglese, a bordo di un Mercedes Premium Van: aeroporti, porti, hotel, business, tour e gite giornaliere. Puntuali, a prezzo fisso, a qualsiasi ora.":"Private transfer with a professional english speaking driver in a Mercedes premium van: Airports, ports, hotels, business, tours and daytrips, punctual, fixed prices at any hour.",
     "La tua destinazione non è in elenco? Dicci dove vuoi andare e ce ne occupiamo noi.":"Your destination is not listed? Tell us where you want to go and we will organize it for you.",
-    "Transfer aeroporti di Roma":"Rome Airport Transfer","Porto di Civitavecchia · Crociere":"Civitavecchia Port Cruise","Tour su misura e gite giornaliere":"Tailor Made Tours and Daytrips","Roma":"Rome","Prenotazione e conferma":"Booking and confirmation","Consigliamo di prenotare almeno 24 ore prima; le richieste dell'ultimo minuto sono valutate in base alla disponibilità. Ti confermiamo la disponibilità entro 8 ore dalla richiesta.":"We recommend booking at least 24 hours in advance; last-minute requests are subject to availability. We confirm availability within 8 hours of your request.","Informazioni sul volo":"Flight information","Indica numero volo, data e orario previsto di arrivo: ci permettono di monitorare il volo e di coordinare il ritiro in aeroporto.":"Please give your flight number, date and scheduled arrival time: this lets us monitor your flight and coordinate the airport pickup.","Prezzi e destinazioni":"Prices and drop-offs","Le tariffe sono per veicolo, non per persona, e comprendono una destinazione nel centro di Roma. Ritiri o soste aggiuntivi possono prevedere un supplemento.":"Prices are per vehicle, not per passenger, and include one drop-off in central Rome. Additional pickups or stops may carry an extra charge.","Tempo di attesa incluso":"Included waiting time","Fino a 60 minuti di attesa gratuita in aeroporto e 15 minuti negli altri punti di ritiro.":"Up to 60 minutes of free waiting time at airports and 15 minutes at all other pickup points.","Pagamento":"Payment","Carta, bancomat e app al prezzo standard. Se paghi in contanti hai uno sconto del 10%.":"Card, debit card and apps at the standard price. Pay in cash and get a 10% discount.","Supplemento notturno":"Night supplement","Per i transfer tra le 19:00 e le 06:00 è previsto un supplemento di 20 € a veicolo.":"A €20 per vehicle supplement applies to transfers between 7:00 PM and 6:00 AM.","Bagagli":"Luggage","Ogni veicolo ha una capienza massima: fino a 7 passeggeri, 7 bagagli in stiva e 7 a mano. Per bagagli ingombranti o oggetti speciali avvisaci in anticipo.":"Each vehicle has a maximum capacity: up to 7 passengers, 7 checked bags and 7 cabin bags. For oversized luggage or special items, let us know in advance.","Servizio privato":"Private service","Il veicolo è riservato solo a te e al tuo gruppo: nessuna corsa condivisa e nessuna sosta non richiesta.":"The vehicle is reserved exclusively for you and your party: no shared rides and no unrequested stops.","Hai bisogno di aiuto?":"Need help?","Scrivici su WhatsApp o per email: ti rispondiamo il prima possibile e ti aiutiamo a completare la prenotazione.":"Message us on WhatsApp or by email: we reply as soon as possible and help you complete your booking.","Quanta attesa è inclusa nel transfer?":"How much waiting time is included?","Fino a 60 minuti gratuiti in aeroporto e 15 minuti negli altri punti di ritiro.":"Up to 60 minutes free at airports and 15 minutes at other pickup points.","Il servizio è privato o condiviso?":"Is the service private or shared?","È sempre privato: il veicolo è riservato solo a te e al tuo gruppo.":"Always private: the vehicle is reserved exclusively for you and your party.","Posso aggiungere una sosta durante il viaggio?":"Can I add a stop during the trip?","Sì, indicala nel messaggio della richiesta: le soste aggiuntive possono prevedere un supplemento.":"Yes, mention it in your request message: additional stops may carry an extra charge.","Informazioni utili":"Useful information","Cosa c'è da sapere prima di prenotare":"What you need to know before booking","Prezzo per veicolo, con una destinazione inclusa. Supplemento notturno di 20 € dalle 19:00 alle 06:00. Pagando in contanti: sconto del 10%.":"Price per vehicle, one drop-off included. €20 night supplement from 7:00 PM to 6:00 AM. Pay in cash and get 10% off.","Numero volo / nave (facoltativo)":"Flight / ship number (optional)","Ti serve più tempo per la dogana?":"Need more time for customs?","Seleziona":"Select","Nessun margine extra":"No extra buffer","+30 minuti":"+30 minutes","+60 minuti":"+60 minutes","+90 minuti":"+90 minutes","Seleziona il margine dopo l'atterraggio.":"Select your buffer after landing.","Tipo di veicolo":"Vehicle type","Mercedes Premium Van – fino a 7 passeggeri":"Mercedes Premium Van – up to 7 passengers","Massimo: 7 passeggeri, 7 bagagli in stiva e 7 bagagli a mano.":"Maximum: 7 passengers, 7 checked bags and 7 cabin bags.","Email":"Email","Cellulare":"Mobile number","Data del transfer":"Transfer date","Orario di arrivo del volo / ritiro (24 ore)":"Flight arrival / pickup time (24h)","Seleziona l'orario di atterraggio del volo o di ritiro.":"Select your flight landing or pickup time.","Prezzo":"Price","Preventivo su richiesta":"Quote on request","Indirizzo / hotel di destinazione":"Drop-off address / hotel","Bagagli a mano":"Cabin bags","Bagagli in stiva":"Checked luggage","Messaggio (facoltativo)":"Message (optional)","Se viaggi con bagagli ingombranti o oggetti speciali, come una sedia a rotelle, strumenti musicali o attrezzatura sportiva, indicalo in anticipo con le dimensioni approssimative, così possiamo confermare che il veicolo abbia spazio sufficiente.":"If you are travelling with oversized luggage or special items, such as a wheelchair, musical instruments or sports equipment, please tell us in advance with approximate dimensions so we can confirm the vehicle has enough space.","Ho letto e accetto l'":"I have read and agree to the ","Informativa Privacy":"Privacy Policy","Cookie Policy":"Cookie Policy","e la":"and the","Aggiungi il ritorno (andata e ritorno)":"Add a return trip (round trip)","Data ritorno":"Return date","Ora ritorno":"Return time","Sconto del 10% per i pagamenti in contanti.":"10% discount for cash payments.","Aeroporti":"Airports","Porti":"Ports","Transfer privati":"Private transfers",
+    "Transfer aeroporti di Roma":"Rome Airport Transfer","Porto di Civitavecchia · Crociere":"Civitavecchia Port Cruise","Tour su misura e gite giornaliere":"Tailor Made Tours and Daytrips","Roma":"Rome","Seleziona":"Select","Aeroporti e porto":"Airports and port","Aeroporto di Fiumicino (FCO)":"Fiumicino Airport (FCO)","Aeroporto di Ciampino (CIA)":"Ciampino Airport (CIA)","Porto di Civitavecchia":"Civitavecchia Port","Roma (hotel o indirizzo)":"Rome (hotel or address)","Castelli Romani / Tivoli":"Castelli Romani / Tivoli","Tour di 3 ore a Roma":"3-hour tour of Rome","Altro (scrivo l'indirizzo)":"Other (I will write the address)","Napoli":"Naples","Firenze":"Florence","Arrivo":"Arrival","Indirizzo / hotel a Roma":"Address / hotel in Rome","Indirizzo di partenza":"Pickup address","Indirizzo di arrivo":"Drop-off address","Indirizzo / hotel di partenza (facoltativo)":"Pickup address / hotel (optional)","Indirizzo / hotel di arrivo (facoltativo)":"Drop-off address / hotel (optional)","Scegli partenza e arrivo per vedere il prezzo":"Choose pickup and drop-off to see the price","Data":"Date","Orario di arrivo del volo / ritiro":"Flight arrival / pickup time","Bagagli":"Bags","Veicolo: Mercedes Premium Van, fino a 7 passeggeri e 7 bagagli.":"Vehicle: Mercedes Premium Van, up to 7 passengers and 7 bags.","+ Aggiungi note o richieste speciali":"+ Add notes or special requests","Bagagli ingombranti, sedia a rotelle, strumenti musicali, attrezzatura sportiva (con dimensioni approssimative), seggiolino bambino, soste intermedie.":"Oversized luggage, wheelchair, musical instruments, sports equipment (with approximate dimensions), child seat, stops on the way.","Ho letto e accetto l'":"I have read and agree to the ","Prenotazione e conferma":"Booking and confirmation","Consigliamo di prenotare almeno 24 ore prima; le richieste dell'ultimo minuto sono valutate in base alla disponibilità. Ti confermiamo la disponibilità entro 8 ore dalla richiesta.":"We recommend booking at least 24 hours in advance; last-minute requests are subject to availability. We confirm availability within 8 hours of your request.","Informazioni sul volo":"Flight information","Indica numero volo, data e orario previsto di arrivo: ci permettono di monitorare il volo e di coordinare il ritiro in aeroporto.":"Please give your flight number, date and scheduled arrival time: this lets us monitor your flight and coordinate the airport pickup.","Prezzi e destinazioni":"Prices and drop-offs","Le tariffe sono per veicolo, non per persona, e comprendono una destinazione nel centro di Roma. Ritiri o soste aggiuntivi possono prevedere un supplemento.":"Prices are per vehicle, not per passenger, and include one drop-off in central Rome. Additional pickups or stops may carry an extra charge.","Tempo di attesa incluso":"Included waiting time","Fino a 60 minuti di attesa gratuita in aeroporto e 15 minuti negli altri punti di ritiro.":"Up to 60 minutes of free waiting time at airports and 15 minutes at all other pickup points.","Pagamento":"Payment","Carta, bancomat e app al prezzo standard. Se paghi in contanti hai uno sconto del 10%.":"Card, debit card and apps at the standard price. Pay in cash and get a 10% discount.","Supplemento notturno":"Night supplement","Per i transfer tra le 19:00 e le 06:00 è previsto un supplemento di 20 € a veicolo.":"A €20 per vehicle supplement applies to transfers between 7:00 PM and 6:00 AM.","Bagagli":"Luggage","Ogni veicolo ha una capienza massima: fino a 7 passeggeri, 7 bagagli in stiva e 7 a mano. Per bagagli ingombranti o oggetti speciali avvisaci in anticipo.":"Each vehicle has a maximum capacity: up to 7 passengers, 7 checked bags and 7 cabin bags. For oversized luggage or special items, let us know in advance.","Servizio privato":"Private service","Il veicolo è riservato solo a te e al tuo gruppo: nessuna corsa condivisa e nessuna sosta non richiesta.":"The vehicle is reserved exclusively for you and your party: no shared rides and no unrequested stops.","Hai bisogno di aiuto?":"Need help?","Scrivici su WhatsApp o per email: ti rispondiamo il prima possibile e ti aiutiamo a completare la prenotazione.":"Message us on WhatsApp or by email: we reply as soon as possible and help you complete your booking.","Quanta attesa è inclusa nel transfer?":"How much waiting time is included?","Fino a 60 minuti gratuiti in aeroporto e 15 minuti negli altri punti di ritiro.":"Up to 60 minutes free at airports and 15 minutes at other pickup points.","Il servizio è privato o condiviso?":"Is the service private or shared?","È sempre privato: il veicolo è riservato solo a te e al tuo gruppo.":"Always private: the vehicle is reserved exclusively for you and your party.","Posso aggiungere una sosta durante il viaggio?":"Can I add a stop during the trip?","Sì, indicala nel messaggio della richiesta: le soste aggiuntive possono prevedere un supplemento.":"Yes, mention it in your request message: additional stops may carry an extra charge.","Informazioni utili":"Useful information","Cosa c'è da sapere prima di prenotare":"What you need to know before booking","Prezzo per veicolo, con una destinazione inclusa. Supplemento notturno di 20 € dalle 19:00 alle 06:00. Pagando in contanti: sconto del 10%.":"Price per vehicle, one drop-off included. €20 night supplement from 7:00 PM to 6:00 AM. Pay in cash and get 10% off.","Numero volo / nave (facoltativo)":"Flight / ship number (optional)","Ti serve più tempo per la dogana?":"Need more time for customs?","Seleziona":"Select","Nessun margine extra":"No extra buffer","+30 minuti":"+30 minutes","+60 minuti":"+60 minutes","+90 minuti":"+90 minutes","Seleziona il margine dopo l'atterraggio.":"Select your buffer after landing.","Tipo di veicolo":"Vehicle type","Mercedes Premium Van – fino a 7 passeggeri":"Mercedes Premium Van – up to 7 passengers","Massimo: 7 passeggeri, 7 bagagli in stiva e 7 bagagli a mano.":"Maximum: 7 passengers, 7 checked bags and 7 cabin bags.","Email":"Email","Cellulare":"Mobile number","Data del transfer":"Transfer date","Orario di arrivo del volo / ritiro (24 ore)":"Flight arrival / pickup time (24h)","Seleziona l'orario di atterraggio del volo o di ritiro.":"Select your flight landing or pickup time.","Prezzo":"Price","Preventivo su richiesta":"Quote on request","Indirizzo / hotel di destinazione":"Drop-off address / hotel","Bagagli a mano":"Cabin bags","Bagagli in stiva":"Checked luggage","Messaggio (facoltativo)":"Message (optional)","Se viaggi con bagagli ingombranti o oggetti speciali, come una sedia a rotelle, strumenti musicali o attrezzatura sportiva, indicalo in anticipo con le dimensioni approssimative, così possiamo confermare che il veicolo abbia spazio sufficiente.":"If you are travelling with oversized luggage or special items, such as a wheelchair, musical instruments or sports equipment, please tell us in advance with approximate dimensions so we can confirm the vehicle has enough space.","Ho letto e accetto l'":"I have read and agree to the ","Informativa Privacy":"Privacy Policy","Cookie Policy":"Cookie Policy","e la":"and the","Aggiungi il ritorno (andata e ritorno)":"Add a return trip (round trip)","Data ritorno":"Return date","Ora ritorno":"Return time","Sconto del 10% per i pagamenti in contanti.":"10% discount for cash payments.","Aeroporti":"Airports","Porti":"Ports","Transfer privati":"Private transfers",
     "Viaggi di lungo percorso in tutta Italia: tariffa fissa, senza sorprese.":"Long-distance trips across Italy: fixed rate, no surprises.",
     "Roma × Assisi":"Rome × Assisi","Roma × Cortona":"Rome × Cortona","Roma × Montepulciano":"Rome × Montepulciano","Roma × Montalcino":"Rome × Montalcino","Roma × Napoli":"Rome × Naples","Roma × Perugia":"Rome × Perugia","Roma × Sorrento":"Rome × Sorrento","Roma × Positano":"Rome × Positano","Roma × Siena":"Rome × Siena","Roma × Porto Santo Stefano":"Rome × Porto Santo Stefano","Roma × Porto Ercole":"Rome × Porto Ercole","Roma × Orvieto":"Rome × Orvieto","Roma × Lucca":"Rome × Lucca","Roma × Firenze":"Rome × Florence",
     "Roma–Napoli":"Rome–Naples",
@@ -781,9 +785,9 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     'NCC Roma · P.IVA 18170441002':'Rome chauffeur service · VAT no. 18170441002',
     'BlackVans Transfer · Tutti i diritti riservati':'BlackVans Transfer · All rights reserved'
   };
-  var PH_EN={n:'John Smith',a:'e.g. Fiumicino Airport',b:'e.g. Hotel, central Rome',o:'Child seat, stops on the way, oversized luggage…',v:'e.g. AZ 610',em:'name@example.com',tel:'Phone number'};
+  var PH_EN={n:'John Smith',aa:'e.g. Hotel, street and number',ba:'e.g. Hotel, street and number',o:'Write your requests here',v:'e.g. AZ 610',em:'name@example.com',tel:'Phone number'};
   var MSG={
-    it:{q:'Ciao, vorrei un preventivo transfer',b:'Ciao, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Valigie',o:'Note',v:'Volo/treno/nave',r:'Ritorno',tf:'Tariffa indicata',em:'Email',tel:'Cellulare',bu:'Margine dogana',ct:'Veicolo',cb:'Bagagli a mano',kb:'Bagagli in stiva',ok:'Richiesta inviata. Ti risponderemo il prima possibile; riceverai anche una email di conferma. Se vuoi, puoi continuare su WhatsApp.',ko:'Non siamo riusciti a inviare la richiesta per email: ti apriamo WhatsApp con il messaggio già pronto.',ar:'Grazie per la tua richiesta a BlackVans Transfer. L\'abbiamo ricevuta e ti confermeremo la disponibilità il prima possibile. Se hai urgenza puoi scriverci su WhatsApp al +39 327 199 6272.',sj:'Nuova richiesta di prenotazione – BlackVans Transfer'},
+    it:{q:'Ciao, vorrei un preventivo transfer',b:'Ciao, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Bagagli',o:'Note',v:'Volo/treno/nave',r:'Ritorno',tf:'Tariffa indicata',em:'Email',tel:'Cellulare',bu:'Margine dogana',ct:'Veicolo',cb:'Bagagli a mano',kb:'Bagagli in stiva',ok:'Richiesta inviata. Ti risponderemo il prima possibile; riceverai anche una email di conferma. Se vuoi, puoi continuare su WhatsApp.',ko:'Non siamo riusciti a inviare la richiesta per email: ti apriamo WhatsApp con il messaggio già pronto.',ar:'Grazie per la tua richiesta a BlackVans Transfer. L\'abbiamo ricevuta e ti confermeremo la disponibilità il prima possibile. Se hai urgenza puoi scriverci su WhatsApp al +39 327 199 6272.',sj:'Nuova richiesta di prenotazione – BlackVans Transfer'},
     en:{q:'Hi, I would like a transfer quote',b:'Hi, I would like to book a transfer:',n:'Name',d:'Date',f:'From',t:'To',p:'Passengers',g:'Bags',o:'Notes',v:'Flight/train/ship',r:'Return',tf:'Quoted rate',em:'Email',tel:'Mobile',bu:'Customs buffer',ct:'Vehicle',cb:'Cabin bags',kb:'Checked bags',ok:'Request sent. We will reply as soon as possible; you will also receive a confirmation email. If you like, you can continue on WhatsApp.',ko:'We could not send the request by email: we are opening WhatsApp with your message ready.',ar:'Thank you for your request to BlackVans Transfer. We have received it and will confirm availability as soon as possible. If it is urgent, message us on WhatsApp at +39 327 199 6272.',sj:'New booking request – BlackVans Transfer'}
   };
   var TITLE={it:document.title,en:'Rome Chauffeur Service (NCC) | BlackVans Transfer'};
@@ -843,48 +847,71 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
   /* ---------- form -> WhatsApp ---------- */
   var tar='';
-  function tarTxt(){if(!tar)return '';var m=/€\s?(\d+)/.exec(tar);if(m&&document.getElementById('rt').checked){var n=+m[1];return tar+' × 2 = €'+(n*2)+' (andata e ritorno)'}return tar}
-  function showTar(){var t=tarTxt();document.getElementById('prd').hidden=!!t;var e=document.getElementById('prv');e.hidden=!t;e.textContent=t}
-  var AIR=/aeroport|airport|fiumicino|ciampino|\bfco\b|\bcia\b|porto|port\b|civitavecchia|nave|crociera|cruise/i;
-  function showFlight(){var on=AIR.test(document.getElementById('a').value+' '+document.getElementById('b').value);['fw','bw'].forEach(function(i){document.getElementById(i).hidden=!on})}
+  var PRC={FCO:60,CIA:50,CVT:140,CAS:180,TOUR:150,Assisi:580,Cortona:600,Montepulciano:520,Montalcino:550,Napoli:660,Perugia:530,Sorrento:680,Positano:750,Siena:600,'Porto Santo Stefano':400,'Porto Ercole':400,Orvieto:360,Lucca:770,Firenze:700};
+  var IVA={FCO:1,CIA:1,CVT:1,CAS:1,TOUR:1,FCOCIA:1};
+  var $=function(i){return document.getElementById(i)};
+  function calc(){
+    var a=$('a').value,b=$('b').value,n=0,k='';
+    if(a&&b){
+      if(a==='ROMA'&&PRC[b]){n=PRC[b];k=b}
+      else if(b==='ROMA'&&PRC[a]){n=PRC[a];k=a}
+      else if((a==='FCO'&&b==='CIA')||(a==='CIA'&&b==='FCO')){n=80;k='FCOCIA'}
+    }
+    tar=n?('€'+n+(IVA[k]?' (IVA incl.)':'')):'';
+  }
+  function tarTxt(){if(!tar)return '';var m=/€\s?(\d+)/.exec(tar);if(m&&$('rt').checked){var n=+m[1];return tar+' × 2 = €'+(n*2)+' (andata e ritorno)'}return tar}
+  function showTar(){var t=tarTxt();$('prd').hidden=!!t;var e=$('prv');e.hidden=!t;e.textContent=t}
+  function side(sel,wrap,inp){
+    var v=$(sel).value,w=$(wrap),mode=0;
+    if(v==='ROMA')mode=1;else if(v==='OTH')mode=2;else if(v&&v!=='FCO'&&v!=='CIA'&&v!=='CVT'&&v!=='TOUR')mode=3;
+    w.hidden=!mode;
+    [].forEach.call(w.querySelectorAll('label span'),function(sp,i){sp.hidden=(i+1)!==mode});
+    $(inp).required=(mode===1||mode===2);
+  }
+  function update(){
+    calc();showTar();side('a','aw','aa');side('b','bw','ba');
+    var on=['FCO','CIA','CVT'].indexOf($('a').value)>-1||['FCO','CIA','CVT'].indexOf($('b').value)>-1;
+    $('fw').hidden=!on;
+  }
+  ['a','b'].forEach(function(i){$(i).addEventListener('change',update)});
   [].forEach.call(document.querySelectorAll('a.go'),function(k){k.addEventListener('click',function(){
-    tar=k.getAttribute('data-t')||'';showTar();
     var A=k.getAttribute('data-a'),B=k.getAttribute('data-b');
-    if(A||B){document.getElementById('a').value=A;document.getElementById('b').value=B}
-    showFlight();
+    if(A||B){$('a').value=A;$('b').value=B;update()}
   })});
-  ['a','b'].forEach(function(i){document.getElementById(i).addEventListener('input',function(){tar='';showTar();showFlight()})});
-  var rt=document.getElementById('rt');
-  rt.addEventListener('change',function(){['rdw','rhw'].forEach(function(i){document.getElementById(i).hidden=!rt.checked});
-    document.getElementById('rd').required=document.getElementById('rh').required=rt.checked;showTar()});
-  document.getElementById('bf').addEventListener('submit',function(e){
+  var rt=$('rt');
+  rt.addEventListener('change',function(){['rdw','rhw'].forEach(function(i){$(i).hidden=!rt.checked});
+    $('rd').required=$('rh').required=rt.checked;showTar()});
+  $('nt').addEventListener('click',function(){var w=$('nw'),o=w.hidden;w.hidden=!o;this.setAttribute('aria-expanded',String(o));if(o)$('o').focus()});
+  function place(k,addr){
+    var sel=$(k),t=sel.options[sel.selectedIndex].text,ad=$(addr).value.trim();
+    return ad?t+' – '+ad:t;
+  }
+  $('bf').addEventListener('submit',function(e){
     e.preventDefault();
     var m=MSG[lang];
-    var v=function(i){return document.getElementById(i).value.trim()};
+    var v=function(i){return $(i).value.trim()};
+    var fr=place('a','aa'),to=place('b','ba');
     var L=[m.b,
       '👤 '+m.n+': '+v('n'),
       '✉️ '+m.em+': '+v('em'),
       '📞 '+m.tel+': '+v('pf')+' '+v('tel'),
-      '📅 '+m.d+': '+v('d')+' '+v('hh')+':'+v('hm'),
-      '📍 '+m.f+': '+v('a'),
-      '🏁 '+m.t+': '+v('b'),
-      '🚐 '+m.ct+': '+v('ct'),
+      '📅 '+m.d+': '+v('d')+' '+v('h'),
+      '📍 '+m.f+': '+fr,
+      '🏁 '+m.t+': '+to,
       '👥 '+m.p+': '+v('p'),
-      '🎒 '+m.cb+': '+v('cb'),
-      '🧳 '+m.kb+': '+v('kb')];
+      '🧳 '+m.g+': '+v('g')];
     if(v('v'))L.push('✈️ '+m.v+': '+v('v'));
-    if(v('bu'))L.push('🕒 '+m.bu+': '+v('bu'));
     if(v('o'))L.push('📝 '+m.o+': '+v('o'));
-    if(document.getElementById('rt').checked)L.push('🔁 '+m.r+': '+v('rd')+' '+v('rh')+' ('+v('b')+' → '+v('a')+')');
+    if(rt.checked)L.push('🔁 '+m.r+': '+v('rd')+' '+v('rh')+' ('+to+' → '+fr+')');
     if(tar)L.push('💶 '+m.tf+': '+tarTxt());
-    var a=document.getElementById('wal');
+    var a=$('wal');
     a.href='https://wa.me/393271996272?text='+encodeURIComponent(L.join('\n'));
-    var btn=e.target.querySelector('button[type=submit]'),st=document.getElementById('bst');
+    var btn=e.target.querySelector('button[type=submit]'),st=$('bst');
     btn.disabled=true;
     var data={_subject:m.sj,_template:'table',_captcha:'false',_autoresponse:m.ar,
-      name:v('n'),email:v('em'),phone:v('pf')+' '+v('tel'),date:v('d')+' '+v('hh')+':'+v('hm'),from:v('a'),to:v('b'),
-      vehicle:v('ct'),passengers:v('p'),cabin_bags:v('cb'),checked_bags:v('kb'),flight:v('v'),customs_buffer:v('bu'),
-      return_trip:document.getElementById('rt').checked?(v('rd')+' '+v('rh')):'no',quoted_rate:tar?tarTxt():'',message:v('o')};
+      name:v('n'),email:v('em'),phone:v('pf')+' '+v('tel'),date:v('d')+' '+v('h'),from:fr,to:to,
+      passengers:v('p'),bags:v('g'),flight:v('v'),
+      return_trip:rt.checked?(v('rd')+' '+v('rh')):'no',quoted_rate:tar?tarTxt():'',message:v('o')};
     function fail(){btn.disabled=false;st.textContent=m.ko;st.hidden=false;a.hidden=false;a.click()}
     fetch('https://formsubmit.co/ajax/andreiprivatetransfers@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
       .then(function(r){return r.json()})
