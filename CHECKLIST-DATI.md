@@ -9,7 +9,7 @@ Servono per rendere la pagina operativa e a norma. Con questi dati: compila `dat
 - [ ] Numero REA / iscrizione Camera di Commercio (se presente)
 - [ ] Numero e Comune di rilascio dell'autorizzazione NCC
 - [ ] PEC
-- [ ] Conferma di telefono e email già presenti (+39 327 199 6272, andreiprivatetransfers@gmail.com)
+- [ ] Conferma di telefono e email già presenti (+39 327 199 6272, blackvanstransfer@gmail.com)
 
 ## Per il posizionamento su Google
 - [ ] Dominio scelto (es. `nccroma…it`) con accesso al pannello DNS
@@ -38,4 +38,4 @@ Le informazioni della sezione «Informazioni utili», delle FAQ e del modulo son
 - Tariffe per veicolo, con una destinazione nel centro di Roma; ritiri o soste aggiuntivi con supplemento.
 - Pagamento: carta, bancomat e app al prezzo standard; sconto 10% in contanti. Il sito di riferimento chiede anche un acconto con link di pagamento: qui non previsto.
 - **Mancante:** politica di cancellazione e rimborsi (non pubblicata sul sito di riferimento).
-- Invio richieste per email: attivo tramite FormSubmit verso andreiprivatetransfers@gmail.com (con email di conferma automatica al cliente). La prima richiesta reale fa arrivare a quell'indirizzo una email di attivazione: va cliccato il link di conferma. Quando c'è l'email sul dominio, cambiare l'indirizzo in index.html (cercare formsubmit.co) e riattivare. La privacy policy cita FormSubmit: farla verificare.
+- Invio richieste per email: attivo tramite FormSubmit verso blackvanstransfer@gmail.com (con email di conferma automatica al cliente). La prima richiesta reale fa arrivare a quell'indirizzo una email di attivazione: va cliccato il link di conferma. Quando c'è l'email sul dominio, cambiare l'indirizzo in index.html (cercare formsubmit.co) e riattivare. La privacy policy cita FormSubmit: farla verificare.
