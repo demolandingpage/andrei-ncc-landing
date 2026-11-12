@@ -659,7 +659,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <a class="float" href="https://wa.me/393271996272?text=Ciao%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-<!--DRAFT--><div class="draft" role="note">Bozza 15 · dati fittizi</div><!--/DRAFT-->
+<!--DRAFT--><div class="draft" role="note">Bozza 16 · dati fittizi</div><!--/DRAFT-->
 <script>
 (function(){
   var h=document.querySelector('header');
@@ -756,7 +756,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "comincia":"starts",
     "qui.":"here.",
     'NCC Roma, noleggio con conducente:':'Rome chauffeur service, private hire:',
-    'Bozza 15 · dati fittizi':'Draft 15 · sample data',
+    'Bozza 16 · dati fittizi':'Draft 16 · sample data',
     'Informativa privacy':'Privacy policy','Cookie policy':'Cookie policy',
     "Transfer Roma →":"Transfer Rome →",
     "Transfer Fiumicino →":"Transfer Fiumicino →",
@@ -963,9 +963,11 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
       passengers:v('p'),bags:v('g'),payment:$('pm').options[$('pm').selectedIndex].text,flight:v('v'),
       return_trip:rt.checked?(v('rd')+' '+v('rh')):'no',quoted_rate:tar?tarTxt():'',message:v('o')};
     function fail(){btn.disabled=false;st.textContent=m.ko;st.hidden=false;a.hidden=false;a.click()}
-    fetch('https://formsubmit.co/ajax/blackvanstransfer@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+    var ac=window.AbortController?new AbortController():null,tm=setTimeout(function(){if(ac)ac.abort();else fail()},12000),done=false;
+    var _fail=fail;fail=function(){if(done)return;done=true;clearTimeout(tm);_fail()};
+    fetch('https://formsubmit.co/ajax/blackvanstransfer@gmail.com',{method:'POST',signal:ac?ac.signal:undefined,headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
       .then(function(r){return r.json()})
-      .then(function(j){if(j&&(j.success===true||j.success==='true')){btn.disabled=false;st.textContent=m.ok;st.hidden=false;a.hidden=false}else fail()})
+      .then(function(j){if(done)return;if(j&&(j.success===true||j.success==='true')){done=true;clearTimeout(tm);btn.disabled=false;st.textContent=m.ok;st.hidden=false;a.hidden=false}else fail()})
       .catch(fail);
   });
 })();
