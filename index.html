@@ -223,27 +223,6 @@ header.solid{background:rgba(7,9,14,.88);backdrop-filter:blur(12px);border-botto
 .step h3{margin-bottom:10px}
 .step p{color:var(--muted);font-size:.93rem;max-width:34ch}
 
-/* recensioni verificate */
-.rws-head{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:flex-end}
-.rws-sum{display:flex;align-items:center;gap:16px}
-.rws-sum b{font:200 3.2rem/1 var(--display);color:var(--gold2)}
-.rws-sum small{display:block;font:400 .68rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:6px}
-.stars{color:var(--gold2);letter-spacing:.14em;font-size:1rem;white-space:nowrap}
-.rws-list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
-.rw{border:1px solid var(--line2);padding:30px 28px 24px;display:flex;flex-direction:column;gap:16px;background:var(--bg2)}
-.rw p{color:var(--fg);font-size:.95rem;margin:0}
-.rw-by{margin-top:auto;display:flex;justify-content:space-between;gap:12px;align-items:flex-end;flex-wrap:wrap;border-top:1px solid var(--line2);padding-top:16px}
-.rw-by b{font:500 .78rem var(--mono);letter-spacing:.12em;text-transform:uppercase;display:block}
-.rw-by small{font:400 .66rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.rw-v{font:500 .64rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}
-.rw-v:hover{color:var(--gold2);border-color:var(--gold2)}
-.rws-empty{margin-top:40px;border:1px solid var(--line2);padding:34px 32px;max-width:760px}
-.rws-empty p{color:var(--muted);max-width:60ch}
-.rws-empty .cta-row{justify-content:flex-start;margin-top:22px}
-.rws-foot{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center}
-.rws-foot p{color:var(--muted);font-size:.8rem;margin:0;max-width:62ch}
-@media(max-width:900px){.rws-list{grid-template-columns:1fr}}
-
 /* booking */
 .book{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
 .contact-list{list-style:none;padding:0;margin-top:38px;display:flex;flex-direction:column;gap:16px}
@@ -557,29 +536,6 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   </div>
 </section>
 
-<!-- RECENSIONI VERIFICATE: i dati stanno nell'array REV nello script (solo recensioni reali, con link alla fonte) -->
-<section id="recensioni">
-  <div class="wrap">
-    <div class="rws-head">
-      <div>
-        <p class="eyebrow rv">Dicono di noi</p>
-        <h2 class="rv">Recensioni verificate</h2>
-      </div>
-      <div class="rws-sum" id="rwsum" hidden><b id="rwavg"></b><div><span class="stars" id="rwstars" aria-hidden="true"></span><small id="rwcount"></small></div></div>
-    </div>
-    <div class="rws-list" id="rwlist"></div>
-    <div class="rws-empty" id="rwempty">
-      <h3>Le recensioni arrivano dai nostri clienti</h3>
-      <p>Pubblichiamo solo recensioni reali, scritte da chi ha viaggiato con noi e verificabili sulla piattaforma originale. Nessun testo inventato, nessuna modifica.</p>
-      <div class="cta-row"><a class="btn btn-gold" id="rwlink" href="#" target="_blank" rel="noopener" hidden>Lascia la tua recensione</a></div>
-    </div>
-    <div class="rws-foot" id="rwfoot" hidden>
-      <a class="btn" id="rwall" href="#" target="_blank" rel="noopener">Leggi tutte le recensioni su Google</a>
-      <p>Ogni recensione rimanda alla pagina originale su cui è stata pubblicata, così puoi verificarla di persona.</p>
-    </div>
-  </div>
-</section>
-
 <!-- PRENOTA -->
 <section id="prenota">
   <div class="wrap book">
@@ -715,7 +671,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <a class="float" href="https://wa.me/393271996272?text=Ciao%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-<!--DRAFT--><div class="draft" role="note">Bozza 21 · dati fittizi</div><!--/DRAFT-->
+<!--DRAFT--><div class="draft" role="note">Bozza 20 · dati fittizi</div><!--/DRAFT-->
 <script>
 (function(){
   var h=document.querySelector('header');
@@ -753,11 +709,6 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     'Aeroporto Fiumicino (FCO)':'Fiumicino Airport (FCO)','Aeroporto Ciampino (CIA)':'Ciampino Airport (CIA)','Porto di Civitavecchia':'Civitavecchia Port','Tour di 3 ore in città':'3-hour city tour','IVA incl.':'VAT incl.',
     'La flotta':'The fleet','Mercedes Premium Van, per viaggiare comodi':'A Mercedes Premium Van, for a comfortable ride',
     'Fino a 7 passeggeri':'Up to 7 passengers','Ampio bagagliaio':'Large luggage space','Interni in pelle':'Leather interior','Acqua a bordo':'Water on board',
-    'Dicono di noi':'What our guests say','Recensioni verificate':'Verified reviews','Le recensioni arrivano dai nostri clienti':'Our reviews come from our guests',
-    'Pubblichiamo solo recensioni reali, scritte da chi ha viaggiato con noi e verificabili sulla piattaforma originale. Nessun testo inventato, nessuna modifica.':'We only publish real reviews, written by people who travelled with us and verifiable on the original platform. Nothing made up, nothing edited.',
-    'Lascia la tua recensione':'Leave your review','Leggi tutte le recensioni su Google':'Read all reviews on Google',
-    'Ogni recensione rimanda alla pagina originale su cui è stata pubblicata, così puoi verificarla di persona.':'Every review links to the original page where it was published, so you can check it yourself.',
-    'Verificata su':'Verified on','recensione':'review','recensioni':'reviews',
     'Il nostro impegno':'Our commitment','Perché scegliere BlackVans Transfer':'Why choose BlackVans Transfer',
     'Porta a porta':'Door to door','Ti veniamo a prendere ovunque tu sia, hotel, casa o terminal.':'We pick you up wherever you are: hotel, home or terminal.',
     'Anche di notte e nei festivi. Un volo all\'alba non è un problema.':'Nights and holidays too. A flight at dawn is no problem.',
@@ -816,7 +767,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "comincia":"starts",
     "qui.":"here.",
     'NCC Roma, noleggio con conducente:':'Rome chauffeur service, private hire:',
-    'Bozza 21 · dati fittizi':'Draft 21 · sample data',
+    'Bozza 20 · dati fittizi':'Draft 20 · sample data',
     'Informativa privacy':'Privacy policy','Cookie policy':'Cookie policy',
     "Transfer Roma →":"Transfer Rome →",
     "Transfer Fiumicino →":"Transfer Fiumicino →",
@@ -861,34 +812,6 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     it:{q:'Ciao, vorrei un preventivo transfer',b:'Ciao, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Bagagli',o:'Note',v:'Volo/treno/nave',r:'Ritorno',tf:'Tariffa indicata',em:'Email',tel:'Cellulare',bu:'Margine dogana',ct:'Veicolo',cb:'Bagagli a mano',kb:'Bagagli registrati',tr:'Trasferimento',pm:'Pagamento',ok:'Richiesta inviata per email: riceverai anche una email di conferma. Si è aperto WhatsApp con il messaggio già pronto: premi Invia per mandarcelo anche lì.',ko:'Non siamo riusciti a inviare la richiesta per email: ti apriamo WhatsApp con il messaggio già pronto.',ar:'Grazie per la tua richiesta a BlackVans Transfer. L\'abbiamo ricevuta e ti confermeremo la disponibilità il prima possibile. Se hai urgenza puoi scriverci su WhatsApp al +39 327 199 6272.',sj:'Nuova richiesta di prenotazione – BlackVans Transfer'},
     en:{q:'Hi, I would like a transfer quote',b:'Hi, I would like to book a transfer:',n:'Name',d:'Date',f:'From',t:'To',p:'Passengers',g:'Bags',o:'Notes',v:'Flight/train/ship',r:'Return',tf:'Quoted rate',em:'Email',tel:'Mobile',bu:'Customs buffer',ct:'Vehicle',cb:'Cabin bags',kb:'Checked bags',tr:'Transfer',pm:'Payment',ok:'Request sent by email: you will also receive a confirmation email. WhatsApp has opened with your message ready: press Send to deliver it there too.',ko:'We could not send the request by email: we are opening WhatsApp with your message ready.',ar:'Thank you for your request to BlackVans Transfer. We have received it and will confirm availability as soon as possible. If it is urgent, message us on WhatsApp at +39 327 199 6272.',sj:'New booking request – BlackVans Transfer'}
   };
-  /* RECENSIONI: inserire SOLO recensioni reali. n=nome, c=nazione, d=data (es. 'Ottobre 2026'), s=stelle 1-5, t=testo originale,
-     src=piattaforma ('Google'), u=link diretto alla recensione/pagina originale. Senza u la recensione non viene mostrata. */
-  var REV=[];
-  var REVLINK='',REVALL='';  /* link "scrivi una recensione" e "tutte le recensioni" del Google Business Profile */
-  (function(){
-    var list=REV.filter(function(r){return r&&r.t&&r.u&&r.s>=1&&r.s<=5});
-    function st(n){return '★★★★★'.slice(0,n)+'☆☆☆☆☆'.slice(0,5-n)}
-    var L=document.getElementById('rwlist');
-    list.forEach(function(r){
-      var c=document.createElement('article');c.className='rw';
-      var s=document.createElement('span');s.className='stars';s.textContent=st(Math.round(r.s));s.setAttribute('aria-label',r.s+'/5');c.appendChild(s);
-      var p=document.createElement('p');p.textContent='“'+r.t+'”';c.appendChild(p);
-      var by=document.createElement('div');by.className='rw-by';
-      var who=document.createElement('div');var b=document.createElement('b');b.textContent=r.n||'';var sm=document.createElement('small');sm.textContent=[r.c,r.d].filter(Boolean).join(' · ');who.appendChild(b);who.appendChild(sm);by.appendChild(who);
-      var a=document.createElement('a');a.className='rw-v';a.href=r.u;a.target='_blank';a.rel='noopener';a.textContent='Verificata su';a.appendChild(document.createTextNode(' '+(r.src||'Google')));
-      by.appendChild(a);c.appendChild(by);L.appendChild(c);
-    });
-    if(list.length){
-      var avg=list.reduce(function(t,r){return t+r.s},0)/list.length;
-      document.getElementById('rwempty').hidden=true;
-      document.getElementById('rwavg').textContent=avg.toFixed(1).replace('.',',');
-      document.getElementById('rwstars').textContent=st(Math.round(avg));
-      document.getElementById('rwcount').textContent=list.length+(list.length===1?' recensione':' recensioni');
-      document.getElementById('rwsum').hidden=false;
-    }
-    if(REVLINK){var k=document.getElementById('rwlink');k.href=REVLINK;k.hidden=false}
-    if(REVALL&&list.length){document.getElementById('rwall').href=REVALL;document.getElementById('rwfoot').hidden=false}
-  })();
   var TITLE={it:document.title,en:'Rome Chauffeur Service (NCC) | BlackVans Transfer'};
   var lang='it',nodes=[],phs=[];
   var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
