@@ -674,7 +674,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <a class="float" href="https://wa.me/393271996272?text=Ciao%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-<!--DRAFT--><div class="draft" role="note">Bozza 26 · dati fittizi</div><!--/DRAFT-->
+<!--DRAFT--><div class="draft" role="note">Bozza 27 · dati fittizi</div><!--/DRAFT-->
 <script>
 (function(){
   var h=document.querySelector('header');
@@ -769,7 +769,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "comincia":"starts",
     "qui.":"here.",
     'NCC Roma, noleggio con conducente:':'Rome chauffeur service, private hire:',
-    'Bozza 26 · dati fittizi':'Draft 26 · sample data',
+    'Bozza 27 · dati fittizi':'Draft 27 · sample data',
     'Informativa privacy':'Privacy policy','Cookie policy':'Cookie policy',
     "Transfer Roma →":"Transfer Rome →",
     "Transfer Fiumicino →":"Transfer Fiumicino →",
@@ -814,16 +814,18 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "Per i trasferimenti tra le 19:00 e le 06:00 si applica un supplemento di 20 €; per i long transfer il supplemento è di 50 €.":"A 20 euro supplement applies to transfers between 07:00 PM and 06:00 AM, and 50 euro for long transfers.",
     "Prezzo per veicolo, con un drop-off nel centro di Roma. Supplemento notturno: 20 € dalle 19:00 alle 06:00, 50 € per i long transfer.":"Price per vehicle, with one drop-off in central Rome. Night supplement: 20 euro from 07:00 PM to 06:00 AM, 50 euro for long transfers."
   };
-  var PH_EN={n:'John Smith',aa:'e.g. Hotel, street and number',ba:'e.g. Hotel, street and number',o:'Write your requests here',v:'e.g. AZ 610',em:'name@example.com',tel:'Phone number'};
+  var PH_EN={ra:'e.g. Hotel, street and number',rb:'e.g. Airport, hotel, street and number',n:'John Smith',aa:'e.g. Hotel, street and number',ba:'e.g. Hotel, street and number',o:'Write your requests here',v:'e.g. AZ 610',em:'name@example.com',tel:'Phone number'};
   var MSG={
     it:{q:'Ciao, vorrei un preventivo transfer',b:'Ciao, vorrei prenotare un transfer:',n:'Nome',d:'Data',f:'Da',t:'A',p:'Passeggeri',g:'Bagagli',o:'Note',v:'Volo/treno/nave',r:'Ritorno',tf:'Tariffa indicata',em:'Email',tel:'Cellulare',bu:'Margine dogana',ct:'Veicolo',cb:'Bagagli a mano',kb:'Bagagli registrati',tr:'Trasferimento',pm:'Pagamento',ok:'Richiesta inviata per email: riceverai anche una email di conferma. Si è aperto WhatsApp con il messaggio già pronto: premi Invia per mandarcelo anche lì.',ko:'Non siamo riusciti a inviare la richiesta per email: ti apriamo WhatsApp con il messaggio già pronto.',ar:'Grazie per la tua richiesta a BlackVans Transfer. L\'abbiamo ricevuta e ti confermeremo la disponibilità il prima possibile. Se hai urgenza puoi scriverci su WhatsApp al +39 327 199 6272.',sj:'Nuova richiesta di prenotazione – BlackVans Transfer'},
     en:{q:'Hi, I would like a transfer quote',b:'Hi, I would like to book a transfer:',n:'Name',d:'Date',f:'From',t:'To',p:'Passengers',g:'Bags',o:'Notes',v:'Flight/train/ship',r:'Return',tf:'Quoted rate',em:'Email',tel:'Mobile',bu:'Customs buffer',ct:'Vehicle',cb:'Cabin bags',kb:'Checked bags',tr:'Transfer',pm:'Payment',ok:'Request sent by email: you will also receive a confirmation email. WhatsApp has opened with your message ready: press Send to deliver it there too.',ko:'We could not send the request by email: we are opening WhatsApp with your message ready.',ar:'Thank you for your request to BlackVans Transfer. We have received it and will confirm availability as soon as possible. If it is urgent, message us on WhatsApp at +39 327 199 6272.',sj:'New booking request – BlackVans Transfer'}
   };
+  var AEN={"BlackVans Transfer, NCC Roma: torna in alto": "BlackVans Transfer, Rome chauffeur service: back to top", "Chiudi": "Close", "Foto precedente": "Previous photo", "Foto successiva": "Next photo", "Galleria": "Gallery", "Galleria della flotta": "Fleet gallery", "Il Colosseo all'alba lungo una strada deserta di Roma": "The Colosseum at dawn along an empty Rome street", "Il Colosseo all'alba riflesso nello specchietto del Mercedes Premium Van nero, a Roma": "The Colosseum at dawn reflected in the mirror of the black Mercedes Premium Van, in Rome", "Il Colosseo all'alba riflesso nello specchietto del van": "The Colosseum at dawn reflected in the van's mirror", "Interni in pelle del Mercedes Premium Van con sedili spaziosi": "Leather interior of the Mercedes Premium Van with spacious seats", "Mercedes Premium Van al ritiro clienti in hotel": "Mercedes Premium Van picking up guests at a hotel", "Mercedes Premium Van con porta scorrevole aperta davanti a un hotel": "Mercedes Premium Van with the sliding door open in front of a hotel", "Mercedes Premium Van davanti a un hotel di lusso": "Mercedes Premium Van in front of a luxury hotel", "Mercedes Premium Van di profilo": "Mercedes Premium Van, side view", "Mercedes Premium Van nero davanti al Pantheon": "Black Mercedes Premium Van in front of the Pantheon", "Mercedes Premium Van nero davanti al Tempio di Adriano a Roma, di sera": "Black Mercedes Premium Van in front of the Temple of Hadrian in Rome, in the evening", "Mercedes Premium Van nero di profilo al porto crociere": "Black Mercedes Premium Van, side view, at the cruise port", "Mercedes Premium Van nero in banchina davanti a una nave da crociera": "Black Mercedes Premium Van on the quay in front of a cruise ship", "Mercedes Premium Van nero in una via del centro con vista su Trinità dei Monti": "Black Mercedes Premium Van on a central street with a view of Trinità dei Monti", "Mercedes Premium Van nero in una via del centro storico di Roma": "Black Mercedes Premium Van on a street in Rome's historic centre", "Prefisso": "Dial code", "Principale": "Main", "Scrivici su WhatsApp": "Message us on WhatsApp", "Sedili in pelle regolabili del Mercedes Premium Van": "Adjustable leather seats of the Mercedes Premium Van"};
   var TITLE={it:document.title,en:'Rome Chauffeur Service (NCC) | BlackVans Transfer'};
   var lang='it',nodes=[],phs=[];
   var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
     return (!n.nodeValue.trim()||n.parentNode.closest('script,style'))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}});
   while(w.nextNode())nodes.push([w.currentNode,w.currentNode.nodeValue]);
+  var ats=[];document.querySelectorAll('[alt],[aria-label]').forEach(function(e){['alt','aria-label'].forEach(function(a){var v=e.getAttribute(a);if(v&&AEN[v])ats.push([e,a,v])})});
   Object.keys(PH_EN).forEach(function(id){var e=document.getElementById(id);phs.push([e,e.getAttribute('placeholder'),PH_EN[id]])});
 
   function setLang(l){
@@ -833,6 +835,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
       p[0].nodeValue=(l==='en'&&EN[k]!==undefined)?p[1].replace(k,function(){return EN[k]}):p[1];
     });
     phs.forEach(function(p){p[0].setAttribute('placeholder',l==='en'?p[2]:p[1])});
+    ats.forEach(function(p){p[0].setAttribute(p[1],l==='en'?AEN[p[2]]:p[2])});
     document.documentElement.lang=l;
     document.title=TITLE[l];
     document.getElementById('lang').textContent=l==='en'?'IT':'EN';
