@@ -39,3 +39,12 @@ Le informazioni della sezione «Informazioni utili», delle FAQ e del modulo son
 - Pagamento: carta, bancomat e app al prezzo standard; sconto 10% in contanti. Il sito di riferimento chiede anche un acconto con link di pagamento: qui non previsto.
 - **Mancante:** politica di cancellazione e rimborsi (non pubblicata sul sito di riferimento).
 - Invio richieste per email: attivo tramite FormSubmit verso blackvanstransfer@gmail.com (con email di conferma automatica al cliente). La prima richiesta reale fa arrivare a quell'indirizzo una email di attivazione: va cliccato il link di conferma. Quando c'è l'email sul dominio, cambiare l'indirizzo in index.html (cercare formsubmit.co) e riattivare. La privacy policy cita FormSubmit: farla verificare.
+
+## Suggerimenti indirizzi con Google Maps (modulo di prenotazione)
+
+Il codice è già nel sito ma è **spento** finché manca la chiave:
+- Creare un account Google Cloud, attivare la fatturazione e abilitare «Maps JavaScript API» e «Places API».
+- Creare una chiave API e limitarla al dominio del sito (HTTP referrer, es. https://blackvanstransfer.com/*).
+- Inserire la chiave in `index.html` nella riga `var GMAPS_KEY='';`.
+- Con la chiave, sotto gli indirizzi compare il pulsante «Attiva i suggerimenti degli indirizzi (Google Maps)»: Google viene contattato solo dopo il clic. Aggiornare la Cookie Policy (Google può usare cookie) e far verificare la privacy.
+- Google Maps Platform è a pagamento oltre una soglia gratuita mensile: controllare i costi.
