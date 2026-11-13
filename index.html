@@ -674,7 +674,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <a class="float" href="https://wa.me/393271996272?text=Ciao%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-<!--DRAFT--><div class="draft" role="note">Bozza 24 · dati fittizi</div><!--/DRAFT-->
+<!--DRAFT--><div class="draft" role="note">Bozza 25 · dati fittizi</div><!--/DRAFT-->
 <script>
 (function(){
   var h=document.querySelector('header');
@@ -769,7 +769,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "comincia":"starts",
     "qui.":"here.",
     'NCC Roma, noleggio con conducente:':'Rome chauffeur service, private hire:',
-    'Bozza 24 · dati fittizi':'Draft 24 · sample data',
+    'Bozza 25 · dati fittizi':'Draft 25 · sample data',
     'Informativa privacy':'Privacy policy','Cookie policy':'Cookie policy',
     "Transfer Roma →":"Transfer Rome →",
     "Transfer Fiumicino →":"Transfer Fiumicino →",
@@ -911,9 +911,11 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
   function tarTxt(){
     if(!tar)return '';
     var m=/€\s?(\d+)/.exec(tar);if(!m)return tar;
-    var n=+m[1],hr=/all'ora/.test(tar),ret=$('rt').checked&&!hr,tot=ret?n*2:n,u=hr?" all'ora":'';
-    if($('pm').value==='cash')return '€'+fmt(tot*0.9)+u+' (sconto 10% in contanti) invece di €'+tot+u+(ret?' (andata e ritorno)':'');
-    return ret?tar+' × 2 = €'+tot+' (andata e ritorno)':tar;
+    var n=+m[1],hr=/all'ora|per hour/.test(tar),ret=$('rt').checked&&!hr,tot=ret?n*2:n;
+    var en=lang==='en',hu=hr?(en?' per hour':" all'ora"):'',rtx=en?' (round trip)':' (andata e ritorno)';
+    if($('pm').value==='cash')return '€'+fmt(tot*0.9)+hu+(en?' (10% cash discount) instead of €':' (sconto 10% in contanti) invece di €')+tot+hu+(ret?rtx:'');
+    var tt=en?tar.replace(" all'ora",' per hour').replace('(IVA incl.)','(VAT incl.)'):tar;
+    return ret?tt+' × 2 = €'+tot+rtx:tt;
   }
   function showTar(){var t=tarTxt();$('prd').hidden=!!t;var e=$('prv');e.hidden=!t;e.textContent=t}
   function update(){
@@ -977,22 +979,24 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     var v=function(i){return $(i).value.trim()};
     var tsel=$('tr'),tname=tsel.options[tsel.selectedIndex].text;
     var fr=v('aa'),to=v('ba'),rfr=v('ra'),rto=v('rb');
+    /* niente emoji nel testo: alcune versioni di WhatsApp per PC le mostrano come "�" */
+    var B=function(k,x){return '*'+k+':* '+x};
     var L=[m.b,
-      '🔖 '+m.tr+': '+tname,
-      '👤 '+m.n+': '+v('n'),
-      '✉️ '+m.em+': '+v('em'),
-      '📞 '+m.tel+': '+v('pf')+' '+v('tel'),
-      '📅 '+m.d+': '+v('d')+' '+v('h'),
-      '📍 '+m.f+': '+fr,
-      '🏁 '+m.t+': '+to,
-      '👥 '+m.p+': '+v('p'),
-      '🧳 '+m.kb+': '+v('kb'),
-      '🎒 '+m.cb+': '+v('cb'),
-      '💳 '+m.pm+': '+$('pm').options[$('pm').selectedIndex].text];
-    if(v('v'))L.push('✈️ '+m.v+': '+v('v'));
-    if(v('o'))L.push('📝 '+m.o+': '+v('o'));
-    if(rt.checked)L.push('🔁 '+m.r+': '+v('rd')+' '+v('rh')+' ('+m.f+': '+rfr+' → '+m.t+': '+rto+')');
-    if(tar)L.push('💶 '+m.tf+': '+tarTxt());
+      B(m.tr,tname),
+      B(m.n,v('n')),
+      B(m.em,v('em')),
+      B(m.tel,v('pf')+' '+v('tel')),
+      B(m.d,v('d')+' '+v('h')),
+      B(m.f,fr),
+      B(m.t,to),
+      B(m.p,v('p')),
+      B(m.kb,v('kb')),
+      B(m.cb,v('cb')),
+      B(m.pm,$('pm').options[$('pm').selectedIndex].text)];
+    if(v('v'))L.push(B(m.v,v('v')));
+    if(v('o'))L.push(B(m.o,v('o')));
+    if(rt.checked)L.push(B(m.r,v('rd')+' '+v('rh')+' ('+m.f+': '+rfr+' - '+m.t+': '+rto+')'));
+    if(tar)L.push(B(m.tf,tarTxt()));
     var a=$('wal');
     a.href='https://wa.me/393271996272?text='+encodeURIComponent(L.join('\n'));
     var btn=e.target.querySelector('button[type=submit]'),st=$('bst');
