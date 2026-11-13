@@ -303,6 +303,9 @@ footer{background:#05070b;border-top:1px solid var(--line);color:var(--muted);pa
 footer .wrap{display:flex;flex-wrap:wrap;gap:34px;justify-content:space-between}
 .flogo{display:block;width:min(420px,88vw);margin:0 auto 44px}
 .flogo img{display:block;width:100%;height:auto;mix-blend-mode:lighten}
+.fcontact{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 44px;padding:0 16px;margin:0 auto 44px;text-align:center}
+.fcontact a{display:inline-flex;align-items:center;gap:12px;font:300 clamp(1.15rem,2.4vw,1.6rem) var(--display);letter-spacing:.04em;color:var(--fg)}
+.fcontact svg{width:22px;height:22px;color:var(--gold);flex:none}
 footer a{text-decoration:none}
 footer a:hover{color:var(--gold)}
 footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);letter-spacing:.3em;text-transform:uppercase;margin-bottom:6px}
@@ -636,7 +639,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     <p class="eyebrow">Informazioni legali</p>
     <h2 id="privacy-t">Informativa privacy</h2>
     <div class="legal-grid">
-      <div><h3>Titolare del trattamento</h3><p>Mario Rossi, ditta individuale, Via Esempio 1, 00100 Roma (RM). P.IVA 12345678901. Email: blackvanstransfer@gmail.com · PEC: mario.rossi@pec.example.it.</p></div>
+      <div><h3>Titolare del trattamento</h3><p>ANDREI D., Via M. Intreccialagli 13, 00077 (RM). P.IVA 18170441002. Email: blackvanstransfer@gmail.com.</p></div>
       <div><h3>Quali dati raccogliamo</h3><p>Solo quelli che inserisci nel modulo di prenotazione: nome, data e ora, partenza, destinazione, numero di passeggeri e valigie e, se vuoi, codice del volo e note. Ti chiediamo di non inserire dati particolari, ad esempio sulla salute.</p></div>
       <div><h3>Perché li usiamo</h3><p>Usiamo i dati solo per rispondere alla tua richiesta di preventivo o prenotazione e per eseguire il servizio. La base giuridica è l'esecuzione di misure precontrattuali e del contratto (art. 6.1.b GDPR).</p></div>
       <div><h3>Come funziona il modulo</h3><p>Questo sito non salva i dati del modulo. Quando premi invio, i dati inseriti vengono trasmessi per email al nostro indirizzo tramite il servizio FormSubmit (formsubmit.co), che agisce come fornitore tecnico dell'invio, e ti arriva un messaggio di conferma. Puoi poi continuare la conversazione su WhatsApp, un servizio di Meta che tratta i dati secondo la propria informativa. Conserviamo la richiesta per il tempo necessario a gestirla e per gli obblighi fiscali e contabili.</p></div>
@@ -662,16 +665,16 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <footer>
   <a class="flogo" href="#top" aria-label="BlackVans Transfer, NCC Roma: torna in alto"><img src="img/logo-full-sm.webp" srcset="img/logo-full-sm.webp 760w, img/logo-full.webp 1522w" sizes="(max-width:700px) 88vw, 420px" alt="BlackVans Transfer – Rome, airports, ports, private transfers" width="760" height="491" loading="lazy"></a>
+  <div class="fcontact"><a href="tel:+393271996272"><svg><use href="#i-ph"/></svg>+39 327 199 6272</a><a href="mailto:blackvanstransfer@gmail.com"><svg><use href="#i-ml"/></svg>blackvanstransfer@gmail.com</a></div>
   <div class="wrap">
-    <div><strong>BlackVans Transfer</strong>Mario Rossi · Via Esempio 1, 00100 Roma (RM)<br>P.IVA 12345678901 · REA RM-1234567<br>Autorizzazione NCC n. 0000 · Roma Capitale<br>PEC mario.rossi@pec.example.it</div>
-    <div><a href="tel:+393271996272">+39 327 199 6272</a> · <a href="mailto:blackvanstransfer@gmail.com">blackvanstransfer@gmail.com</a></div>
+    <div><strong>BlackVans Transfer</strong>ANDREI D. · Via M. Intreccialagli 13, 00077 (RM)<br>P.IVA 18170441002 · C.F. ……………………<br>Autorizzazione NCC n. …… · Roma Capitale</div>
     <div>© <span id="y"></span> BlackVans Transfer · Tutti i diritti riservati<br><a href="#privacy">Privacy Policy</a> · <a href="#cookie">Cookie Policy</a></div>
   </div>
 </footer>
 
 <a class="float" href="https://wa.me/393271996272?text=Ciao%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-<!--DRAFT--><div class="draft" role="note">Bozza 20 · dati fittizi</div><!--/DRAFT-->
+<!--DRAFT--><div class="draft" role="note">Bozza 22 · dati fittizi</div><!--/DRAFT-->
 <script>
 (function(){
   var h=document.querySelector('header');
@@ -737,12 +740,12 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "Salta al contenuto":"Skip to content",
     "Acconsento al trattamento dei dati per rispondere alla mia richiesta.":"I consent to my data being processed to answer my request.",
     "Leggi l'informativa privacy":"Read the privacy notice",
-    "Mario Rossi · Via Esempio 1, 00100 Roma (RM)":"Mario Rossi · Via Esempio 1, 00100 Rome (RM)",
-    "P.IVA 12345678901 · REA RM-1234567":"VAT no. 12345678901 · REA RM-1234567",
-    "Autorizzazione NCC n. 0000 · Roma Capitale":"NCC licence no. 0000 · Roma Capitale",
+    "ANDREI D. · Via M. Intreccialagli 13, 00077 (RM)":"ANDREI D. · Via M. Intreccialagli 13, 00077 (RM)",
+    "P.IVA 18170441002 · C.F. ……………………":"VAT no. 18170441002 · Tax code ……………………",
+    "Autorizzazione NCC n. …… · Roma Capitale":"NCC licence no. …… · Roma Capitale",
     "Ultimo aggiornamento: 4 novembre 2026":"Last updated: 4 November 2026",
     "Titolare del trattamento":"Data controller",
-    "Mario Rossi, ditta individuale, Via Esempio 1, 00100 Roma (RM). P.IVA 12345678901. Email: blackvanstransfer@gmail.com · PEC: mario.rossi@pec.example.it.":"Mario Rossi, sole proprietorship, Via Esempio 1, 00100 Rome (RM). VAT no. 12345678901. Email: blackvanstransfer@gmail.com · PEC: mario.rossi@pec.example.it.",
+    "ANDREI D., Via M. Intreccialagli 13, 00077 (RM). P.IVA 18170441002. Email: blackvanstransfer@gmail.com.":"ANDREI D., Via M. Intreccialagli 13, 00077 (RM). VAT no. 18170441002. Email: blackvanstransfer@gmail.com.",
     "Quali dati raccogliamo":"What data we collect",
     "Solo quelli che inserisci nel modulo di prenotazione: nome, data e ora, partenza, destinazione, numero di passeggeri e valigie e, se vuoi, codice del volo e note. Ti chiediamo di non inserire dati particolari, ad esempio sulla salute.":"Only what you enter in the booking form: name, date and time, pickup, drop-off, number of passengers and bags and, if you wish, flight number and notes. Please do not enter special-category data, such as health information.",
     "Perché li usiamo":"Why we use it",
@@ -767,7 +770,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "comincia":"starts",
     "qui.":"here.",
     'NCC Roma, noleggio con conducente:':'Rome chauffeur service, private hire:',
-    'Bozza 20 · dati fittizi':'Draft 20 · sample data',
+    'Bozza 22 · dati fittizi':'Draft 22 · sample data',
     'Informativa privacy':'Privacy policy','Cookie policy':'Cookie policy',
     "Transfer Roma →":"Transfer Rome →",
     "Transfer Fiumicino →":"Transfer Fiumicino →",
