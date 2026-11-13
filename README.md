@@ -6,7 +6,7 @@ Landing page statica (HTML/CSS/JS, nessuna build) per BlackVans Transfer, NCC a 
 
 **https://demolandingpage.github.io/andrei-ncc-landing/**
 
-> **Bozza 16** – anteprima da sottoporre al cliente: i dati del titolare sono fittizi (vedi sotto).
+> **Bozza 17** – anteprima da sottoporre al cliente: i dati del titolare sono fittizi (vedi sotto).
 > Se il link non risponde: Settings → Pages → Source "Deploy from a branch", branch `main`, cartella `/ (root)`. Dopo il salvataggio servono 1–2 minuti.
 
 ## Contenuto
