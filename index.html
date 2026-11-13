@@ -554,7 +554,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     </div>
     <form id="bf" class="rv">
       <div class="f full"><label for="tr">Seleziona Trasferimento</label><select id="tr" required><option value="">Seleziona</option><optgroup label="Aeroporti e porto di Civitavecchia"><option value="FCO>ROMA">Aeroporto di Fiumicino (FCO) → Roma centro</option><option value="ROMA>FCO">Roma centro → Aeroporto di Fiumicino (FCO)</option><option value="CIA>ROMA">Aeroporto di Ciampino (CIA) → Roma centro</option><option value="ROMA>CIA">Roma centro → Aeroporto di Ciampino (CIA)</option><option value="CVT>ROMA">Porto di Civitavecchia → Roma centro</option><option value="ROMA>CVT">Roma centro → Porto di Civitavecchia</option><option value="FCO>CVT">Aeroporto di Fiumicino (FCO) → Porto di Civitavecchia</option><option value="CVT>FCO">Porto di Civitavecchia → Aeroporto di Fiumicino (FCO)</option><option value="CIA>CVT">Aeroporto di Ciampino (CIA) → Porto di Civitavecchia</option><option value="CVT>CIA">Porto di Civitavecchia → Aeroporto di Ciampino (CIA)</option></optgroup><optgroup label="Tour e gite giornaliere"><option value="HOUR">Servizio a ore da Roma centro (77 € all'ora)</option></optgroup><optgroup label="Long Transfer (andata o ritorno)"><option value="LT:Assisi">Roma ⇄ Assisi</option><option value="LT:Cortona">Roma ⇄ Cortona</option><option value="LT:Montepulciano">Roma ⇄ Montepulciano</option><option value="LT:Montalcino">Roma ⇄ Montalcino</option><option value="LT:Napoli">Roma ⇄ Napoli</option><option value="LT:Perugia">Roma ⇄ Perugia</option><option value="LT:Sorrento">Roma ⇄ Sorrento</option><option value="LT:Positano">Roma ⇄ Positano</option><option value="LT:Siena">Roma ⇄ Siena</option><option value="LT:Porto Santo Stefano">Roma ⇄ Porto Santo Stefano</option><option value="LT:Porto Ercole">Roma ⇄ Porto Ercole</option><option value="LT:Orvieto">Roma ⇄ Orvieto</option><option value="LT:Lucca">Roma ⇄ Lucca</option><option value="LT:Firenze">Roma ⇄ Firenze</option></optgroup><option value="OTH">Altro (indirizzo a scelta, preventivo su richiesta)</option></select><p class="hint">Scegli il tuo tragitto: il prezzo si calcola da solo. Per tratte diverse scegli «Altro» e inserisci tu gli indirizzi.</p></div>
-      <div class="f full"><label>Prezzo</label><div class="pbox"><span id="prd">Seleziona un trasferimento per vedere il prezzo</span><span id="prv" hidden></span></div><p class="pnote">Prezzo per veicolo, con un solo drop-off nel centro di Roma. Supplemento notturno: 20 € dalle 19:00 alle 06:00, 50 € per i trasferimenti lunghi.</p></div>
+      <div class="f full"><label>Prezzo</label><div class="pbox"><span id="prd">Seleziona un trasferimento per vedere il prezzo</span><span id="prv" hidden></span></div><p class="pnote">Prezzo per veicolo, con un drop-off nel centro di Roma. Supplemento notturno: 20 € dalle 19:00 alle 06:00, 50 € per i long transfer.</p></div>
       <div class="f full"><label for="aa">Indirizzo di Ritiro</label><input id="aa" required maxlength="160" autocomplete="off" placeholder="Es. Hotel, via e numero civico"></div>
       <div class="f"><label for="d">Data Trasferimento</label><input id="d" type="date" required></div>
       <div class="f"><label for="v">Numero Volo / Numero Treno / Nave (facoltativo)</label><input id="v" maxlength="40" placeholder="Es. AZ 610"></div>
@@ -594,10 +594,10 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     <div class="why">
       <div class="rv"><h3>Prenotazione e conferma</h3><p>Consigliamo di prenotare con 48/72 ore di anticipo; le richieste dell'ultimo minuto sono valutate in base alla disponibilità. Ti confermiamo la disponibilità entro 8 ore dalla richiesta.</p></div>
       <div class="rv"><h3>Informazioni sul volo</h3><p>Indica numero volo, data e orario previsto di arrivo: ci permettono di monitorare il volo e di coordinare il ritiro in aeroporto.</p></div>
-      <div class="rv"><h3>Prezzi e drop-off</h3><p>Le tariffe sono per veicolo, non per persona, e includono un solo drop-off nel centro di Roma. Ritiri o soste aggiuntivi possono prevedere un supplemento.</p></div>
+      <div class="rv"><h3>Prezzi e drop-off</h3><p>Le tariffe sono per veicolo, non per persona, e includono un drop-off nel centro di Roma. Ritiri o soste aggiuntivi possono prevedere un supplemento.</p></div>
       <div class="rv"><h3>Tempo di attesa incluso</h3><p>Fino a 60 minuti di attesa gratuita in aeroporto e 15 minuti negli altri punti di ritiro.</p></div>
-      <div class="rv"><h3>Pagamento</h3><p>Nessun pagamento anticipato: si paga direttamente all'autista, in contanti o con carta di credito. Scegli il metodo nel modulo di prenotazione.</p></div>
-      <div class="rv"><h3>Supplemento notturno</h3><p>Per i trasferimenti tra le 19:00 e le 06:00 si applica un supplemento di 20 € a veicolo; per i trasferimenti lunghi il supplemento è di 50 €.</p></div>
+      <div class="rv"><h3>Pagamento</h3><p>Nessun pagamento anticipato: si paga direttamente all'autista, in contanti o con carta di credito.</p></div>
+      <div class="rv"><h3>Supplemento notturno</h3><p>Per i trasferimenti tra le 19:00 e le 06:00 si applica un supplemento di 20 €; per i long transfer il supplemento è di 50 €.</p></div>
       <div class="rv"><h3>Bagagli</h3><p>Ogni veicolo ha una capienza massima: fino a 7 passeggeri, 7 bagagli in stiva e 7 a mano. Per bagagli ingombranti o oggetti speciali avvisaci in anticipo.</p></div>
       <div class="rv"><h3>Servizio privato</h3><p>Il veicolo è riservato solo a te e al tuo gruppo: nessuna corsa condivisa e nessuna sosta non richiesta.</p></div>
       <div class="rv"><h3>Hai bisogno di aiuto?</h3><p>Scrivici su WhatsApp o per email: ti rispondiamo il prima possibile e ti aiutiamo a completare la prenotazione.</p></div>
@@ -674,7 +674,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
 
 <a class="float" href="https://wa.me/393271996272?text=Ciao%2C%20vorrei%20un%20preventivo%20transfer" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-<!--DRAFT--><div class="draft" role="note">Bozza 25 · dati fittizi</div><!--/DRAFT-->
+<!--DRAFT--><div class="draft" role="note">Bozza 26 · dati fittizi</div><!--/DRAFT-->
 <script>
 (function(){
   var h=document.querySelector('header');
@@ -769,7 +769,7 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     "comincia":"starts",
     "qui.":"here.",
     'NCC Roma, noleggio con conducente:':'Rome chauffeur service, private hire:',
-    'Bozza 25 · dati fittizi':'Draft 25 · sample data',
+    'Bozza 26 · dati fittizi':'Draft 26 · sample data',
     'Informativa privacy':'Privacy policy','Cookie policy':'Cookie policy',
     "Transfer Roma →":"Transfer Rome →",
     "Transfer Fiumicino →":"Transfer Fiumicino →",
@@ -807,7 +807,12 @@ footer strong{display:block;color:var(--fg);font:300 1.05rem var(--display);lett
     'Posso prenotare un seggiolino per bambini?':'Can I book a child seat?',
     'Certo, segnalalo nelle note della richiesta così lo prepariamo prima del ritiro.':'Of course. Mention it in the notes of your request and we will have it ready at pickup.',
     'NCC Roma · P.IVA 18170441002':'Rome chauffeur service · VAT no. 18170441002',
-    'BlackVans Transfer · Tutti i diritti riservati':'BlackVans Transfer · All rights reserved'
+    'BlackVans Transfer · Tutti i diritti riservati':'BlackVans Transfer · All rights reserved',
+    "Consigliamo di prenotare con 48/72 ore di anticipo; le richieste dell'ultimo minuto sono valutate in base alla disponibilità. Ti confermiamo la disponibilità entro 8 ore dalla richiesta.":"We recommend booking 48/72 hours in advance; last-minute requests are subject to availability. We confirm availability within 8 hours of your request.",
+    "Le tariffe sono per veicolo, non per persona, e includono un drop-off nel centro di Roma. Ritiri o soste aggiuntivi possono prevedere un supplemento.":"Prices are per vehicle, not per passenger, and include one drop-off in central Rome. Additional pickups or stops may carry an extra charge.",
+    "Nessun pagamento anticipato: si paga direttamente all'autista, in contanti o con carta di credito.":"No upfront payment, you pay directly to the driver, cash or credit card.",
+    "Per i trasferimenti tra le 19:00 e le 06:00 si applica un supplemento di 20 €; per i long transfer il supplemento è di 50 €.":"A 20 euro supplement applies to transfers between 07:00 PM and 06:00 AM, and 50 euro for long transfers.",
+    "Prezzo per veicolo, con un drop-off nel centro di Roma. Supplemento notturno: 20 € dalle 19:00 alle 06:00, 50 € per i long transfer.":"Price per vehicle, with one drop-off in central Rome. Night supplement: 20 euro from 07:00 PM to 06:00 AM, 50 euro for long transfers."
   };
   var PH_EN={n:'John Smith',aa:'e.g. Hotel, street and number',ba:'e.g. Hotel, street and number',o:'Write your requests here',v:'e.g. AZ 610',em:'name@example.com',tel:'Phone number'};
   var MSG={
